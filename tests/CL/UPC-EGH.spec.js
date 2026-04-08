@@ -8,7 +8,7 @@ const {
   applyCheckboxFilter,
   openMASD,
   openCaseList
-} = require('../../helpers/commonActions');
+} = require('./helpers/commonActions');
 
 async function findRowByBadge(page, badgeText) {
   const rows = page.locator('#patient_lists tbody tr');

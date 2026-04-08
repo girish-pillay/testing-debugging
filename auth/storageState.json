@@ -1,0 +1,33 @@
+{
+  "cookies": [
+    {
+      "name": "authorization",
+      "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjUxOWJhNTY5LTMxMDYtNGYxMS05YWFjLWFlMzA1Y2Q2OThlMyIsImN1cnJlbnRfb3JnYW5pemF0aW9uX2lkIjoiODQ2ZDlhMjEtNWNhZS00Y2M0LTgyOGEtZWUyZjU3ZTZlMzU0IiwiY3VycmVudF9vcmdhbml6YXRpb25fcmVjb3JkX2lkIjo1NywiY3VycmVudF9tZWRpY2FsX2ZhY2lsaXR5X2lkIjoiMjA3YzJlODUtNDA1OS00OGZkLWJlMDItMTI1YzNlNmU2M2ZhIiwiY3VycmVudF9zdWJfZmFjaWxpdHlfaWQiOm51bGwsImN1cnJlbnRfbG9jYWxlIjoiZW5nbGlzaCIsImVtYWlsIjoicGlsbGF5LmdpcmlzaEBnbWFpbC5jb20iLCJ0aW1lIjoiMjAyNS0wNi0yNFQwNDo0MTozNy4zMzdaIiwiaWF0IjoxNzUwNzQwMDk3LCJleHAiOjE3NTA4NDgwOTd9.v7VmX9nhgOaSn5UvmdcNVQ9172Qzc5lElwPZeorzxjk",
+      "domain": "demo.api.cuedwell.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "None"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://demo.cuedwell.com",
+      "localStorage": [
+        {
+          "name": "ct_push_alert_dismissed",
+          "value": "true"
+        },
+        {
+          "name": "cuedwell_uid",
+          "value": "2818"
+        },
+        {
+          "name": "is_cookie_accepted",
+          "value": "true"
+        }
+      ]
+    }
+  ]
+}

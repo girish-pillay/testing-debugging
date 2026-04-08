@@ -7,7 +7,7 @@ const {
   closeFilterPanel,
   applyCheckboxFilter,
   openMASD
-} = require('../../helpers/commonActions');
+} = require('./helpers/commonActions');
 
 const MAX_RETRIES = 3;
 const RETRY_TIMEOUT = 2000;

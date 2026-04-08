@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pageObject/CL_loginpage');
 const dataset = require('../../cred/credential.json');
 const {
-  loginToApp,} = require('../../helpers/commonActions');
+  loginToApp,} = require('./helpers/commonActions');
 
 test('Voice recording function check', async ({ page, context, browserName }) => {
   test.setTimeout(90000);

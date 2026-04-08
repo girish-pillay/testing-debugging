@@ -1,0 +1,20 @@
+{
+  "validatedPage": "https://demo.cuedwell.com/backup/ac6bed9c-47b8-4846-ba4c-efe1b45a5829",
+  "totalExtractedRows": 8,
+  "missingFiles": [
+    "MCJ_Case_Report"
+  ],
+  "duplicateFiles": [
+    "MCJ_Case_Measurements"
+  ],
+  "prefixCounts": {
+    "MCJ_Case_Measurements": 2,
+    "Child": 1,
+    "Mother": 1,
+    "Check_CF": 1,
+    "Check_BF": 1,
+    "Check_growth": 1,
+    "Mother's_Protein_Intake": 1,
+    "Antenatal_care": 1
+  }
+}

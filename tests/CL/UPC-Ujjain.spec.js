@@ -9,7 +9,7 @@ const {
   closeFilterPanel,
   applyCheckboxFilter,
   openMASD
-} = require('../../helpers/commonActions');
+} = require('./helpers/commonActions');
 
 
 

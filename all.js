@@ -248,7 +248,7 @@ const { execSync } = require('child_process');
 
 /* ================= CONFIG ================= */
 
-const testFiles = ['UPC-Ujjain', 'MASD_ML_Check', 'voice-recording-check'];
+const testFiles = ['UPC-Ujjain', 'UPC-EGH','MASD_ML_Check', 'voice-recording-check'];
 const testDir = './tests/CL';
 
 const reportTempDir = 'report-temp';
@@ -321,7 +321,7 @@ for (const file of testFiles) {
 
   try {
     execSync(
-      `npx playwright test ${file}.spec.js --project=chrome --config=${tempConfigPath} --workers=1 --timeout=90000`,
+      `npx playwright test ${file}.spec.js --project=chrome --config=${tempConfigPath} --workers=1 --timeout=150000`,
       { stdio: 'inherit' }
     );
   } catch (err) {

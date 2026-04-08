@@ -1,0 +1,22 @@
+{
+  "name": "playwright-new",
+  "version": "1.0.0",
+  "main": "all.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {},
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "dayjs": "^1.11.13",
+    "dotenv": "^17.2.3",
+    "lighthouse": "^12.6.1"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.53.1",
+    "@types/node": "^24.0.3"
+  }
+}

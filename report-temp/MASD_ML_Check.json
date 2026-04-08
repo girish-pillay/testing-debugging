@@ -1,0 +1,144 @@
+{
+  "config": {
+    "configFile": "D:\\playright-refactor\\temp.config.js",
+    "rootDir": "D:/playright-refactor/tests/CL",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/playright-refactor/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "D:/playright-refactor/tests/CL",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 150000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "report-temp/MASD_ML_Check.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "report-temp/MASD_ML_Check-html",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "MASD_ML_Check.spec.js",
+      "file": "MASD_ML_Check.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "EGH MASD Tab-wise Validation",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 16319,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🌍 Org selector opened\n"
+                    },
+                    {
+                      "text": "🏢 Clicked parent org: EGH\n"
+                    },
+                    {
+                      "text": "📍 Clicked block: Agalgre Awc\n"
+                    },
+                    {
+                      "text": "✅ Organization switched to EGH\n"
+                    },
+                    {
+                      "text": "\n===== MASD Timestamp Summary =====\n"
+                    },
+                    {
+                      "text": "Case Summary       : Apr 8, 2026 08:15 am\n"
+                    },
+                    {
+                      "text": "Case Activities    : Apr 8, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "Coaching           : Apr 8, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "Supervision        : Apr 8, 2026 05:30 am\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-04-08T06:11:17.991Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a6d3e70a8ef7597039f8-a50992e6937c20a4456a",
+          "file": "MASD_ML_Check.spec.js",
+          "line": 15,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-04-08T06:11:16.796Z",
+    "duration": 18434.177000000003,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}
