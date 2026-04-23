@@ -29,7 +29,7 @@ jobs:
         run: npx playwright install --with-deps
 
       - name: Run Playwright test
-        run: npx playwright test tests/CL/JIIU-IIMSR.spec.js --project=chrome
+        run: node all.js
 
       - name: Upload Playwright report
         if: always()
