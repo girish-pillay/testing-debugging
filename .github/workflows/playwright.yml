@@ -38,9 +38,16 @@ jobs:
           name: playwright-report
           path: playwright-report/
 
-      - name: Upload test results
+      - name: Upload temp reports
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: test-results
-          path: test-results/
+          name: report-temp
+          path: report-temp/
+
+      - name: Upload final html reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: report-final
+          path: report-final/
