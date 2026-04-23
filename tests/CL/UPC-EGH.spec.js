@@ -7,8 +7,31 @@ const {
   closeFilterPanel,
   applyCheckboxFilter,
   openMASD,
-  openCaseList
+  openCaseList,
+  openI2R
 } = require('./helpers/commonActions');
+
+
+async function getI2RLastUpdated(page) {
+  const lastUpdated = page.locator('div.font-14.text-lite-gray').filter({
+    hasText: /Last updated/i
+  }).first();
+
+  await lastUpdated.waitFor({ state: 'visible', timeout: 15000 });
+  return (await lastUpdated.innerText()).replace(/\s+/g, ' ').trim();
+}
+
+async function openTabAndPrintLastUpdated(page, tabName) {
+  const tab = page.getByRole('tab', { name: tabName });
+  await tab.waitFor({ state: 'visible', timeout: 15000 });
+  await tab.click();
+  await page.waitForTimeout(800);
+
+  const text = await getI2RLastUpdated(page);
+  console.log(`📊 I2R → ${tabName} → ${text}`);
+}
+
+
 
 async function findRowByBadge(page, badgeText) {
   const rows = page.locator('#patient_lists tbody tr');
@@ -310,3 +333,49 @@ try {
   }
 
 });
+
+
+
+
+test('EGH-I2R-Check', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+
+  /* ================= LOGIN ================= */
+  await loginToApp(loginPage, dataset);
+
+  /* ================= ORG SWITCH ================= */
+  await loginPage.EGH();
+  console.log(`🌐 Landed after EGH() on: ${page.url()}`);
+
+  /* ================= OPEN I2R ================= */
+  await openI2R(page);
+  console.log('✅ Items To Review page opened');
+
+  /* ================= PAGE LEVEL LAST UPDATED ================= */
+  try {
+    const pageLastUpdated = await getI2RLastUpdated(page);
+    console.log(`🕒 I2R Page Last Updated → ${pageLastUpdated}`);
+  } catch {
+    console.log('📭 I2R Page Last Updated not found');
+  }
+
+  /* ================= TAB-WISE ================= */
+  const tabs = [
+    'Role Summary',
+    'HCW Requiring Guidance',
+    'Cases Needing Guidance',
+    'Block/Village',
+    'Training Status'
+  ];
+
+  for (const tabName of tabs) {
+    try {
+      await openTabAndPrintLastUpdated(page, tabName);
+    } catch (err) {
+      console.log(`❌ I2R → ${tabName} → Last updated not found`);
+    }
+  }
+});
+
+
+

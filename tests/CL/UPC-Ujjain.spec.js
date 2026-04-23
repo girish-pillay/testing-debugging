@@ -8,10 +8,32 @@ const {
   waitForCaseList,
   closeFilterPanel,
   applyCheckboxFilter,
-  openMASD
+  openMASD,
+  openI2R
 } = require('./helpers/commonActions');
 
+test.afterEach(async ({ page }) => {
+  await page.waitForTimeout(10000);
+});
 
+async function getI2RLastUpdated(page) {
+  const lastUpdated = page.locator('div.font-14.text-lite-gray').filter({
+    hasText: /Last updated/i
+  }).first();
+
+  await lastUpdated.waitFor({ state: 'visible', timeout: 15000 });
+  return (await lastUpdated.innerText()).replace(/\s+/g, ' ').trim();
+}
+
+async function openI2RTabAndPrintLastUpdated(page, tabName) {
+  const tab = page.getByRole('tab', { name: tabName });
+  await tab.waitFor({ state: 'visible', timeout: 15000 });
+  await tab.click();
+  await page.waitForTimeout(800);
+
+  const text = await getI2RLastUpdated(page);
+  console.log(`📊 UJJAIN I2R → ${tabName} → ${text}`);
+}
 
 
 async function waitForSUWRows(page) {
@@ -269,5 +291,49 @@ test('UJJAIN MASD Last Updated Extraction Only', async ({ page }) => {
     console.log(`📊 Case Activities → ${text}`);
   } catch {
     console.log('📭 Case Activities → Last updated not found');
+  }
+});
+
+
+
+/* ================= I2R TEST ================= */
+
+test('UJJAIN I2R Last Updated Extraction Tab-wise', async ({ page }) => {
+  const loginPage = new LoginPage(page);
+
+  /* ================= LOGIN ================= */
+  await loginToApp(loginPage, dataset);
+
+  /* ================= ORG SWITCH ================= */
+  await loginPage.UJJAIN();
+  console.log(`🌐 Landed after UJJAIN() on: ${page.url()}`);
+
+  /* ================= OPEN I2R ================= */
+  await openI2R(page);
+  console.log('✅ UJJAIN Items To Review page opened');
+
+  /* ================= PAGE LEVEL LAST UPDATED ================= */
+  try {
+    const pageLastUpdated = await getI2RLastUpdated(page);
+    console.log(`🕒 UJJAIN I2R Page Last Updated → ${pageLastUpdated}`);
+  } catch {
+    console.log('📭 UJJAIN I2R Page Last Updated not found');
+  }
+
+  /* ================= TAB-WISE EXTRACTION ================= */
+  const tabs = [
+    'Role Summary',
+    'HCW Requiring Guidance',
+    'Cases Needing Guidance',
+    'Block/Village',
+    'Training Status'
+  ];
+
+  for (const tabName of tabs) {
+    try {
+      await openI2RTabAndPrintLastUpdated(page, tabName);
+    } catch (err) {
+      console.log(`❌ UJJAIN I2R → ${tabName} → Last updated not found`);
+    }
   }
 });

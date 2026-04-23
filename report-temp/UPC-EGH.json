@@ -83,7 +83,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 45408,
+                  "duration": 80367,
                   "errors": [],
                   "stdout": [
                     {
@@ -108,36 +108,33 @@
                       "text": "✅ Filters applied (PNC + SUW + MUW)\n"
                     },
                     {
-                      "text": "⚠️ SUW not found, trying MUW\n"
+                      "text": "✅ SUW user found\n"
                     },
                     {
-                      "text": "✅ MUW user found\n"
+                      "text": "✅ UPC opened for SUW: Akame S Sangma\n"
                     },
                     {
-                      "text": "✅ UPC opened for MUW: Bernia Sangma\n"
+                      "text": "📭 Cases → No data in tab\n"
                     },
                     {
-                      "text": "📊 Cases → Last updated at Apr 8, 2026 08:15 am.\n"
+                      "text": "📭 Actions → No data in tab\n"
                     },
                     {
-                      "text": "📊 Actions → User: Enbitha G Momin\n"
-                    },
-                    {
-                      "text": "📊 Timeline → User: Enbitha G Momin\n"
+                      "text": "📭 Timeline → No data in tab\n"
                     },
                     {
                       "text": "📭 Submissions → No data in tab\n"
                     },
                     {
-                      "text": "📊 Indicators → User: Enbitha G Momin\n"
+                      "text": "📊 Indicators → User: Jessy sangma\n"
                     },
                     {
-                      "text": "📊 Daily Report → Your activity for Apr 8, 2026\n"
+                      "text": "📭 Daily Report → No data in tab\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-08T06:09:59.043Z",
+                  "startTime": "2026-04-08T07:34:14.166Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -166,7 +163,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7737,
+                  "duration": 6726,
                   "errors": [],
                   "stdout": [
                     {
@@ -182,7 +179,7 @@
                       "text": "✅ Organization switched to EGH\n"
                     },
                     {
-                      "text": "🌐 Landed after UJJAIN() on: https://demo.cuedwell.com/health/table\n"
+                      "text": "🌐 Landed after UJJAIN() on: https://demo.cuedwell.com/ML%20East%20Garo%20Hills/members/b2840f10-ab91-43fe-8ce0-46fbbf0156b5\n"
                     },
                     {
                       "text": "📊 Case Summary → Last updated : Apr 8, 2026 08:15 am\n"
@@ -193,7 +190,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-08T06:10:44.659Z",
+                  "startTime": "2026-04-08T07:35:34.740Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -211,8 +208,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-08T06:09:58.039Z",
-    "duration": 55233.05499999999,
+    "startTime": "2026-04-08T07:34:13.184Z",
+    "duration": 89118.04299999999,
     "expected": 2,
     "skipped": 0,
     "unexpected": 0,

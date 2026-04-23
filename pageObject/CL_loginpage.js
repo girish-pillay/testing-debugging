@@ -18,7 +18,41 @@ class LoginPage {
 }
 
 
-  async ValidLogin(username, password) {
+
+async closePushSettingIfPresent() {
+  const pushTitle = this.page.getByText('Push Setting', { exact: true });
+  const closeBtn = this.page.locator('#popup_close');
+
+  await pushTitle.waitFor({ state: 'visible', timeout: 2000 }).catch(() => {});
+
+  if (await pushTitle.isVisible().catch(() => false)) {
+    console.log('⚠️ Push setting popup detected');
+
+    await closeBtn.first().click({ force: true }).catch(async () => {
+      await closeBtn.first().evaluate(el => el.click());
+    });
+
+    await pushTitle.waitFor({ state: 'hidden', timeout: 3000 }).catch(() => {});
+    await this.page.waitForTimeout(500);
+    console.log('✅ Push setting popup closed');
+  }
+}
+
+   async ValidLogin(username, password) {
+  await this.page.waitForSelector('text=Sign in with Email', { timeout: 15000 });
+  await this.signinicon.click();
+
+  await this.username.fill(username);
+  await this.password.fill(password);
+  await this.signin.click();
+
+  await this.page.getByRole('button', { name: 'Close' }).click();
+  await this.page.waitForLoadState('networkidle');
+
+  await this.closePushSettingIfPresent();
+}
+
+ /* async ValidLogin(username, password) {
     await this.page.waitForSelector('text=Sign in with Email', { timeout: 15000 });
     await this.signinicon.click();
 
@@ -28,8 +62,12 @@ class LoginPage {
 
     // Close welcome popup
     await this.page.getByRole('button', { name: 'Close' }).click();
+    //await this.page.getByRole('button', { name: 'X' }).click();
     await this.page.waitForLoadState('networkidle');
   }
+ /*
+
+
 
   /* =========================
      SWITCH TO EGH (ROBUST)
@@ -82,10 +120,54 @@ class LoginPage {
     console.log('✅ Organization switched to EGH');
   }
 
+async selectOrg(parentText, childText) {
+  await this.closePushSettingIfPresent();
+
+  const globe = this.page.locator('li[data-tip] img').first();
+  await globe.waitFor({ state: 'visible', timeout: 15000 });
+  await globe.click({ force: true });
+
+  const parentOrg = this.page.locator('h5').filter({ hasText: parentText }).first();
+  await parentOrg.waitFor({ state: 'visible', timeout: 20000 });
+  await parentOrg.click({ force: true });
+  await this.page.waitForTimeout(1000);
+
+  const childOrg = this.page.locator('h5').filter({ hasText: childText }).first();
+  await childOrg.waitFor({ state: 'visible', timeout: 10000 });
+  await childOrg.click({ force: true });
+
+  await this.page.locator('#popup_close').first().click({ force: true });
+}
+
+
+async JIIU_IIMSR() {
+  await this.selectOrg(
+    'JIIU IIMSR Mother-Child Portal',
+    'JIIU IIMSR'
+  );
+}
+
+ 
+
+
+
+
+
+
+
+
 
 
 
 async UJJAIN() {
+
+  
+  const popupClose = this.page.locator('#popup_close').first();
+  if (await popupClose.isVisible().catch(() => false)) {
+    await popupClose.click({ force: true });
+    await this.page.waitForTimeout(1000);
+  }
+
 
   /* ---------- OPEN ORG SELECTOR ---------- */
   const globe = this.page.locator('li[data-tip] img');
@@ -205,42 +287,44 @@ async KCORP_NGO(ngoName = 'AROEHAN') {
   console.log(`✅ Organization switched to KCORP → ${ngoName}`);
 }
 
-
-
-
 async cuetree() {
+  await this.closePushSettingIfPresent();
 
-  /* ---------- OPEN ORG SELECTOR ---------- */
   const globe = this.page.locator('li[data-tip] img');
-  await globe.first().waitFor({ state: 'visible', timeout: 15000 });
-  await globe.first().click();
+  await globe.first().waitFor({ state: 'visible', timeout: 10000 });
+
+  console.log('STEP 2: clicking globe');
+  await globe.first().click({ force: true });
+
+  await this.page.waitForTimeout(1000);
+  await this.closePushSettingIfPresent();
+
   console.log('🌍 Org selector opened');
+  
 
-  /* ---------- SELECT PARENT ORG ---------- */
-  const parentOrg = this.page.getByRole('heading', {
-    name: /Cuetree.*2/i
-  });
+  const parentOrg = this.page.locator('.organization-item h5').filter({
+  hasText: 'Cuetree'
+}).first();
 
-  await parentOrg.waitFor({ state: 'visible', timeout: 20000 });
-  await parentOrg.click();
-  console.log('🏢 Clicked parent org: Cuetree');
+await parentOrg.waitFor({ state: 'visible', timeout: 20000 });
+await parentOrg.scrollIntoViewIfNeeded();
+await parentOrg.click();
+console.log('🏢 Clicked parent org: Cuetree');
 
-  /* ---------- SELECT CHILD ORG ---------- */
-  const childOrg = this.page.getByRole('heading', {
-    name: /Library Center/i
-  });
+const childOrg = this.page.locator('h5').filter({
+  hasText: 'Library Center'
+}).first();
 
-  await childOrg.waitFor({ state: 'visible', timeout: 20000 });
-  await childOrg.click();
-  console.log('📍 Clicked child org: Library Center');
+await childOrg.waitFor({ state: 'visible', timeout: 20000 });
+await childOrg.scrollIntoViewIfNeeded();
+await childOrg.click();
+console.log('📍 Clicked child org: Library Center');
 
-  /* ---------- CLOSE ORG MODAL ---------- */
   const closeBtn = this.page.locator('#popup_close');
   await closeBtn.waitFor({ state: 'visible', timeout: 10000 });
   await closeBtn.click();
 
   console.log('✅ Organization switched to Cuetree');
 }
-
 }
 module.exports = {LoginPage};

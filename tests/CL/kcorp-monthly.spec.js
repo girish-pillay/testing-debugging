@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('../pageObject/loginpage');
-const dataset = JSON.parse(JSON.stringify(require('../cred/credential.json')));
+const { LoginPage } = require('../../pageObject/loginpage');
+const dataset = JSON.parse(JSON.stringify(require('../../cred/credential.json')));
 
 test('Org backup for KCorp districts', async ({ page }) => {
   const loginPage = new LoginPage(page);
