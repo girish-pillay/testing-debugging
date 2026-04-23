@@ -42,6 +42,12 @@ async function applyCheckboxFilter(page, sectionText, optionText) {
 }
 
 async function openMASD(page) {
+   // 🔥 CLOSE POPUP FIRST
+  const popup = page.locator('#popup_close').first();
+  if (await popup.isVisible().catch(() => false)) {
+    await popup.click({ force: true });
+    await page.waitForTimeout(800);
+  }
   const menuIcon = page.locator('li[data-tip="View main menu"] img');
   await menuIcon.waitFor({ state: 'visible', timeout: 15000 });
   await menuIcon.click();
