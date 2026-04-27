@@ -248,7 +248,7 @@ const { execSync } = require('child_process');
 
 /* ================= CONFIG ================= */
 
-const testFiles = ['UPC-Ujjain', 'UPC-EGH','JIIU-IIMSR'];
+const testFiles = ['UPC-Ujjain', 'UPC-EGH','JIIU-IIMSR','ML-ALL-MASD-Check'];
 const testDir = './tests/CL';
 
 const reportTempDir = 'report-temp';
