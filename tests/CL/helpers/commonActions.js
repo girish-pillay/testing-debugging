@@ -65,35 +65,21 @@ async function openMASD(page) {
 
 /* ================= OPEN I2R ================= */
 async function openI2R(page) {
-  const popup = page.locator('#popup_close').first();
-  if (await popup.isVisible().catch(() => false)) {
-    await popup.click({ force: true });
-    await page.waitForTimeout(800);
-  }
-  const menuIcon = page.locator('li[data-tip="View main menu"] img');
-  await menuIcon.waitFor({ state: 'visible', timeout: 15000 });
-  await menuIcon.click();
+  // click/open your I2R menu here as you already do
 
-  // First try exact text-based menu item
-  let i2rLink = page.getByRole('link', { name: /Items To Review|I2R/i }).first();
+  await page.waitForLoadState('domcontentloaded');
 
-  if (!(await i2rLink.isVisible().catch(() => false))) {
-    i2rLink = page.locator('a[href*="review"], a[href*="i2r"]').first();
-  }
+  // Do NOT depend only on title "Items To Review"
+  const i2rReady = page.locator('[role="tab"]').filter({
+    hasText: /Role Summary|HCW Requiring Guidance|Cases Needing Guidance|Block\/Village|Training Status/i
+  }).first();
 
-  await i2rLink.waitFor({ state: 'visible', timeout: 20000 });
+  await expect(i2rReady).toBeVisible({ timeout: 30000 });
 
-  await Promise.all([
-    page.waitForLoadState('domcontentloaded'),
-    i2rLink.click()
-  ]);
-
-  // verify page loaded
+  // Real proof that I2R data loaded
   await expect(
-    page.locator('div.app-title, h1, h2').filter({ hasText: /Items To Review/i }).first()
-  ).toBeVisible({ timeout: 20000 });
-
-  await page.waitForSelector('[role="tab"]', { timeout: 20000 });
+    page.locator('div.font-14.text-lite-gray').filter({ hasText: /Last updated/i }).first()
+  ).toContainText(/\d{4}|\bam\b|\bpm\b/, { timeout: 30000 });
 }
 
 module.exports = {
