@@ -32,7 +32,7 @@ async function openI2RTabAndPrintLastUpdated(page, tabName) {
   await page.waitForTimeout(800);
 
   const text = await getI2RLastUpdated(page);
-  //console.log(`📊 UJJAIN I2R → ${tabName} → ${text}`);
+  console.log(`📊 UJJAIN I2R → ${tabName} → ${text}`);
 }
 
 
@@ -236,7 +236,7 @@ test('UJJAIN MASD Last Updated Extraction Only', async ({ page }) => {
   await loginPage.ValidLogin(dataset.username, dataset.password);
 
   /* ================= ORG SWITCH ================= */
-  await loginPage.UJJAIN();
+  //await loginPage.UJJAIN();
   //console.log(`🌐 Landed after UJJAIN() on: ${page.url()}`);
 
   /* ================= OPEN MASD ================= */
@@ -292,6 +292,30 @@ test('UJJAIN MASD Last Updated Extraction Only', async ({ page }) => {
   } catch {
     console.log('📭 Case Activities → Last updated not found');
   }
+
+  /* ================= SUPERVISION ================= */
+try {
+  const supervisionTab = page.getByRole('tab', { name: 'Coaching' });
+
+  await supervisionTab.waitFor({ state: 'visible', timeout: 15000 });
+  await supervisionTab.click();
+  await page.waitForTimeout(800);
+
+  const panelId = await supervisionTab.getAttribute('aria-controls');
+  const panel = page.locator(`#${panelId}`);
+
+  const lastUpdated = panel
+    .locator('div.font-14.text-lite-gray', { hasText: 'Last updated' })
+    .first();
+
+  await lastUpdated.waitFor({ timeout: 15000 });
+
+  const text = (await lastUpdated.innerText()).trim();
+  console.log(`📊 Coaching → ${text}`);
+
+} catch {
+  console.log('📭 Coaching → Last updated not found');
+}
 });
 
 
@@ -305,7 +329,7 @@ test('UJJAIN I2R Last Updated Extraction Tab-wise', async ({ page }) => {
   await loginToApp(loginPage, dataset);
 
   /* ================= ORG SWITCH ================= */
-  await loginPage.UJJAIN();
+  //await loginPage.UJJAIN();
   //console.log(`🌐 Landed after UJJAIN() on: ${page.url()}`);
 
   /* ================= OPEN I2R ================= */

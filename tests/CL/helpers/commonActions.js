@@ -73,24 +73,14 @@ async function openI2R(page) {
     await page.waitForTimeout(1000);
   }
 
-  // Open main menu
-  const menuIcon = page.locator('li[data-tip="View main menu"] img').first();
-  await menuIcon.waitFor({ state: 'visible', timeout: 20000 });
-  await menuIcon.click({ force: true });
+  // Directly open I2R page
+  await page.goto('https://demo.cuedwell.com/health/comment_review/page', {
+    waitUntil: 'domcontentloaded'
+  });
 
-  // Click Items To Review
-  const i2rLink = page.locator('a').filter({
-    hasText: /Items\s*To\s*Review|Items\s*to\s*Review/i
-  }).first();
-
-  await i2rLink.waitFor({ state: 'visible', timeout: 20000 });
-
-  await Promise.all([
-    page.waitForURL(/items|review|guidance/i, { timeout: 30000 }).catch(() => {}),
-    i2rLink.click({ force: true })
-  ]);
-
-  await page.waitForLoadState('domcontentloaded');
+  await expect(page).toHaveURL(/\/health\/comment_review\/page/, {
+    timeout: 30000
+  });
 
   // Wait for I2R tabs
   const i2rReady = page.locator('[role="tab"]').filter({

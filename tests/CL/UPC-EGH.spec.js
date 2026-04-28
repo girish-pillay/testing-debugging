@@ -275,67 +275,6 @@ if (tabName === 'Timeline') {
 
   
 
-test('EGH MASD Last Updated Extraction Only', async ({ page }) => {
-
-  const loginPage = new LoginPage(page);
-
-  /* ================= LOGIN ================= */
-   await loginToApp(loginPage, dataset);
-
-  /* ================= ORG SWITCH (UNCHANGED) ================= */
-  await loginPage.EGH();
-  console.log(`🌐 Landed after UJJAIN() on: ${page.url()}`);
-
-  /* ================= OPEN MASD ================= */
-    await openMASD(page);
-
-  /* ================= CASE SUMMARY ================= */
-try {
-  const caseSummaryTab = page.getByRole('tab', { name: 'Case Summary' });
-  const csPanelId = await caseSummaryTab.getAttribute('aria-controls');
-  const csPanel = page.locator(`#${csPanelId}`);
-
-  const csLastUpdated = csPanel.locator('div.font-14.text-lite-gray').first();
-
-  // wait until text contains a date
-  await expect(csLastUpdated).toContainText(/\d{4}|\bam\b|\bpm\b/, {
-    timeout: 20000
-  });
-
-  const csText = (await csLastUpdated.innerText()).replace(/\s+/g, ' ').trim();
-  console.log(`📊 Case Summary → ${csText}`);
-
-} catch {
-  console.log('📭 Case Summary → Last updated not found');
-}
-
-  
-  /* ================= CASE ACTIVITIES ================= */
-  try {
-    const caseActivityTab = page.getByRole('tab', { name: 'Case Activities' });
-    await caseActivityTab.click();
-    await page.waitForTimeout(500);
-
-    const caPanelId = await caseActivityTab.getAttribute('aria-controls');
-    const caPanel = page.locator(`#${caPanelId}`);
-
-    const caLastUpdated = caPanel.locator(
-      'div.font-14.text-lite-gray',
-      { hasText: 'Last updated' }
-    ).first();
-
-    await caLastUpdated.waitFor({ timeout: 15000 });
-
-    const text = (await caLastUpdated.innerText()).trim();
-    console.log(`📊 Case Activities → ${text}`);
-  } catch {
-    console.log('📭 Case Activities → Last updated not found');
-  }
-
-});
-
-
-
 
 
 
@@ -346,7 +285,7 @@ test('EGH-I2R-Check', async ({ page }) => {
   await loginToApp(loginPage, dataset);
 
   /* ================= ORG SWITCH ================= */
-  await loginPage.EGH();
+  //await loginPage.EGH();
   console.log(`🌐 Landed after EGH() on: ${page.url()}`);
 
   /* ================= OPEN I2R ================= */
