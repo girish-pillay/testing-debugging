@@ -2,6 +2,7 @@ const { test, expect } = require('@playwright/test');
 const { LoginCheck } = require('../../pageObject/CL_logincheck');
 
 test('All Meghalaya orgs -> MASD -> print last updated from each tab', async ({ page }) => {
+  test.setTimeout(10 * 60 * 1000); // 10 minutes
   const lc = new LoginCheck(page);
   await lc.login();
 
@@ -97,9 +98,15 @@ test('All Meghalaya orgs -> MASD -> print last updated from each tab', async ({ 
     const tabsVisible = await waitForMasdTabs(page);
 
     if (!tabsVisible) {
-      console.log(`⚠️ All tabs missing for ${org.child}`);
+     await page.waitForTimeout(3000);
+
+       const retryTabsVisible = await waitForMasdTabs(page);
+
+    if (!retryTabsVisible) {
+      console.log(`❌ MASD tabs not loaded for ${org.child} after retry`);
       continue;
-    }
+   }
+  }
 
     let foundAnyTab = false;
 

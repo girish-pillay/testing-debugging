@@ -32,7 +32,7 @@ async function openI2RTabAndPrintLastUpdated(page, tabName) {
   await page.waitForTimeout(800);
 
   const text = await getI2RLastUpdated(page);
-  console.log(`📊 UJJAIN I2R → ${tabName} → ${text}`);
+  //console.log(`📊 UJJAIN I2R → ${tabName} → ${text}`);
 }
 
 
@@ -45,7 +45,7 @@ async function waitForSUWRows(page) {
       async () => {
         suwRows = page.locator('#patient_lists tbody tr', { hasText: 'SUW' });
         suwCount = await suwRows.count();
-        console.log(`🔎 SUW row count check: ${suwCount}`);
+        //console.log(`🔎 SUW row count check: ${suwCount}`);
         return suwCount;
       },
       {
@@ -178,7 +178,7 @@ test('Ujjain | PNC |SUW |UPC | Tab-wise Validation', async ({ page }) => {
   await page.getByRole('list').locator('a').first().click();
   await loginPage.UJJAIN();
 
-  console.log(`🌐 On URL: ${page.url()}`);
+ // console.log(`🌐 On URL: ${page.url()}`);
 
   /* ================= ENSURE CASE LIST ================= */
   await waitForCaseList(page);
@@ -191,10 +191,10 @@ test('Ujjain | PNC |SUW |UPC | Tab-wise Validation', async ({ page }) => {
   await applyCheckboxFilter(page, 'Z-score (Weight)', 'SUW');
 
   await closeFilterPanel(page);
-  console.log('✅ Filters applied');
+  //console.log('✅ Filters applied');
 
   await waitForCaseList(page);
-  console.log('🔁 Case List refreshed after filter');
+  //console.log('🔁 Case List refreshed after filter');
 
   /* ================= FIND SUW USERS ================= */
   let suwRows;
@@ -237,7 +237,7 @@ test('UJJAIN MASD Last Updated Extraction Only', async ({ page }) => {
 
   /* ================= ORG SWITCH ================= */
   await loginPage.UJJAIN();
-  console.log(`🌐 Landed after UJJAIN() on: ${page.url()}`);
+  //console.log(`🌐 Landed after UJJAIN() on: ${page.url()}`);
 
   /* ================= OPEN MASD ================= */
   const menuIcon = page.locator('li[data-tip="View main menu"] img');
@@ -306,11 +306,11 @@ test('UJJAIN I2R Last Updated Extraction Tab-wise', async ({ page }) => {
 
   /* ================= ORG SWITCH ================= */
   await loginPage.UJJAIN();
-  console.log(`🌐 Landed after UJJAIN() on: ${page.url()}`);
+  //console.log(`🌐 Landed after UJJAIN() on: ${page.url()}`);
 
   /* ================= OPEN I2R ================= */
   await openI2R(page);
-  console.log('✅ UJJAIN Items To Review page opened');
+  //console.log('✅ UJJAIN Items To Review page opened');
 
   /* ================= PAGE LEVEL LAST UPDATED ================= */
   try {

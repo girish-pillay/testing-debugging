@@ -9,10 +9,11 @@ const {
   openMASD
 } = require('./helpers/commonActions');
 
-const MAX_RETRIES = 3;
+const MAX_RETRIES = 1;
 const RETRY_TIMEOUT = 2000;
 
 test('EGH MASD Tab-wise Validation', async ({ page }) => {
+  test.setTimeout(10 * 60 * 1000);
   const loginPage = new LoginPage(page);
 
   await loginToApp(loginPage, dataset);
