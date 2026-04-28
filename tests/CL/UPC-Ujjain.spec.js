@@ -182,7 +182,7 @@ test('Ujjain | PNC |SUW |UPC | Tab-wise Validation', async ({ page }) => {
 
   /* ================= ENSURE CASE LIST ================= */
   await waitForCaseList(page);
-  console.log('✅ Base Case List loaded');
+ // console.log('✅ Base Case List loaded');
 
   /* ================= APPLY FILTERS ================= */
   await page.locator('#filter i').click();
@@ -267,6 +267,7 @@ test('UJJAIN MASD Last Updated Extraction Only', async ({ page }) => {
     });
 
     const csText = (await csLastUpdated.innerText()).replace(/\s+/g, ' ').trim();
+    console.log('MASD for Ujjain')
     console.log(`📊 Case Summary → ${csText}`);
   } catch {
     console.log('📭 Case Summary → Last updated not found');
