@@ -26,7 +26,7 @@ async closePushSettingIfPresent() {
   await pushTitle.waitFor({ state: 'visible', timeout: 2000 }).catch(() => {});
 
   if (await pushTitle.isVisible().catch(() => false)) {
-    console.log('⚠️ Push setting popup detected');
+    //console.log('⚠️ Push setting popup detected');
 
     await closeBtn.first().click({ force: true }).catch(async () => {
       await closeBtn.first().evaluate(el => el.click());
@@ -34,7 +34,7 @@ async closePushSettingIfPresent() {
 
     await pushTitle.waitFor({ state: 'hidden', timeout: 3000 }).catch(() => {});
     await this.page.waitForTimeout(500);
-    console.log('✅ Push setting popup closed');
+    //console.log('✅ Push setting popup closed');
   }
 }
 
@@ -85,7 +85,7 @@ async closePushSettingIfPresent() {
     const globe = this.page.locator('li[data-tip] img');
     await globe.first().waitFor({ state: 'visible', timeout: 15000 });
     await globe.first().click();
-    console.log('🌍 Org selector opened');
+    //console.log('🌍 Org selector opened');
 
     /* ---------- WAIT FOR ORG LIST ---------- */
     const orgItem = this.page.locator('.organization-item');
@@ -98,13 +98,13 @@ async closePushSettingIfPresent() {
 
     await parentOrg.scrollIntoViewIfNeeded();
     await parentOrg.click();
-    console.log('🏢 Clicked parent org: EGH');
+   // console.log('🏢 Clicked parent org: EGH');
 
     /* ---------- CLICK AWC ---------- */
     const block = this.page.locator('h5', { hasText: 'Agalgre Awc' }).first();
     await block.waitFor({ state: 'visible', timeout: 15000 });
     await block.click();
-    console.log('📍 Clicked block: Agalgre Awc');
+    //console.log('📍 Clicked block: Agalgre Awc');
 
     /* ---------- CLOSE MODAL ---------- */
     const closeBtn = this.page.locator('#popup_close');
@@ -173,7 +173,7 @@ async UJJAIN() {
   const globe = this.page.locator('li[data-tip] img');
   await globe.first().waitFor({ state: 'visible', timeout: 15000 });
   await globe.first().click();
-  console.log('🌍 Org selector opened');
+ // console.log('🌍 Org selector opened');
 
   /* ---------- SELECT PARENT ORG ---------- */
   const parentOrg = this.page
@@ -183,7 +183,7 @@ async UJJAIN() {
 
   await parentOrg.waitFor({ state: 'visible', timeout: 20000 });
   await parentOrg.click();
-  console.log('🏢 Clicked parent org: MP Ujjain - 2457');
+  //console.log('🏢 Clicked parent org: MP Ujjain - 2457');
 
   /* ---------- SELECT CHILD ORG ---------- */
   const block = this.page
@@ -193,7 +193,7 @@ async UJJAIN() {
 
   await block.waitFor({ state: 'visible', timeout: 20000 });
   await block.click();
-  console.log('📍 Clicked block: MP Ujjain - 1A');
+  //console.log('📍 Clicked block: MP Ujjain - 1A');
 
   /* ---------- CLOSE ORG MODAL ---------- */
   const closeBtn = this.page.locator('#popup_close');
@@ -209,13 +209,13 @@ async UJJAIN() {
   const menuIcon = this.page.locator('li[data-tip="View main menu"] img');
   await menuIcon.waitFor({ state: 'visible', timeout: 15000 });
   await menuIcon.click();
-  console.log('📂 Main menu opened');
+ // console.log('📂 Main menu opened');
 
   /* ---------- CLICK HOME (CASE LIST) ---------- */
   const homeLink = this.page.locator('a#dashboard[href="/health/table"]');
   await homeLink.waitFor({ state: 'visible', timeout: 15000 });
   await homeLink.click();
-  console.log('🏠 Navigated to Case List');
+  //console.log('🏠 Navigated to Case List');
 
   /* ---------- CONFIRM CASE LIST LOADED ---------- */
   
@@ -229,7 +229,7 @@ await this.page.waitForFunction(() => {
   const el = document.querySelector('#patient_lists');
   return el && el.offsetHeight > 0;
 }, { timeout: 30000 });
-  console.log('✅ UJJAIN Case List ready');
+  //console.log('✅ UJJAIN Case List ready');
 }
 
 
@@ -249,7 +249,7 @@ async KCORP_NGO(ngoName = 'AROEHAN') {
   const globe = this.page.locator('li[data-tip] img');
   await globe.first().waitFor({ state: 'visible', timeout: 15000 });
   await globe.first().click();
-  console.log('🌍 Org selector opened');
+  //console.log('🌍 Org selector opened');
 
   /* ---------- WAIT FOR ORG LIST ---------- */
   const orgItem = this.page.locator('.organization-item');
@@ -262,7 +262,7 @@ async KCORP_NGO(ngoName = 'AROEHAN') {
 
   await parentOrg.scrollIntoViewIfNeeded();
   await parentOrg.click();
-  console.log('🏢 Clicked parent org: KCORP Foundation');
+  //console.log('🏢 Clicked parent org: KCORP Foundation');
 
   /* ---------- SELECT NGO ---------- */
   const childOrg = this.page.locator('h5')
