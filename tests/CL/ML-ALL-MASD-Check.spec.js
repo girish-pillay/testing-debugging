@@ -2,7 +2,8 @@ const { test, expect } = require('@playwright/test');
 const { LoginCheck } = require('../../pageObject/CL_logincheck');
 
 test('All Meghalaya orgs -> MASD -> print last updated from each tab', async ({ page }) => {
-  test.setTimeout(10 * 60 * 1000); // 10 minutes
+  test.setTimeout(10 * 60 * 1000);
+
   const lc = new LoginCheck(page);
   await lc.login();
 
@@ -21,7 +22,6 @@ test('All Meghalaya orgs -> MASD -> print last updated from each tab', async ({ 
     { parent: 'ML West Khasi Hills', child: '15 Shnong CLF' }
   ];
 
-  // Keep tab names exactly as app shows
   const MASD_TABS = [
     'Case Summary',
     'Case Activities',
@@ -30,48 +30,84 @@ test('All Meghalaya orgs -> MASD -> print last updated from each tab', async ({ 
   ];
 
   async function safeClickTab(page, tabName) {
-    const tab = page.getByRole('tab', { name: new RegExp(`^${tabName}$`, 'i') }).first();
+    const tab = page.getByRole('tab', {
+      name: new RegExp(`^${tabName}$`, 'i')
+    }).first();
 
     if (await tab.count() === 0) {
       return { ok: false, reason: 'tab not found in DOM' };
     }
 
     try {
-      await tab.scrollIntoViewIfNeeded();
+      await tab.scrollIntoViewIfNeeded().catch(() => {});
       await tab.click({ timeout: 10000 });
-      await page.waitForTimeout(1500); // keep small stabilization
+      await page.waitForTimeout(1500);
       return { ok: true };
     } catch (err) {
       return { ok: false, reason: `tab click failed: ${err.message}` };
     }
   }
 
+  async function getLastUpdatedFromCurrentTab(page) {
+    const activePanel = page.locator('div[role="tabpanel"][aria-hidden="false"]').first();
 
-   async function getLastUpdatedFromCurrentTab(page) {
-  const activePanel = page.locator('div[role="tabpanel"][aria-hidden="false"]').first();
+    try {
+      await activePanel.waitFor({ state: 'visible', timeout: 10000 });
 
-  try {
-    await activePanel.waitFor({ state: 'visible', timeout: 10000 });
+      const text = await activePanel.evaluate((panel) => {
+        const match = panel.innerText.match(
+          /Last\s*updated\s*:?\s*[A-Za-z]{3}\s+\d{1,2},\s+\d{4}\s+\d{1,2}:\d{2}\s*(am|pm)/i
+        );
+        return match ? match[0] : null;
+      });
 
-    const text = await activePanel.evaluate((panel) => {
-      const match = panel.innerText.match(/Last\s*updated\s*:?\s*[A-Za-z]{3}\s+\d{1,2},\s+\d{4}\s+\d{1,2}:\d{2}\s*(am|pm)/i);
-      return match ? match[0] : null;
-    });
-
-    return text ? text.replace(/\s+/g, ' ').trim() : null;
-  } catch {
-    return null;
+      return text ? text.replace(/\s+/g, ' ').trim() : null;
+    } catch {
+      return null;
+    }
   }
-}
 
   async function waitForMasdTabs(page) {
     const tabList = page.locator('[role="tab"]');
+
     try {
       await tabList.first().waitFor({ state: 'visible', timeout: 15000 });
       return true;
     } catch {
       return false;
     }
+  }
+
+  async function openMASDWithRetry(page, lc, childName) {
+    for (let attempt = 1; attempt <= 2; attempt++) {
+      try {
+        console.log(`🔁 MASD open attempt ${attempt} for ${childName}`);
+
+        await lc.gotoMASD();
+
+        const tabsVisible = await waitForMasdTabs(page);
+
+        if (tabsVisible) {
+          console.log(`✅ MASD opened for ${childName} on attempt ${attempt}`);
+          return true;
+        }
+
+        throw new Error('MASD tabs not visible');
+
+      } catch (err) {
+        console.log(`⚠️ MASD attempt ${attempt} failed for ${childName}: ${err.message}`);
+
+        if (attempt < 2) {
+          await page.goto('https://demo.cuedwell.com/health/table', {
+            waitUntil: 'domcontentloaded'
+          });
+
+          await page.waitForTimeout(3000);
+        }
+      }
+    }
+
+    return false;
   }
 
   for (const org of ORGS) {
@@ -87,26 +123,12 @@ test('All Meghalaya orgs -> MASD -> print last updated from each tab', async ({ 
       continue;
     }
 
-    try {
-      await lc.gotoMASD();
-    //  console.log(`📊 MASD opened`);
-    } catch (err) {
-      console.log(`❌ MASD open failed for ${org.child}: ${err.message}`);
+    const masdOpened = await openMASDWithRetry(page, lc, org.child);
+
+    if (!masdOpened) {
+      console.log(`❌ MASD open failed for ${org.child} after retry`);
       continue;
     }
-
-    const tabsVisible = await waitForMasdTabs(page);
-
-    if (!tabsVisible) {
-     await page.waitForTimeout(3000);
-
-       const retryTabsVisible = await waitForMasdTabs(page);
-
-    if (!retryTabsVisible) {
-      console.log(`❌ MASD tabs not loaded for ${org.child} after retry`);
-      continue;
-   }
-  }
 
     let foundAnyTab = false;
 
@@ -132,5 +154,11 @@ test('All Meghalaya orgs -> MASD -> print last updated from each tab', async ({ 
     if (!foundAnyTab) {
       console.log(`⚠️ All tabs missing for ${org.child}`);
     }
+
+    await page.goto('https://demo.cuedwell.com/health/table', {
+      waitUntil: 'domcontentloaded'
+    });
+
+    await page.waitForTimeout(1500);
   }
 });
