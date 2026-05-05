@@ -83,18 +83,9 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 80367,
+                  "duration": 9868,
                   "errors": [],
                   "stdout": [
-                    {
-                      "text": "🌍 Org selector opened\n"
-                    },
-                    {
-                      "text": "🏢 Clicked parent org: EGH\n"
-                    },
-                    {
-                      "text": "📍 Clicked block: Agalgre Awc\n"
-                    },
                     {
                       "text": "✅ Organization switched to EGH\n"
                     },
@@ -111,30 +102,30 @@
                       "text": "✅ SUW user found\n"
                     },
                     {
-                      "text": "✅ UPC opened for SUW: Akame S Sangma\n"
+                      "text": "✅ UPC opened for SUW: Winnie M Sangma\n"
                     },
                     {
-                      "text": "📭 Cases → No data in tab\n"
+                      "text": "📊 Cases → Last updated at May 5, 2026 08:21 am.\n"
                     },
                     {
-                      "text": "📭 Actions → No data in tab\n"
+                      "text": "📊 Actions → User: Nobitha Marak\n"
                     },
                     {
-                      "text": "📭 Timeline → No data in tab\n"
+                      "text": "📊 Timeline → User: Nobitha Marak\n"
                     },
                     {
                       "text": "📭 Submissions → No data in tab\n"
                     },
                     {
-                      "text": "📊 Indicators → User: Jessy sangma\n"
+                      "text": "📊 Indicators → User: Sattilla N Sangma\n"
                     },
                     {
-                      "text": "📭 Daily Report → No data in tab\n"
+                      "text": "📊 Daily Report → Your activity for May 5, 2026\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-08T07:34:14.166Z",
+                  "startTime": "2026-05-05T08:48:20.422Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -144,11 +135,11 @@
           ],
           "id": "6fd7c2975f906fc32d63-333510806a287a061160",
           "file": "UPC-EGH.spec.js",
-          "line": 46,
+          "line": 69,
           "column": 1
         },
         {
-          "title": "EGH MASD Last Updated Extraction Only",
+          "title": "EGH-I2R-Check",
           "ok": true,
           "tags": [],
           "tests": [
@@ -163,34 +154,37 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6726,
+                  "duration": 8028,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "🌍 Org selector opened\n"
+                      "text": "🌐 Landed after EGH() on: https://demo.cuedwell.com/ML%20East%20Garo%20Hills/members/b2840f10-ab91-43fe-8ce0-46fbbf0156b5\n"
                     },
                     {
-                      "text": "🏢 Clicked parent org: EGH\n"
+                      "text": "✅ Items To Review page opened\n"
                     },
                     {
-                      "text": "📍 Clicked block: Agalgre Awc\n"
+                      "text": "🕒 I2R Page Last Updated → Last updated : May 5, 2026 08:27 am\n"
                     },
                     {
-                      "text": "✅ Organization switched to EGH\n"
+                      "text": "📊 I2R → Role Summary → Last updated : May 5, 2026 08:27 am\n"
                     },
                     {
-                      "text": "🌐 Landed after UJJAIN() on: https://demo.cuedwell.com/ML%20East%20Garo%20Hills/members/b2840f10-ab91-43fe-8ce0-46fbbf0156b5\n"
+                      "text": "📊 I2R → HCW Requiring Guidance → Last updated : May 5, 2026 08:27 am\n"
                     },
                     {
-                      "text": "📊 Case Summary → Last updated : Apr 8, 2026 08:15 am\n"
+                      "text": "📊 I2R → Cases Needing Guidance → Last updated : May 5, 2026 08:27 am\n"
                     },
                     {
-                      "text": "📊 Case Activities → Last updated : Apr 8, 2026 05:30 am\n"
+                      "text": "📊 I2R → Block/Village → Last updated : May 5, 2026 08:27 am\n"
+                    },
+                    {
+                      "text": "📊 I2R → Training Status → Last updated : May 5, 2026 08:27 am\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-08T07:35:34.740Z",
+                  "startTime": "2026-05-05T08:48:30.442Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -198,9 +192,9 @@
               "status": "expected"
             }
           ],
-          "id": "6fd7c2975f906fc32d63-0a0d3c64e76d55e13ece",
+          "id": "6fd7c2975f906fc32d63-2c50099a652aed6a0c6d",
           "file": "UPC-EGH.spec.js",
-          "line": 255,
+          "line": 281,
           "column": 1
         }
       ]
@@ -208,8 +202,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-08T07:34:13.184Z",
-    "duration": 89118.04299999999,
+    "startTime": "2026-05-05T08:48:19.563Z",
+    "duration": 19686.428,
     "expected": 2,
     "skipped": 0,
     "unexpected": 0,

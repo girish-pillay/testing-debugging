@@ -1,0 +1,435 @@
+{
+  "config": {
+    "configFile": "D:\\playright-refactor\\temp.config.js",
+    "rootDir": "D:/playright-refactor/tests/CL",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/playright-refactor/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "D:/playright-refactor/tests/CL",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 150000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "report-temp/ML-ALL-MASD-Check.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "report-temp/ML-ALL-MASD-Check-html",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "ML-ALL-MASD-Check.spec.js",
+      "file": "ML-ALL-MASD-Check.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "All Meghalaya orgs -> MASD -> print last updated from each tab",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 600000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 133839,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Logged in (via credential.json)\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML East Garo Hills -> Agalgre Awc\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> Agalgre Awc\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 5, 2026 08:21 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML East Jaintia Hills -> Bamkhosngi\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> Bamkhosngi\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 5, 2026 08:21 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML East Khasi Hills -> 29-Contonment Anjalee I\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> 29-Contonment Anjalee I\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 5, 2026 08:21 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML Eastern West Khasi Hills -> BLOSSOM CLF\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> BLOSSOM CLF\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 5, 2026 08:21 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML North Garo Hills -> Abanda\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> Abanda\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 5, 2026 08:21 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML Ri Bhoi -> 0 Point A\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> 0 Point A\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 5, 2026 08:21 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML South Garo Hills -> AMAN CHIGA CLF\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> AMAN CHIGA CLF\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 5, 2026 08:21 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML South West Garo Hills -> AGIPE DOROA CLF\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> AGIPE DOROA CLF\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 5, 2026 08:21 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML South West Khasi Hills -> Alekwareng\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> Alekwareng\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 5, 2026 08:21 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML West Garo Hills -> Chisakgre\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> Chisakgre\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "❌ MASD tabs not loaded for Chisakgre after retry\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML West Jaintia Hills -> Amjalong\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> Amjalong\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 5, 2026 08:21 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "\n==============================\n"
+                    },
+                    {
+                      "text": "ORG: ML West Khasi Hills -> 15 Shnong CLF\n"
+                    },
+                    {
+                      "text": "==============================\n"
+                    },
+                    {
+                      "text": "🏢 Org selected -> 15 Shnong CLF\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 5, 2026 08:21 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 5, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 5, 2026 05:30 am\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-05T08:49:36.417Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "afc7163a58f8da1cc918-f5beced3d0cbff145797",
+          "file": "ML-ALL-MASD-Check.spec.js",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-05-05T08:49:35.511Z",
+    "duration": 135627.10100000002,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

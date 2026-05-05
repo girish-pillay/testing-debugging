@@ -83,73 +83,40 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 35626,
+                  "duration": 43263,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "🌍 Org selector opened\n"
-                    },
-                    {
-                      "text": "🏢 Clicked parent org: MP Ujjain - 2457\n"
-                    },
-                    {
-                      "text": "📍 Clicked block: MP Ujjain - 1A\n"
-                    },
-                    {
                       "text": "✅ Organization switched to UJJAIN\n"
-                    },
-                    {
-                      "text": "📂 Main menu opened\n"
-                    },
-                    {
-                      "text": "🏠 Navigated to Case List\n"
-                    },
-                    {
-                      "text": "✅ UJJAIN Case List ready\n"
-                    },
-                    {
-                      "text": "🌐 On URL: https://demo.cuedwell.com/health/table\n"
-                    },
-                    {
-                      "text": "✅ Base Case List loaded\n"
-                    },
-                    {
-                      "text": "✅ Filters applied\n"
-                    },
-                    {
-                      "text": "🔁 Case List refreshed after filter\n"
-                    },
-                    {
-                      "text": "🔎 SUW row count check: 10\n"
                     },
                     {
                       "text": "✅ Found 10 SUW users\n"
                     },
                     {
-                      "text": "✅ UPC opened for: Pavitra Parmar\n"
+                      "text": "✅ UPC opened for: लिलाबाई\n"
                     },
                     {
-                      "text": "📊 Cases → Data present\n"
+                      "text": "📭 Cases → No data in tab\n"
                     },
                     {
-                      "text": "📊 Actions → User: Ranu Hans Raj\n"
+                      "text": "📭 Actions → No data in tab\n"
                     },
                     {
-                      "text": "📊 Timeline → User: Monika mukes codhrih\n"
+                      "text": "📊 Timeline → User: लक्ष्मी\n"
                     },
                     {
-                      "text": "📊 Submissions → User: Anjali Sandeep\n"
+                      "text": "📊 Submissions → User: अनिता\n"
                     },
                     {
-                      "text": "📊 Indicators → User: Bindu\n"
+                      "text": "📊 Indicators → User: अनिता\n"
                     },
                     {
-                      "text": "📊 Daily Report → Your activity for Apr 8, 2026\n"
+                      "text": "📊 Daily Report → Your activity for May 5, 2026\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-08T07:32:48.832Z",
+                  "startTime": "2026-05-05T08:46:34.134Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -159,7 +126,7 @@
           ],
           "id": "8f1c8886740de028ff7c-6ff6203544143d01cf10",
           "file": "UPC-Ujjain.spec.js",
-          "line": 150,
+          "line": 172,
           "column": 1
         },
         {
@@ -178,43 +145,25 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 24605,
+                  "duration": 20640,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "🌍 Org selector opened\n"
+                      "text": "MASD for Ujjain\n"
                     },
                     {
-                      "text": "🏢 Clicked parent org: MP Ujjain - 2457\n"
+                      "text": "📊 Case Summary → Last updated : May 5, 2026 08:21 am\n"
                     },
                     {
-                      "text": "📍 Clicked block: MP Ujjain - 1A\n"
+                      "text": "📊 Case Activities → Last updated : May 5, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Organization switched to UJJAIN\n"
-                    },
-                    {
-                      "text": "📂 Main menu opened\n"
-                    },
-                    {
-                      "text": "🏠 Navigated to Case List\n"
-                    },
-                    {
-                      "text": "✅ UJJAIN Case List ready\n"
-                    },
-                    {
-                      "text": "🌐 Landed after UJJAIN() on: https://demo.cuedwell.com/health/table\n"
-                    },
-                    {
-                      "text": "📊 Case Summary → Last updated : Apr 8, 2026 08:15 am\n"
-                    },
-                    {
-                      "text": "📊 Case Activities → Last updated : Apr 8, 2026 05:30 am\n"
+                      "text": "📊 Coaching → Last updated : May 5, 2026 05:30 am\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-04-08T07:33:24.851Z",
+                  "startTime": "2026-05-05T08:47:17.708Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -224,7 +173,60 @@
           ],
           "id": "8f1c8886740de028ff7c-c3cbb07005a356551459",
           "file": "UPC-Ujjain.spec.js",
-          "line": 209,
+          "line": 231,
+          "column": 1
+        },
+        {
+          "title": "UJJAIN I2R Last Updated Extraction Tab-wise",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 150000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 17786,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "🕒 UJJAIN I2R Page Last Updated → Last updated : May 5, 2026 08:27 am\n"
+                    },
+                    {
+                      "text": "📊 UJJAIN I2R → Role Summary → Last updated : May 5, 2026 08:27 am\n"
+                    },
+                    {
+                      "text": "📊 UJJAIN I2R → HCW Requiring Guidance → Last updated : May 5, 2026 08:27 am\n"
+                    },
+                    {
+                      "text": "📊 UJJAIN I2R → Cases Needing Guidance → Last updated : May 5, 2026 08:27 am\n"
+                    },
+                    {
+                      "text": "📊 UJJAIN I2R → Block/Village → Last updated : May 5, 2026 08:27 am\n"
+                    },
+                    {
+                      "text": "📊 UJJAIN I2R → Training Status → Last updated : May 5, 2026 08:27 am\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-05T08:47:38.379Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "8f1c8886740de028ff7c-0aaed6c939b69815fa09",
+          "file": "UPC-Ujjain.spec.js",
+          "line": 326,
           "column": 1
         }
       ]
@@ -232,9 +234,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-04-08T07:32:46.567Z",
-    "duration": 63718.405999999995,
-    "expected": 2,
+    "startTime": "2026-05-05T08:46:32.910Z",
+    "duration": 84044.024,
+    "expected": 3,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

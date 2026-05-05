@@ -23,23 +23,30 @@ async goTo()
 
 
 
+async ValidLogin(username, password) {   
+  await this.page.waitForLoadState('networkidle');
+  await this.page.waitForSelector('text=Sign in with Email', { timeout: 10000 });
 
- async ValidLogin (username,password)
- 
- {   
-     await this.page.waitForLoadState('networkidle'); // wait for full load
-     await this.page.waitForSelector('text=Sign in with Email', { timeout: 10000 });
-     await this.signinicon.click()
-     //await this.username.click();
-     await this.username.fill(username);
-     await this.username.press('Tab');
-     await this.password.fill(password);
-     await this.signin.click();
-     await this.closebtn.waitFor({ state: 'visible', timeout: 20000 });
-     await this.closebtn.click();
-    // await this.Xbtn.waitFor({ state: 'visible', timeout: 5000 });
-     //await this.Xbtn.click();
-    
+  await this.signinicon.click();
+  await this.username.fill(username);
+  await this.username.press('Tab');
+  await this.password.fill(password);
+  await this.signin.click();
+
+  await this.closebtn.waitFor({ state: 'visible', timeout: 20000 });
+  await this.closebtn.click();
+
+  // ✅ Close Push Setting popup immediately after login
+  await this.page.waitForTimeout(1000);
+
+  const popupClose = this.page.locator('#popup_close').first();
+
+  if (await popupClose.isVisible().catch(() => false)) {
+    console.log('⚠️ Push setting popup detected after login');
+    await popupClose.click({ force: true });
+    await this.page.waitForTimeout(800);
+    console.log('✅ Push setting popup closed');
+  }
 }
 
  
