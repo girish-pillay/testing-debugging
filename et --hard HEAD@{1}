@@ -1,0 +1,24 @@
+[33mb26f97f[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m)[m HEAD@{0}: commit: Changes done
+[33m3395e9e[m[33m ([m[1;31morigin/main[m[33m)[m HEAD@{1}: commit: Changes done
+[33m5206591[m HEAD@{2}: commit: Changes done
+[33mff768ac[m HEAD@{3}: commit: Changes done
+[33mf627c19[m HEAD@{4}: commit: Comments Removed
+[33m6a50e80[m HEAD@{5}: commit: added
+[33m4e3d2ab[m HEAD@{6}: commit: ML-ALL-MASD File added
+[33mcc1492d[m HEAD@{7}: rebase (finish): returning to refs/heads/main
+[33mcc1492d[m HEAD@{8}: rebase (continue): Added
+[33ma8c1d85[m HEAD@{9}: pull origin main --rebase (start): checkout a8c1d854469408401f20f740f31a268739cd94fa
+[33me341231[m HEAD@{10}: commit: Added
+[33m9b2e86c[m HEAD@{11}: commit: all files added
+[33m6b6c09b[m HEAD@{12}: Branch: renamed refs/heads/main to refs/heads/main
+[33m6b6c09b[m HEAD@{14}: commit: Added Form files
+[33m2676db2[m HEAD@{15}: reset: moving to HEAD
+[33m2676db2[m HEAD@{16}: commit: WIP: refactor common helper functions
+[33mc28549a[m HEAD@{17}: commit: cred
+[33macf1129[m HEAD@{18}: commit: helper deleted
+[33mfb4e526[m HEAD@{19}: commit: final
+[33ma01bb35[m HEAD@{20}: commit: commonactions.js
+[33md655655[m HEAD@{21}: commit: Removed login file from repo
+[33m6476380[m HEAD@{22}: commit: Refactored
+[33me5fd1db[m HEAD@{23}: Branch: renamed refs/heads/master to refs/heads/main
+[33me5fd1db[m HEAD@{25}: commit (initial): all.js file
