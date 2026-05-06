@@ -15,7 +15,8 @@ const EXPECTED_PREFIXES = [
   'ANC',
   'PW_Mother_Education_Occupation',
   'Birth_History_(Gravida)',
-  'Family_details'
+  'Family_details',
+  'Immunization'
 ];
 
 const NGO_NAMES = [
