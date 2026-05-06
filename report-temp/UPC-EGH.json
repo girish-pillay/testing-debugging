@@ -82,8 +82,58 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 35367,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#patient_lists')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('#patient_lists')\u001b[22m\n",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#patient_lists')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('#patient_lists')\u001b[22m\n\n    at waitForCaseList (D:\\playright-refactor\\tests\\CL\\helpers\\commonActions.js:9:48)\n    at D:\\playright-refactor\\tests\\CL\\UPC-EGH.spec.js:84:9",
+                    "location": {
+                      "file": "D:\\playright-refactor\\tests\\CL\\helpers\\commonActions.js",
+                      "column": 48,
+                      "line": 9
+                    },
+                    "snippet": "\u001b[90m   at \u001b[39mhelpers\\commonActions.js:9\n\n\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForCaseList(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#patient_lists'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'#patient_lists tbody tr'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "D:\\playright-refactor\\tests\\CL\\helpers\\commonActions.js",
+                        "column": 48,
+                        "line": 9
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#patient_lists')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('#patient_lists')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mhelpers\\commonActions.js:9\n\n\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForCaseList(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#patient_lists'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'#patient_lists tbody tr'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\u001b[0m\n\u001b[2m    at waitForCaseList (D:\\playright-refactor\\tests\\CL\\helpers\\commonActions.js:9:48)\u001b[22m\n\u001b[2m    at D:\\playright-refactor\\tests\\CL\\UPC-EGH.spec.js:84:9\u001b[22m"
+                    }
+                  ],
+                  "stdout": [
+                    {
+                      "text": "✅ Organization switched to EGH\n"
+                    },
+                    {
+                      "text": "🌐 On URL: https://demo.cuedwell.com/health/table\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-06T02:26:58.339Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "D:\\playright-refactor\\test-results\\UPC-EGH-EGH-PNC-SUW-MUW-UPC-Tab-wise-Validation-chrome\\error-context.md"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "D:\\playright-refactor\\tests\\CL\\helpers\\commonActions.js",
+                    "column": 48,
+                    "line": 9
+                  }
+                },
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9868,
+                  "duration": 9810,
                   "errors": [],
                   "stdout": [
                     {
@@ -102,35 +152,35 @@
                       "text": "✅ SUW user found\n"
                     },
                     {
-                      "text": "✅ UPC opened for SUW: Winnie M Sangma\n"
+                      "text": "✅ UPC opened for SUW: Rikameniora C Marak\n"
                     },
                     {
                       "text": "📊 Cases → Last updated at May 5, 2026 08:21 am.\n"
                     },
                     {
-                      "text": "📊 Actions → User: Nobitha Marak\n"
+                      "text": "📊 Actions → User: Kelchina Ch Momin\n"
                     },
                     {
-                      "text": "📊 Timeline → User: Nobitha Marak\n"
+                      "text": "📊 Timeline → User: Kelchina Ch Momin\n"
                     },
                     {
                       "text": "📭 Submissions → No data in tab\n"
                     },
                     {
-                      "text": "📊 Indicators → User: Sattilla N Sangma\n"
+                      "text": "📊 Indicators → User: Kelchina Ch Momin\n"
                     },
                     {
                       "text": "📊 Daily Report → Your activity for May 5, 2026\n"
                     }
                   ],
                   "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-05T08:48:20.422Z",
+                  "retry": 1,
+                  "startTime": "2026-05-06T02:27:35.247Z",
                   "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "expected"
+              "status": "flaky"
             }
           ],
           "id": "6fd7c2975f906fc32d63-333510806a287a061160",
@@ -151,10 +201,10 @@
               "projectName": "chrome",
               "results": [
                 {
-                  "workerIndex": 0,
+                  "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8028,
+                  "duration": 7994,
                   "errors": [],
                   "stdout": [
                     {
@@ -184,7 +234,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-05T08:48:30.442Z",
+                  "startTime": "2026-05-06T02:27:45.269Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -202,11 +252,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-05T08:48:19.563Z",
-    "duration": 19686.428,
-    "expected": 2,
+    "startTime": "2026-05-06T02:26:57.085Z",
+    "duration": 56554.185,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
-    "flaky": 0
+    "flaky": 1
   }
 }

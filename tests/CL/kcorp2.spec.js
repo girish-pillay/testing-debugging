@@ -24,7 +24,8 @@ const NGO_NAMES = [
   'Bal_Raksha_Bharat',
   'CRY',
   'United_Way_Mumbai',
-  'CYDA'
+  'CYDA',
+  'Armman'
 ];
 
 function daysBetween(date1, date2) {
@@ -56,7 +57,7 @@ test('Org Backup File Check (Match key, check age)', async ({ page }) => {
 
   const allRows = [];
 
-  const MAX_PAGES = 3;
+  const MAX_PAGES = 4;
   await page.waitForSelector('tbody tr', { timeout: 10000 });
 
   for (let pageNum = 1; pageNum <= MAX_PAGES; pageNum++) {
@@ -71,15 +72,21 @@ test('Org Backup File Check (Match key, check age)', async ({ page }) => {
       await page.waitForTimeout(1000);
     }
 
-    const rows = await page.$$eval('tbody tr', trs =>
-      trs.map(tr => {
+    const rows = await page.$$eval(
+  'tbody tr',
+  (trs, pageNum) =>
+    trs
+      .slice(0, pageNum === 4 ? 2 : trs.length)
+      .map(tr => {
         const cells = tr.querySelectorAll('td');
         return {
           filename: cells[1]?.textContent.trim() || '',
           dateStr: cells[2]?.textContent.trim() || ''
         };
-      }).filter(r => r.filename)
-    );
+      })
+      .filter(r => r.filename),
+  pageNum
+);
 
     if (rows.length === 0) {
       console.warn(`⚠️ Page ${pageNum} had 0 rows`);
