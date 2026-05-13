@@ -7,3 +7,5 @@ node_modules/
 /playwright/.cache/
 tests/CL/CL-login-test.spec.js
 tests/CL/rename.js
+cred/credential.json
+cred/Cuedlink-creds.json
