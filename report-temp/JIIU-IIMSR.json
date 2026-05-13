@@ -83,25 +83,25 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9884,
+                  "duration": 10253,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "🌐 Landed after JIIU_IIMSR() on: https://demo.cuedwell.com/ML%20East%20Garo%20Hills/members/b2840f10-ab91-43fe-8ce0-46fbbf0156b5\n"
                     },
                     {
-                      "text": "📊 JIIU IIMSR → Case Summary → Last updated : May 5, 2026 08:21 am\n"
+                      "text": "📊 JIIU IIMSR → Case Summary → Last updated : May 11, 2026 08:21 am\n"
                     },
                     {
-                      "text": "📊 JIIU IIMSR → Case Activities → Last updated : May 5, 2026 05:30 am\n"
+                      "text": "📊 JIIU IIMSR → Case Activities → Last updated : May 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "📊 JIIU IIMSR → Coaching → Last updated : May 5, 2026 05:30 am\n"
+                      "text": "📊 JIIU IIMSR → Coaching → Last updated : May 11, 2026 05:30 am\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-06T02:28:17.410Z",
+                  "startTime": "2026-05-12T01:04:26.886Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -119,8 +119,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-06T02:28:16.360Z",
-    "duration": 11446.087,
+    "startTime": "2026-05-12T01:04:25.543Z",
+    "duration": 12224.447,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

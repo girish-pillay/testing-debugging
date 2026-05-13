@@ -82,58 +82,8 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "failed",
-                  "duration": 35367,
-                  "error": {
-                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#patient_lists')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('#patient_lists')\u001b[22m\n",
-                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#patient_lists')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('#patient_lists')\u001b[22m\n\n    at waitForCaseList (D:\\playright-refactor\\tests\\CL\\helpers\\commonActions.js:9:48)\n    at D:\\playright-refactor\\tests\\CL\\UPC-EGH.spec.js:84:9",
-                    "location": {
-                      "file": "D:\\playright-refactor\\tests\\CL\\helpers\\commonActions.js",
-                      "column": 48,
-                      "line": 9
-                    },
-                    "snippet": "\u001b[90m   at \u001b[39mhelpers\\commonActions.js:9\n\n\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForCaseList(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#patient_lists'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'#patient_lists tbody tr'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\u001b[0m"
-                  },
-                  "errors": [
-                    {
-                      "location": {
-                        "file": "D:\\playright-refactor\\tests\\CL\\helpers\\commonActions.js",
-                        "column": 48,
-                        "line": 9
-                      },
-                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: locator('#patient_lists')\nExpected: visible\nTimeout: 30000ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 30000ms\u001b[22m\n\u001b[2m  - waiting for locator('#patient_lists')\u001b[22m\n\n\n\u001b[90m   at \u001b[39mhelpers\\commonActions.js:9\n\n\u001b[0m \u001b[90m  7 |\u001b[39m\n \u001b[90m  8 |\u001b[39m \u001b[36masync\u001b[39m \u001b[36mfunction\u001b[39m waitForCaseList(page) {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  9 |\u001b[39m   \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mlocator(\u001b[32m'#patient_lists'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible({ timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 10 |\u001b[39m   \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mwaitForSelector(\u001b[32m'#patient_lists tbody tr'\u001b[39m\u001b[33m,\u001b[39m { timeout\u001b[33m:\u001b[39m \u001b[35m30000\u001b[39m })\u001b[33m;\u001b[39m\n \u001b[90m 11 |\u001b[39m }\n \u001b[90m 12 |\u001b[39m\u001b[0m\n\u001b[2m    at waitForCaseList (D:\\playright-refactor\\tests\\CL\\helpers\\commonActions.js:9:48)\u001b[22m\n\u001b[2m    at D:\\playright-refactor\\tests\\CL\\UPC-EGH.spec.js:84:9\u001b[22m"
-                    }
-                  ],
-                  "stdout": [
-                    {
-                      "text": "✅ Organization switched to EGH\n"
-                    },
-                    {
-                      "text": "🌐 On URL: https://demo.cuedwell.com/health/table\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-06T02:26:58.339Z",
-                  "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "D:\\playright-refactor\\test-results\\UPC-EGH-EGH-PNC-SUW-MUW-UPC-Tab-wise-Validation-chrome\\error-context.md"
-                    }
-                  ],
-                  "errorLocation": {
-                    "file": "D:\\playright-refactor\\tests\\CL\\helpers\\commonActions.js",
-                    "column": 48,
-                    "line": 9
-                  }
-                },
-                {
-                  "workerIndex": 1,
-                  "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 9810,
+                  "duration": 67531,
                   "errors": [],
                   "stdout": [
                     {
@@ -152,35 +102,35 @@
                       "text": "✅ SUW user found\n"
                     },
                     {
-                      "text": "✅ UPC opened for SUW: Rikameniora C Marak\n"
+                      "text": "✅ UPC opened for SUW: Usha S Sangma\n"
                     },
                     {
-                      "text": "📊 Cases → Last updated at May 5, 2026 08:21 am.\n"
+                      "text": "📭 Cases → No data in tab\n"
                     },
                     {
-                      "text": "📊 Actions → User: Kelchina Ch Momin\n"
+                      "text": "📊 Actions → User: Moonmoon N Marak\n"
                     },
                     {
-                      "text": "📊 Timeline → User: Kelchina Ch Momin\n"
+                      "text": "📭 Timeline → No data in tab\n"
                     },
                     {
                       "text": "📭 Submissions → No data in tab\n"
                     },
                     {
-                      "text": "📊 Indicators → User: Kelchina Ch Momin\n"
+                      "text": "📊 Indicators → User: Amchina R Marak\n"
                     },
                     {
-                      "text": "📊 Daily Report → Your activity for May 5, 2026\n"
+                      "text": "📭 Daily Report → No data in tab\n"
                     }
                   ],
                   "stderr": [],
-                  "retry": 1,
-                  "startTime": "2026-05-06T02:27:35.247Z",
+                  "retry": 0,
+                  "startTime": "2026-05-12T01:02:43.205Z",
                   "annotations": [],
                   "attachments": []
                 }
               ],
-              "status": "flaky"
+              "status": "expected"
             }
           ],
           "id": "6fd7c2975f906fc32d63-333510806a287a061160",
@@ -201,10 +151,10 @@
               "projectName": "chrome",
               "results": [
                 {
-                  "workerIndex": 1,
+                  "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 7994,
+                  "duration": 8944,
                   "errors": [],
                   "stdout": [
                     {
@@ -214,27 +164,27 @@
                       "text": "✅ Items To Review page opened\n"
                     },
                     {
-                      "text": "🕒 I2R Page Last Updated → Last updated : May 5, 2026 08:27 am\n"
+                      "text": "🕒 I2R Page Last Updated → Last updated : May 11, 2026 08:27 am\n"
                     },
                     {
-                      "text": "📊 I2R → Role Summary → Last updated : May 5, 2026 08:27 am\n"
+                      "text": "📊 I2R → Role Summary → Last updated : May 11, 2026 08:27 am\n"
                     },
                     {
-                      "text": "📊 I2R → HCW Requiring Guidance → Last updated : May 5, 2026 08:27 am\n"
+                      "text": "📊 I2R → HCW Requiring Guidance → Last updated : May 11, 2026 08:27 am\n"
                     },
                     {
-                      "text": "📊 I2R → Cases Needing Guidance → Last updated : May 5, 2026 08:27 am\n"
+                      "text": "📊 I2R → Cases Needing Guidance → Last updated : May 11, 2026 08:27 am\n"
                     },
                     {
-                      "text": "📊 I2R → Block/Village → Last updated : May 5, 2026 08:27 am\n"
+                      "text": "📊 I2R → Block/Village → Last updated : May 11, 2026 08:27 am\n"
                     },
                     {
-                      "text": "📊 I2R → Training Status → Last updated : May 5, 2026 08:27 am\n"
+                      "text": "📊 I2R → Training Status → Last updated : May 11, 2026 08:27 am\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-06T02:27:45.269Z",
+                  "startTime": "2026-05-12T01:03:50.928Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -252,11 +202,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-06T02:26:57.085Z",
-    "duration": 56554.185,
-    "expected": 1,
+    "startTime": "2026-05-12T01:02:41.589Z",
+    "duration": 78714.059,
+    "expected": 2,
     "skipped": 0,
     "unexpected": 0,
-    "flaky": 1
+    "flaky": 0
   }
 }
