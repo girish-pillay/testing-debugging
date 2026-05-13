@@ -78,9 +78,10 @@ for (let i = 1; i < Math.min(rowCount, 20); i++) {
 
   const fileName = (await cells.nth(1).textContent()).trim();
   const fileDate = (await cells.nth(2).textContent()).trim();
+  const fileSize = (await cells.nth(2).textContent()).trim();
 
   if (/\.csv$/.test(fileName)) {
-    console.log(`${fileName.padEnd(70)}${fileDate}`);
+   console.log(`${fileName.padEnd(75)} Size: ${fileSize.padEnd(10)} Date: ${fileDate}`);
   }
 }
 
