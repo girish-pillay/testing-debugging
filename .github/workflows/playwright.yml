@@ -9,7 +9,7 @@ jobs:
     timeout-minutes: 60
 
     env:
-      BASE_URL: ${{ secrets.BASE_URL }}
+      #BASE_URL: ${{ secrets.BASE_URL }}
       CW_USERNAME: ${{ secrets.CW_USERNAME }}
       CW_PASSWORD: ${{ secrets.CW_PASSWORD }}
 
