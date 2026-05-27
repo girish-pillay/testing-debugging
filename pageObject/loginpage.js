@@ -33,8 +33,9 @@ async ValidLogin(username, password) {
   await this.password.fill(password);
   await this.signin.click();
 
-  await this.closebtn.waitFor({ state: 'visible', timeout: 20000 });
+  if (await this.closebtn.isVisible().catch(() => false)) {
   await this.closebtn.click();
+}
 
   // ✅ Close Push Setting popup immediately after login
   await this.page.waitForTimeout(1000);
@@ -47,6 +48,14 @@ async ValidLogin(username, password) {
     await this.page.waitForTimeout(800);
     console.log('✅ Push setting popup closed');
   }
+
+  // ✅ Cookie Accept popup
+const acceptBtn = this.page.locator('button:has-text("Accept")');
+
+if (await acceptBtn.isVisible().catch(() => false)) {
+  await acceptBtn.click({ force: true });
+  console.log('✅ Cookie popup accepted');
+}
 }
 
  
@@ -292,6 +301,32 @@ async ValidLogin(username, password) {
     await this.page.getByRole('button', { name: '⨉' }).click();
   }
 
+
+  async SMDT() {
+
+  // Expand parent org
+  const heading = this.page.locator('h5.pointer', {
+    hasText: 'SMDT - 1'
+  });
+
+  await heading.scrollIntoViewIfNeeded();
+  await heading.click();
+
+  console.log('✅ Clicked SMDT parent');
+
+  // Click child org
+  const child = this.page.locator('h5', {
+    hasText: 'Tilaknagar Site'
+  });
+
+  await child.scrollIntoViewIfNeeded();
+  await child.click();
+
+  console.log('✅ Selected SMDT -> Tilaknagar Site');
+
+  // Close modal
+  await this.page.getByRole('button', { name: '⨉' }).click();
+}
 
 
 }
