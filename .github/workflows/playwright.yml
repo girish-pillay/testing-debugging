@@ -1,4 +1,4 @@
-name: Playwright Tests Daily
+name: Playwright Daily Test
 
 on:
   workflow_dispatch:
