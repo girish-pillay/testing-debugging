@@ -261,24 +261,54 @@ test('UJJAIN MASD Last Updated Extraction Only', async ({ page }) => {
 
   await page.waitForSelector('[role="tab"]', { timeout: 30000 });
 
+  
   /* ================= CASE SUMMARY ================= */
-  try {
-    const caseSummaryTab = page.getByRole('tab', { name: 'Case Summary' });
-    const csPanelId = await caseSummaryTab.getAttribute('aria-controls');
-    const csPanel = page.locator(`#${csPanelId}`);
+try {
 
-    const csLastUpdated = csPanel.locator('div.font-14.text-lite-gray').first();
+  await page.waitForLoadState('networkidle');
+  await page.waitForTimeout(2000);
 
-    await expect(csLastUpdated).toContainText(/\d{4}|\bam\b|\bpm\b/, {
-      timeout: 20000
-    });
+  const caseSummaryTab = page.getByRole('tab', {
+    name: 'Case Summary'
+  });
 
-    const csText = (await csLastUpdated.innerText()).replace(/\s+/g, ' ').trim();
-    console.log('MASD for Ujjain')
-    console.log(`📊 Case Summary → ${csText}`);
-  } catch {
-    console.log('📭 Case Summary → Last updated not found');
-  }
+  await caseSummaryTab.waitFor({
+    state: 'visible',
+    timeout: 15000
+  });
+
+  await caseSummaryTab.click();
+  await page.waitForTimeout(1500);
+
+  const csPanelId = await caseSummaryTab.getAttribute('aria-controls');
+
+  const csPanel = page.locator(`#${csPanelId}`);
+
+  const csLastUpdated = csPanel
+    .locator('div.font-14.text-lite-gray')
+    .filter({ hasText: /Last updated/i })
+    .first();
+
+  await csLastUpdated.waitFor({
+    state: 'visible',
+    timeout: 20000
+  });
+
+  await expect(csLastUpdated).toContainText(
+    /\d{4}|\bam\b|\bpm\b/,
+    { timeout: 20000 }
+  );
+
+  const csText = (await csLastUpdated.innerText())
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  console.log(`📊 Case Summary → ${csText}`);
+
+} catch {
+  console.log('📭 Case Summary → Last updated not found');
+}
+
 
   /* ================= CASE ACTIVITIES ================= */
   try {

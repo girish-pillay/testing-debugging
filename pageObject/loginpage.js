@@ -220,7 +220,18 @@ if (await acceptBtn.isVisible().catch(() => false)) {
     await child.click(); 	
   
     // Close the modal
-    await this.page.getByRole('button', { name: '⨉' }).click();
+         const closeBtn = this.page.locator('#popup_close').first();
+
+await closeBtn.waitFor({
+  state: 'visible',
+  timeout: 10000
+});
+
+await closeBtn.click({ force: true }).catch(async () => {
+  await closeBtn.evaluate(el => el.click());
+});
+
+await this.page.waitForTimeout(1000);
   }
 
   async KCorp_BAIF() {

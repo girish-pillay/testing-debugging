@@ -53,24 +53,45 @@ test('All Meghalaya orgs -> MASD -> print last updated from each tab', async ({ 
     }
   }
 
-  async function getLastUpdatedFromCurrentTab(page) {
-    const activePanel = page.locator('div[role="tabpanel"][aria-hidden="false"]').first();
+      async function getLastUpdatedFromCurrentTab(page) {
 
-    try {
-      await activePanel.waitFor({ state: 'visible', timeout: 10000 });
+  const activePanel = page
+    .locator('div[role="tabpanel"][aria-hidden="false"]')
+    .first();
 
-      const text = await activePanel.evaluate((panel) => {
-        const match = panel.innerText.match(
-          /Last\s*updated\s*:?\s*[A-Za-z]{3}\s+\d{1,2},\s+\d{4}\s+\d{1,2}:\d{2}\s*(am|pm)/i
-        );
-        return match ? match[0] : null;
-      });
+  try {
 
-      return text ? text.replace(/\s+/g, ' ').trim() : null;
-    } catch {
-      return null;
-    }
+    await activePanel.waitFor({
+      state: 'visible',
+      timeout: 15000
+    });
+
+    await page.waitForLoadState('networkidle');
+    await page.waitForTimeout(1500);
+
+    const lastUpdated = activePanel
+      .locator('div.font-14.text-lite-gray')
+      .filter({ hasText: /Last updated/i })
+      .first();
+
+    await lastUpdated.waitFor({
+      state: 'visible',
+      timeout: 20000
+    });
+
+    const text = (await lastUpdated.innerText())
+      .replace(/\s+/g, ' ')
+      .trim();
+
+    return text;
+
+  } catch {
+    return null;
   }
+}
+
+
+
 
   async function waitForMasdTabs(page) {
     const tabList = page.locator('[role="tab"]');
