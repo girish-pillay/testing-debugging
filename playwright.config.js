@@ -14,7 +14,7 @@ const config = {
   //reporter: [['html'], ['json', { outputFile: 'playwright-report/report.json' }]],
   reporter: [
     ['html'],
-    //['json', { outputFile: 'playwright-report/combined-report.json' }]
+    ['json', { outputFile: 'playwright-report/results.json' }]
   ],
 
   projects: [

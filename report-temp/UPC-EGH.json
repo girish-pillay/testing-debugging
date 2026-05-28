@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "D:\\playright-refactor\\temp.config.js",
-    "rootDir": "D:/playright-refactor/tests/CL",
+    "configFile": "D:\\Prod-Playwright\\playright-refactor\\temp.config.js",
+    "rootDir": "D:/Prod-Playwright/playright-refactor/tests/CL",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -16,7 +16,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "D:/playright-refactor/test-results",
+        "outputDir": "D:/Prod-Playwright/playright-refactor/test-results",
         "repeatEach": 1,
         "retries": 1,
         "metadata": {
@@ -24,7 +24,7 @@
         },
         "id": "chrome",
         "name": "chrome",
-        "testDir": "D:/playright-refactor/tests/CL",
+        "testDir": "D:/Prod-Playwright/playright-refactor/tests/CL",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -83,7 +83,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 67531,
+                  "duration": 11807,
                   "errors": [],
                   "stdout": [
                     {
@@ -102,30 +102,30 @@
                       "text": "✅ SUW user found\n"
                     },
                     {
-                      "text": "✅ UPC opened for SUW: Usha S Sangma\n"
+                      "text": "✅ UPC opened for SUW: Simchirik M Marak\n"
                     },
                     {
-                      "text": "📭 Cases → No data in tab\n"
+                      "text": "📊 Cases → Last updated at May 27, 2026 06:24 am.\n"
                     },
                     {
-                      "text": "📊 Actions → User: Moonmoon N Marak\n"
+                      "text": "📊 Actions → User: Silje B Momin\n"
                     },
                     {
-                      "text": "📭 Timeline → No data in tab\n"
+                      "text": "📊 Timeline → User: Trisilda D Sangma\n"
                     },
                     {
                       "text": "📭 Submissions → No data in tab\n"
                     },
                     {
-                      "text": "📊 Indicators → User: Amchina R Marak\n"
+                      "text": "📊 Indicators → User: Trisilda D Sangma\n"
                     },
                     {
-                      "text": "📭 Daily Report → No data in tab\n"
+                      "text": "📊 Daily Report → Your activity for May 27, 2026\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-12T01:02:43.205Z",
+                  "startTime": "2026-05-28T02:53:54.374Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -135,7 +135,7 @@
           ],
           "id": "6fd7c2975f906fc32d63-333510806a287a061160",
           "file": "UPC-EGH.spec.js",
-          "line": 69,
+          "line": 73,
           "column": 1
         },
         {
@@ -154,7 +154,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 8944,
+                  "duration": 14361,
                   "errors": [],
                   "stdout": [
                     {
@@ -164,27 +164,27 @@
                       "text": "✅ Items To Review page opened\n"
                     },
                     {
-                      "text": "🕒 I2R Page Last Updated → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "🕒 I2R Page Last Updated → Last updated : May 27, 2026 06:30 am\n"
                     },
                     {
-                      "text": "📊 I2R → Role Summary → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "📊 I2R → Role Summary → Last updated : May 27, 2026 06:30 am\n"
                     },
                     {
-                      "text": "📊 I2R → HCW Requiring Guidance → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "📊 I2R → HCW Requiring Guidance → Last updated : May 27, 2026 06:30 am\n"
                     },
                     {
-                      "text": "📊 I2R → Cases Needing Guidance → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "📊 I2R → Cases Needing Guidance → Last updated : May 27, 2026 06:30 am\n"
                     },
                     {
-                      "text": "📊 I2R → Block/Village → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "📊 I2R → Block/Village → Last updated : May 27, 2026 06:30 am\n"
                     },
                     {
-                      "text": "📊 I2R → Training Status → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "📊 I2R → Training Status → Last updated : May 27, 2026 06:30 am\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-12T01:03:50.928Z",
+                  "startTime": "2026-05-28T02:54:06.302Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -194,7 +194,7 @@
           ],
           "id": "6fd7c2975f906fc32d63-2c50099a652aed6a0c6d",
           "file": "UPC-EGH.spec.js",
-          "line": 281,
+          "line": 285,
           "column": 1
         }
       ]
@@ -202,8 +202,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-12T01:02:41.589Z",
-    "duration": 78714.059,
+    "startTime": "2026-05-28T02:53:53.408Z",
+    "duration": 28026.887000000002,
     "expected": 2,
     "skipped": 0,
     "unexpected": 0,

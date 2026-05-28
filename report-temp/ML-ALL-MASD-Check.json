@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "D:\\playright-refactor\\temp.config.js",
-    "rootDir": "D:/playright-refactor/tests/CL",
+    "configFile": "D:\\Prod-Playwright\\playright-refactor\\temp.config.js",
+    "rootDir": "D:/Prod-Playwright/playright-refactor/tests/CL",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -16,7 +16,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "D:/playright-refactor/test-results",
+        "outputDir": "D:/Prod-Playwright/playright-refactor/test-results",
         "repeatEach": 1,
         "retries": 1,
         "metadata": {
@@ -24,7 +24,7 @@
         },
         "id": "chrome",
         "name": "chrome",
-        "testDir": "D:/playright-refactor/tests/CL",
+        "testDir": "D:/Prod-Playwright/playright-refactor/tests/CL",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -82,17 +82,9 @@
                 {
                   "workerIndex": 0,
                   "parallelIndex": 0,
-                  "status": "interrupted",
-                  "duration": 567459,
-                  "error": {
-                    "message": "Error: browserContext.close: Target page, context or browser has been closed",
-                    "stack": "Error: browserContext.close: Target page, context or browser has been closed"
-                  },
-                  "errors": [
-                    {
-                      "message": "Error: browserContext.close: Target page, context or browser has been closed"
-                    }
-                  ],
+                  "status": "passed",
+                  "duration": 128122,
+                  "errors": [],
                   "stdout": [
                     {
                       "text": "✅ Logged in (via credential.json)\n"
@@ -119,16 +111,16 @@
                       "text": "✅ MASD opened for Agalgre Awc on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : May 11, 2026 08:21 am\n"
+                      "text": "✅ Case Summary -> Last updated : May 27, 2026 06:24 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -152,16 +144,16 @@
                       "text": "✅ MASD opened for Bamkhosngi on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : May 11, 2026 08:21 am\n"
+                      "text": "⚠️ Case Summary -> Last updated missing\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -185,16 +177,16 @@
                       "text": "✅ MASD opened for 29-Contonment Anjalee I on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : May 11, 2026 08:21 am\n"
+                      "text": "✅ Case Summary -> Last updated : May 27, 2026 06:24 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -218,16 +210,16 @@
                       "text": "✅ MASD opened for BLOSSOM CLF on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : May 11, 2026 08:21 am\n"
+                      "text": "✅ Case Summary -> Last updated : May 27, 2026 06:24 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -251,16 +243,16 @@
                       "text": "✅ MASD opened for Abanda on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : May 11, 2026 08:21 am\n"
+                      "text": "✅ Case Summary -> Last updated : May 27, 2026 06:24 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -284,16 +276,16 @@
                       "text": "✅ MASD opened for 0 Point A on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : May 11, 2026 08:21 am\n"
+                      "text": "✅ Case Summary -> Last updated : May 27, 2026 06:24 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -317,16 +309,16 @@
                       "text": "✅ MASD opened for AMAN CHIGA CLF on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : May 11, 2026 08:20 am\n"
+                      "text": "✅ Case Summary -> Last updated : May 27, 2026 06:24 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -350,16 +342,16 @@
                       "text": "✅ MASD opened for AGIPE DOROA CLF on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : May 11, 2026 08:21 am\n"
+                      "text": "✅ Case Summary -> Last updated : May 27, 2026 06:24 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -383,16 +375,16 @@
                       "text": "✅ MASD opened for Alekwareng on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : May 11, 2026 08:21 am\n"
+                      "text": "✅ Case Summary -> Last updated : May 27, 2026 06:24 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : May 11, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "⚠️ Supervision -> Last updated missing\n"
+                      "text": "✅ Supervision -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -404,7 +396,28 @@
                       "text": "==============================\n"
                     },
                     {
-                      "text": "❌ Org switch failed -> Chisakgre: locator.waitFor: Timeout 15000ms exceeded.\nCall log:\n\u001b[2m  - waiting for locator('.ml-modal').locator('h5').filter({ hasText: 'Chisakgre' }).first() to be visible\u001b[22m\n\n"
+                      "text": "🏢 Org selected -> Chisakgre\n"
+                    },
+                    {
+                      "text": "🔁 MASD open attempt 1 for Chisakgre\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ MASD opened for Chisakgre on attempt 1\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 27, 2026 06:24 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -416,7 +429,28 @@
                       "text": "==============================\n"
                     },
                     {
-                      "text": "❌ Org switch failed -> Amjalong: locator.click: Target page, context or browser has been closed\nCall log:\n\u001b[2m  - waiting for locator('li[data-tip] img').first()\u001b[22m\n\u001b[2m    - locator resolved to <img alt=\"\" src=\"images/web-icon.png\"/>\u001b[22m\n\u001b[2m  - attempting click action\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button id=\"popup_close\" class=\"btn-close undefined\">⨉</button> from <div class=\"ml-modal\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m    - waiting 20ms\u001b[22m\n\u001b[2m    2 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m      - element is visible, enabled and stable\u001b[22m\n\u001b[2m      - scrolling into view if needed\u001b[22m\n\u001b[2m      - done scrolling\u001b[22m\n\u001b[2m      - <button id=\"popup_close\" class=\"btn-close undefined\">⨉</button> from <div class=\"ml-modal\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m    - retrying click action\u001b[22m\n\u001b[2m      - waiting 100ms\u001b[22m\n\u001b[2m    190 × waiting for element to be visible, enabled and stable\u001b[22m\n\u001b[2m        - element is visible, enabled and stable\u001b[22m\n\u001b[2m        - scrolling into view if needed\u001b[22m\n\u001b[2m        - done scrolling\u001b[22m\n\u001b[2m        - <button id=\"popup_close\" class=\"btn-close undefined\">⨉</button> from <div class=\"ml-modal\">…</div> subtree intercepts pointer events\u001b[22m\n\u001b[2m      - retrying click action\u001b[22m\n\u001b[2m        - waiting 500ms\u001b[22m\n\n"
+                      "text": "🏢 Org selected -> Amjalong\n"
+                    },
+                    {
+                      "text": "🔁 MASD open attempt 1 for Amjalong\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ MASD opened for Amjalong on attempt 1\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 27, 2026 06:24 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Supervision -> Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -428,28 +462,43 @@
                       "text": "==============================\n"
                     },
                     {
-                      "text": "❌ Org switch failed -> 15 Shnong CLF: locator.waitFor: Target page, context or browser has been closed\n"
+                      "text": "🏢 Org selected -> 15 Shnong CLF\n"
+                    },
+                    {
+                      "text": "🔁 MASD open attempt 1 for 15 Shnong CLF\n"
+                    },
+                    {
+                      "text": "📊 MASD opened\n"
+                    },
+                    {
+                      "text": "✅ MASD opened for 15 Shnong CLF on attempt 1\n"
+                    },
+                    {
+                      "text": "✅ Case Summary -> Last updated : May 27, 2026 06:24 am\n"
+                    },
+                    {
+                      "text": "✅ Case Activities -> Last updated : May 27, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "✅ Coaching -> Last updated : May 27, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "⚠️ Supervision -> Last updated missing\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-12T01:05:01.819Z",
+                  "startTime": "2026-05-28T02:55:56.198Z",
                   "annotations": [],
-                  "attachments": [
-                    {
-                      "name": "error-context",
-                      "contentType": "text/markdown",
-                      "path": "D:\\playright-refactor\\test-results\\ML-ALL-MASD-Check-All-Megh-6d56e--last-updated-from-each-tab-chrome\\error-context.md"
-                    }
-                  ]
+                  "attachments": []
                 }
               ],
-              "status": "skipped"
+              "status": "expected"
             }
           ],
           "id": "afc7163a58f8da1cc918-f5beced3d0cbff145797",
           "file": "ML-ALL-MASD-Check.spec.js",
-          "line": 4,
+          "line": 9,
           "column": 1
         }
       ]
@@ -457,10 +506,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-12T01:05:00.598Z",
-    "duration": 569408.373,
-    "expected": 0,
-    "skipped": 1,
+    "startTime": "2026-05-28T02:55:52.321Z",
+    "duration": 132646.004,
+    "expected": 1,
+    "skipped": 0,
     "unexpected": 0,
     "flaky": 0
   }

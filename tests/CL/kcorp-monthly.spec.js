@@ -1,9 +1,10 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pageObject/loginpage');
-const dataset = {
+const dataset = JSON.parse(JSON.stringify(require('../../cred/credential.json')));
+const GHSecret = {
   username: process.env.CW_USERNAME,
   password: process.env.CW_PASSWORD
-};
+  };
 
 test('Org backup for KCorp districts', async ({ page }) => {
   const loginPage = new LoginPage(page);

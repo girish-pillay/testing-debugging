@@ -1,7 +1,9 @@
-name: Playwright Tests
+name: Playwright Tests Daily
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '30 4 * * *'
 
 jobs:
   test:
@@ -51,3 +53,10 @@ jobs:
         with:
           name: report-final
           path: report-final/
+      
+            - name: Upload JSON report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: json-report
+          path: playwright-report/results.json

@@ -1,12 +1,13 @@
-
-
-
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pageObject/loginpage');
-const dataset = {
+const dataset = JSON.parse(JSON.stringify(require('../../cred/credential.json')));
+const GHSecret = {
   username: process.env.CW_USERNAME,
   password: process.env.CW_PASSWORD
-};
+  };
+
+const fs = require('fs');
+const path = require('path');
 
 const EXPECTED_PREFIXES = [
   'MCJ_Case_Measurements',
@@ -38,6 +39,21 @@ function daysBetween(date1, date2) {
 }
 
 test('Org Backup File Check (Match key, check age)', async ({ page }) => {
+  // ✅ Correct downloads folder path
+  const downloadDir = path.resolve(__dirname, '../../downloads');
+
+  console.log('📁 Download directory:', downloadDir);
+
+  // ✅ Delete old downloads folder completely
+  if (fs.existsSync(downloadDir)) {
+    fs.rmSync(downloadDir, { recursive: true, force: true });
+    console.log('🧹 Old downloads folder deleted');
+  }
+
+  // ✅ Create fresh downloads folder
+  fs.mkdirSync(downloadDir, { recursive: true });
+  console.log('📁 Fresh downloads folder created');
+
   const loginPage = new LoginPage(page);
   await loginPage.goTo();
   await loginPage.ValidLogin(dataset.username, dataset.password);
@@ -55,13 +71,15 @@ test('Org Backup File Check (Match key, check age)', async ({ page }) => {
 
   const backupURL = new URL(href, page.url()).toString();
   console.log(`🔗 Navigating directly to Org Backup URL: ${backupURL}`);
+
   await page.goto(backupURL, { waitUntil: 'load', timeout: 20000 });
   await expect(page).toHaveURL(/\/backup/, { timeout: 10000 });
+
   console.log('✅ Confirmed Org Backup URL');
 
   const allRows = [];
+  const MAX_PAGES = 3;
 
-  const MAX_PAGES = 4;
   await page.waitForSelector('tbody tr', { timeout: 10000 });
 
   for (let pageNum = 1; pageNum <= MAX_PAGES; pageNum++) {
@@ -77,20 +95,20 @@ test('Org Backup File Check (Match key, check age)', async ({ page }) => {
     }
 
     const rows = await page.$$eval(
-  'tbody tr',
-  (trs, pageNum) =>
-    trs
-      .slice(0, pageNum === 4 ? 2 : trs.length)
-      .map(tr => {
-        const cells = tr.querySelectorAll('td');
-        return {
-          filename: cells[1]?.textContent.trim() || '',
-          dateStr: cells[2]?.textContent.trim() || ''
-        };
-      })
-      .filter(r => r.filename),
-  pageNum
-);
+      'tbody tr',
+      (trs, pageNum) =>
+        trs
+          .slice(0, pageNum === 4 ? 2 : trs.length)
+          .map(tr => {
+            const cells = tr.querySelectorAll('td');
+            return {
+              filename: cells[1]?.textContent.trim() || '',
+              dateStr: cells[2]?.textContent.trim() || ''
+            };
+          })
+          .filter(r => r.filename),
+      pageNum
+    );
 
     if (rows.length === 0) {
       console.warn(`⚠️ Page ${pageNum} had 0 rows`);
@@ -101,11 +119,13 @@ test('Org Backup File Check (Match key, check age)', async ({ page }) => {
   }
 
   console.log(`\n📄 Extracted Filenames (${allRows.length} total):`);
+
   allRows.forEach((row, i) => {
     console.log(`${String(i + 1).padStart(2, '0')}. ${row.filename} (${row.dateStr})`);
   });
 
   console.log(`📦 Total files extracted: ${allRows.length}\n`);
+
   const today = new Date();
 
   for (const ngo of NGO_NAMES) {
@@ -117,10 +137,12 @@ test('Org Backup File Check (Match key, check age)', async ({ page }) => {
     for (const prefix of EXPECTED_PREFIXES) {
       const key = `${prefix}_${ngo}`;
       const match = allRows.find(row => row.filename.startsWith(key));
+
       if (match) {
         const fileDate = new Date(match.dateStr);
         const isFresh = daysBetween(fileDate, today) <= 2;
         const freshness = isFresh ? '✅' : '❌';
+
         console.log(`   ✅ ${freshness}  ${key} → Found on ${match.dateStr}`);
         matched++;
       } else {

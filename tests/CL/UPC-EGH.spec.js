@@ -1,9 +1,10 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pageObject/CL_loginpage');
-const dataset = {
+const dataset = require('../../cred/credential.json');
+const GHSecret = {
   username: process.env.CW_USERNAME,
   password: process.env.CW_PASSWORD
-};
+  };
 const {
   loginToApp,
   waitForCaseList,

@@ -1,0 +1,192 @@
+{
+  "config": {
+    "configFile": "D:\\Prod-Playwright\\playright-refactor\\temp.config.js",
+    "rootDir": "D:/Prod-Playwright/playright-refactor/tests/CL",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "D:/Prod-Playwright/playright-refactor/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chrome",
+        "name": "chrome",
+        "testDir": "D:/Prod-Playwright/playright-refactor/tests/CL",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 150000
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "json",
+        {
+          "outputFile": "report-temp/kcorp-consolidated-check.json"
+        }
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "report-temp/kcorp-consolidated-check-html",
+          "open": "never"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.59.1",
+    "workers": 1,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "kcorp-consolidated-check.spec.js",
+      "file": "kcorp-consolidated-check.spec.js",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "Validate consolidated report file names, size and date",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 300000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chrome",
+              "projectName": "chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 13513,
+                  "errors": [],
+                  "stdout": [
+                    {
+                      "text": "✅ Cookie popup accepted\n"
+                    },
+                    {
+                      "text": "✅ Clicked KCorpAROEHAN\n"
+                    },
+                    {
+                      "text": "✅ Backup page opened\n"
+                    },
+                    {
+                      "text": "\n================================================\n"
+                    },
+                    {
+                      "text": "📊 CONSOLIDATED REPORT FILE STATUS\n"
+                    },
+                    {
+                      "text": "================================================\n\n"
+                    },
+                    {
+                      "text": "✅ Up to date | ANC | Size: 1.2258 MB | Date: May 27, 2026 | Age: 1 days\n"
+                    },
+                    {
+                      "text": "✅ Up to date | ANC_Follow_Up | Size: 3.318 MB | Date: May 27, 2026 | Age: 1 days\n"
+                    },
+                    {
+                      "text": "✅ Up to date | Birth_History_(Gravida) | Size: 1.392 MB | Date: May 27, 2026 | Age: 1 days\n"
+                    },
+                    {
+                      "text": "✅ Up to date | Check_baby_indicators | Size: 20.1571 MB | Date: May 27, 2026 | Age: 1 days\n"
+                    },
+                    {
+                      "text": "✅ Up to date | Child_delivery | Size: 3.461 MB | Date: May 27, 2026 | Age: 1 days\n"
+                    },
+                    {
+                      "text": "✅ Up to date | Family_details | Size: 1.7818 MB | Date: May 27, 2026 | Age: 1 days\n"
+                    },
+                    {
+                      "text": "✅ Up to date | Immunization | Size: 7.9861 MB | Date: May 27, 2026 | Age: 1 days\n"
+                    },
+                    {
+                      "text": "✅ Up to date | MCJ_Case_Measurements | Size: 15.8627 MB | Date: May 27, 2026 | Age: 1 days\n"
+                    },
+                    {
+                      "text": "✅ Up to date | MCJ_Case_Report | Size: 4.4311 MB | Date: May 27, 2026 | Age: 1 days\n"
+                    },
+                    {
+                      "text": "✅ Up to date | Mother | Size: 4.7759 MB | Date: May 27, 2026 | Age: 1 days\n"
+                    },
+                    {
+                      "text": "✅ Up to date | PW_Mother_Education_Occupation | Size: 1.2304 MB | Date: May 27, 2026 | Age: 1 days\n"
+                    },
+                    {
+                      "text": "\n================================================\n"
+                    },
+                    {
+                      "text": "📌 SUMMARY\n"
+                    },
+                    {
+                      "text": "================================================\n"
+                    },
+                    {
+                      "text": "Total Expected Files: 11\n"
+                    },
+                    {
+                      "text": "Total Found Files: 11\n"
+                    },
+                    {
+                      "text": "Missing Files: 0\n"
+                    },
+                    {
+                      "text": "Not Up To Date Files: 0\n"
+                    },
+                    {
+                      "text": "\n✅ Consolidated report validation completed\n"
+                    }
+                  ],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-05-28T02:59:55.315Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "7208925aca034a7054da-3bec1f943e4d6588d363",
+          "file": "kcorp-consolidated-check.spec.js",
+          "line": 33,
+          "column": 1
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-05-28T02:59:53.387Z",
+    "duration": 18285.535,
+    "expected": 1,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  }
+}

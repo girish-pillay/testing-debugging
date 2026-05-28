@@ -1,7 +1,7 @@
 {
   "config": {
-    "configFile": "D:\\playright-refactor\\temp.config.js",
-    "rootDir": "D:/playright-refactor/tests/CL",
+    "configFile": "D:\\Prod-Playwright\\playright-refactor\\temp.config.js",
+    "rootDir": "D:/Prod-Playwright/playright-refactor/tests/CL",
     "forbidOnly": false,
     "fullyParallel": false,
     "globalSetup": null,
@@ -16,7 +16,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "D:/playright-refactor/test-results",
+        "outputDir": "D:/Prod-Playwright/playright-refactor/test-results",
         "repeatEach": 1,
         "retries": 1,
         "metadata": {
@@ -24,7 +24,7 @@
         },
         "id": "chrome",
         "name": "chrome",
-        "testDir": "D:/playright-refactor/tests/CL",
+        "testDir": "D:/Prod-Playwright/playright-refactor/tests/CL",
         "testIgnore": [],
         "testMatch": [
           "**/*.@(spec|test).?(c|m)[jt]s?(x)"
@@ -83,7 +83,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 49600,
+                  "duration": 43986,
                   "errors": [],
                   "stdout": [
                     {
@@ -93,30 +93,30 @@
                       "text": "✅ Found 10 SUW users\n"
                     },
                     {
-                      "text": "✅ UPC opened for: Anita waghela\n"
+                      "text": "✅ UPC opened for: Aruna Prajapat\n"
                     },
                     {
                       "text": "📊 Cases → Data present\n"
                     },
                     {
-                      "text": "📊 Actions → User: Rachana\n"
+                      "text": "📊 Actions → User: ज्योति व्यास\n"
                     },
                     {
-                      "text": "📊 Timeline → User: Simran\n"
+                      "text": "📊 Timeline → User: Saina bhi Asif\n"
                     },
                     {
-                      "text": "📊 Submissions → User: Babli\n"
+                      "text": "📊 Submissions → User: Sadiya bhi\n"
                     },
                     {
-                      "text": "📊 Indicators → User: Simran\n"
+                      "text": "📊 Indicators → User: Sadiya bhi\n"
                     },
                     {
-                      "text": "📊 Daily Report → Your activity for May 11, 2026\n"
+                      "text": "📊 Daily Report → Your activity for May 27, 2026\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-12T01:00:44.028Z",
+                  "startTime": "2026-05-28T02:52:08.877Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -126,7 +126,7 @@
           ],
           "id": "8f1c8886740de028ff7c-6ff6203544143d01cf10",
           "file": "UPC-Ujjain.spec.js",
-          "line": 172,
+          "line": 176,
           "column": 1
         },
         {
@@ -145,25 +145,25 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 16556,
+                  "duration": 16895,
                   "errors": [],
                   "stdout": [
                     {
                       "text": "MASD for Ujjain\n"
                     },
                     {
-                      "text": "📊 Case Summary → Last updated : May 11, 2026 08:21 am\n"
+                      "text": "📊 Case Summary → Last updated : May 27, 2026 06:24 am\n"
                     },
                     {
-                      "text": "📊 Case Activities → Last updated : May 11, 2026 05:30 am\n"
+                      "text": "📊 Case Activities → Last updated : May 27, 2026 05:30 am\n"
                     },
                     {
-                      "text": "📊 Coaching → Last updated : May 11, 2026 05:30 am\n"
+                      "text": "📊 Coaching → Last updated : May 27, 2026 05:30 am\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-12T01:01:36.583Z",
+                  "startTime": "2026-05-28T02:52:53.268Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -173,7 +173,7 @@
           ],
           "id": "8f1c8886740de028ff7c-c3cbb07005a356551459",
           "file": "UPC-Ujjain.spec.js",
-          "line": 231,
+          "line": 236,
           "column": 1
         },
         {
@@ -192,31 +192,31 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 19706,
+                  "duration": 18979,
                   "errors": [],
                   "stdout": [
                     {
-                      "text": "🕒 UJJAIN I2R Page Last Updated → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "🕒 UJJAIN I2R Page Last Updated → Last updated : May 27, 2026 06:30 am\n"
                     },
                     {
-                      "text": "📊 UJJAIN I2R → Role Summary → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "📊 UJJAIN I2R → Role Summary → Last updated : May 27, 2026 06:30 am\n"
                     },
                     {
-                      "text": "📊 UJJAIN I2R → HCW Requiring Guidance → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "📊 UJJAIN I2R → HCW Requiring Guidance → Last updated : May 27, 2026 06:30 am\n"
                     },
                     {
-                      "text": "📊 UJJAIN I2R → Cases Needing Guidance → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "📊 UJJAIN I2R → Cases Needing Guidance → Last updated : May 27, 2026 06:30 am\n"
                     },
                     {
-                      "text": "📊 UJJAIN I2R → Block/Village → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "📊 UJJAIN I2R → Block/Village → Last updated : May 27, 2026 06:30 am\n"
                     },
                     {
-                      "text": "📊 UJJAIN I2R → Training Status → Last updated : May 11, 2026 08:27 am\n"
+                      "text": "📊 UJJAIN I2R → Training Status → Last updated : May 27, 2026 06:30 am\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-12T01:01:53.196Z",
+                  "startTime": "2026-05-28T02:53:10.181Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -226,7 +226,7 @@
           ],
           "id": "8f1c8886740de028ff7c-0aaed6c939b69815fa09",
           "file": "UPC-Ujjain.spec.js",
-          "line": 326,
+          "line": 331,
           "column": 1
         }
       ]
@@ -234,8 +234,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-12T01:00:41.314Z",
-    "duration": 92513.23,
+    "startTime": "2026-05-28T02:52:07.202Z",
+    "duration": 82730.97600000001,
     "expected": 3,
     "skipped": 0,
     "unexpected": 0,
