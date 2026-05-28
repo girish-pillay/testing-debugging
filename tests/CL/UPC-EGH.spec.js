@@ -1,7 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pageObject/CL_loginpage');
-const dataset = require('../../cred/credential.json');
-const GHSecret = {
+//const dataset = require('../../cred/credential.json');
+const datset = {
   username: process.env.CW_USERNAME,
   password: process.env.CW_PASSWORD
   };
@@ -86,7 +86,9 @@ test('EGH PNC-SUW-MUW UPC  Tab-wise Validation', async ({ page }) => {
 
   /* ================= BASE CASE LIST ================= */
   await waitForCaseList(page);
-  console.log('✅ Base Case List loaded');
+ // console.log('✅ Base Case List loaded');
+  await page.waitForLoadState('networkidle');
+  await page.waitForTimeout(1500);
 
   /* ================= APPLY FILTERS ================= */
   await page.locator('#filter i').click();
