@@ -18,25 +18,32 @@ class LoginPage {
 }
 
 
+      async closePushSettingIfPresent() {
 
-async closePushSettingIfPresent() {
+  // Push Setting popup
   const pushTitle = this.page.getByText('Push Setting', { exact: true });
   const closeBtn = this.page.locator('#popup_close');
 
-  await pushTitle.waitFor({ state: 'visible', timeout: 2000 }).catch(() => {});
-
   if (await pushTitle.isVisible().catch(() => false)) {
-    //console.log('⚠️ Push setting popup detected');
-
     await closeBtn.first().click({ force: true }).catch(async () => {
       await closeBtn.first().evaluate(el => el.click());
     });
 
-    await pushTitle.waitFor({ state: 'hidden', timeout: 3000 }).catch(() => {});
     await this.page.waitForTimeout(500);
-    //console.log('✅ Push setting popup closed');
+    console.log('✅ Push Setting popup closed');
+  }
+
+  // Cookie popup
+  const acceptBtn = this.page.locator('button:has-text("Accept")');
+
+  if (await acceptBtn.isVisible().catch(() => false)) {
+    await acceptBtn.click({ force: true });
+    await this.page.waitForTimeout(500);
+    console.log('✅ Cookie popup accepted');
   }
 }
+
+   
 
    async ValidLogin(username, password) {
   await this.page.waitForSelector('text=Sign in with Email', { timeout: 15000 });

@@ -38,7 +38,7 @@ test('Validate consolidated report file names, size and date', async ({ page }) 
   await loginPage.goTo();
   await loginPage.ValidLogin(dataset.username, dataset.password);
 
-  await page.getByRole('list').locator('a').nth(1).click();
+  await page.getByRole('list').locator('a').nth(0).click();
   await page.waitForTimeout(1000);
 
   await loginPage.KCorpAROEHAN();
