@@ -208,37 +208,55 @@ if (await acceptBtn.isVisible().catch(() => false)) {
   }
   
 
-  async KCorpAROEHAN() {
-  const heading = this.page.locator('h5.pointer')
-    .filter({ hasText: 'KCorp Foundation -' })
-    .first();
+     async KCorpAROEHAN() {
 
-  await heading.waitFor({ state: 'visible', timeout: 30000 });
+  const globe = this.page.locator('li[data-tip] img').first();
 
-  await heading.click({ force: true });
+  await globe.waitFor({
+    state: 'visible',
+    timeout: 15000
+  });
 
-  console.log('✅ Clicked KCorpAROEHAN');
+  await globe.click({ force: true });
 
-  
-    // Then click the nested entry (child location or project)
-    const child = this.page.locator('h5', { hasText: 'KCorp Foundation - AROEHAN' });
-    await child.scrollIntoViewIfNeeded();
-    await child.click(); 	
-  
-    // Close the modal
-         const closeBtn = this.page.locator('#popup_close').first();
+  await this.page.waitForTimeout(2000);
 
-await closeBtn.waitFor({
-  state: 'visible',
-  timeout: 10000
-});
+  // Click parent exactly as old code used to do
+  const heading = this.page.locator('h5.pointer', {
+    hasText: 'KCorp Foundation -'
+  });
 
-await closeBtn.click({ force: true }).catch(async () => {
-  await closeBtn.evaluate(el => el.click());
-});
+  await heading.waitFor({
+    state: 'visible',
+    timeout: 30000
+  });
 
-await this.page.waitForTimeout(1000);
+  await heading.click();
+
+  await this.page.waitForTimeout(3000);
+
+  // Child org
+  const child = this.page.locator('h5', {
+    hasText: 'KCorp Foundation - AROEHAN'
+  });
+
+  await child.waitFor({
+    state: 'visible',
+    timeout: 20000
+  });
+
+  await child.click();
+
+  const closeBtn = this.page.locator('#popup_close').first();
+
+  if (await closeBtn.isVisible().catch(() => false)) {
+    await closeBtn.click({ force: true });
   }
+
+  console.log('✅ Switched to KCORP → AROEHAN');
+}   
+   
+      
 
   async KCorp_BAIF() {
     const heading = this.page.locator('h5.pointer', { hasText: 'KCorp Foundation -' });

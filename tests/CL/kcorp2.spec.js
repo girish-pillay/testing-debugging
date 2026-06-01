@@ -1,10 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pageObject/loginpage');
-//const dataset = JSON.parse(JSON.stringify(require('../../cred/credential.json')));
-const dataset = {
-  username: process.env.CW_USERNAME,
-  password: process.env.CW_PASSWORD
-  };
+const dataset = JSON.parse(JSON.stringify(require('../../cred/credential.json')));
 
 const fs = require('fs');
 const path = require('path');
@@ -58,8 +54,7 @@ test('Org Backup File Check (Match key, check age)', async ({ page }) => {
   await loginPage.goTo();
   await loginPage.ValidLogin(dataset.username, dataset.password);
 
-  await page.getByRole('list').locator('a').nth(0).click();
-  await page.waitForTimeout(1000);
+  
   await loginPage.KCorpAROEHAN();
   await page.waitForTimeout(2000);
 
