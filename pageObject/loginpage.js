@@ -209,10 +209,16 @@ if (await acceptBtn.isVisible().catch(() => false)) {
   
 
   async KCorpAROEHAN() {
-    const heading = this.page.locator('h5.pointer', { hasText: 'KCorp Foundation -' });
-    await heading.scrollIntoViewIfNeeded();
-    await heading.click();
-    console.log('✅ Clicked KCorpAROEHAN');
+  const heading = this.page.locator('h5.pointer')
+    .filter({ hasText: 'KCorp Foundation -' })
+    .first();
+
+  await heading.waitFor({ state: 'visible', timeout: 30000 });
+
+  await heading.click({ force: true });
+
+  console.log('✅ Clicked KCorpAROEHAN');
+
   
     // Then click the nested entry (child location or project)
     const child = this.page.locator('h5', { hasText: 'KCorp Foundation - AROEHAN' });
