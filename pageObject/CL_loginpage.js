@@ -108,15 +108,28 @@ async ValidLogin(username, password) {
     }
   } catch {}
 
-  await this.page.waitForLoadState('domcontentloaded');
-  console.log('🌐 Current URL:', this.page.url());
+  await this.page.waitForLoadState('networkidle').catch(() => {});
+await this.page.waitForTimeout(3000);
+
+try {
+  await this.page.locator('li[data-tip] img').first().waitFor({
+    state: 'visible',
+    timeout: 30000
+  });
+
+  console.log('✅ Globe icon found');
+} catch {
+  console.log('❌ Globe icon NOT found after login');
+}
+
+console.log('🌐 Current URL:', this.page.url());
 
 await this.page.screenshot({
   path: `after-login-${Date.now()}.png`,
   fullPage: true
 });
 
-  console.log('✅ Login completed');
+console.log('✅ Login completed');
 }
  /* async ValidLogin(username, password) {
     await this.page.waitForSelector('text=Sign in with Email', { timeout: 15000 });
