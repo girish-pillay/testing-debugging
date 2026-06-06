@@ -122,7 +122,34 @@ try {
   console.log('❌ Globe icon NOT found after login');
 }
 
+
 console.log('🌐 Current URL:', this.page.url());
+
+// Check popups 5 times
+for (let i = 0; i < 5; i++) {
+
+  const acceptBtn = this.page.locator('button:has-text("Accept")').first();
+
+  if (await acceptBtn.isVisible().catch(() => false)) {
+    await acceptBtn.click({ force: true });
+    console.log('✅ Cookie accepted');
+  }
+
+  const popupClose = this.page.locator('#popup_close').first();
+
+  if (await popupClose.isVisible().catch(() => false)) {
+    await popupClose.click({ force: true });
+    console.log('✅ Notification popup closed');
+  }
+
+  await this.page.waitForTimeout(1000);
+}
+
+console.log('Popup close count:',
+  await this.page.locator('#popup_close').count());
+
+console.log('Accept count:',
+  await this.page.locator('button:has-text("Accept")').count());
 
 await this.page.screenshot({
   path: `after-login-${Date.now()}.png`,
@@ -130,6 +157,8 @@ await this.page.screenshot({
 });
 
 console.log('✅ Login completed');
+
+
 }
  /* async ValidLogin(username, password) {
     await this.page.waitForSelector('text=Sign in with Email', { timeout: 15000 });
