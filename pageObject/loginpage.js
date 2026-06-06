@@ -23,39 +23,69 @@ async goTo()
 
 
 
-async ValidLogin(username, password) {   
-  await this.page.waitForLoadState('networkidle');
-  await this.page.waitForSelector('text=Sign in with Email', { timeout: 10000 });
+
+async ValidLogin(username, password) {
+
+  await this.page.waitForSelector('text=Sign in with Email', {
+    timeout: 15000
+  });
 
   await this.signinicon.click();
+
   await this.username.fill(username);
-  await this.username.press('Tab');
   await this.password.fill(password);
+
   await this.signin.click();
 
-  if (await this.closebtn.isVisible().catch(() => false)) {
-  await this.closebtn.click();
-}
+  console.log('✅ Login button clicked');
 
-  // ✅ Close Push Setting popup immediately after login
-  await this.page.waitForTimeout(1000);
+  await this.page.waitForTimeout(3000);
 
-  const popupClose = this.page.locator('#popup_close').first();
+  // Close button popup
+  try {
+    const closeBtn = this.page.getByRole('button', { name: /^Close$/i });
 
-  if (await popupClose.isVisible().catch(() => false)) {
-    console.log('⚠️ Push setting popup detected after login');
-    await popupClose.click({ force: true });
-    await this.page.waitForTimeout(800);
-    console.log('✅ Push setting popup closed');
-  }
+    if (await closeBtn.first().isVisible().catch(() => false)) {
+      await closeBtn.first().click({ force: true });
+      console.log('✅ Close popup handled');
+    }
+  } catch {}
 
-  // ✅ Cookie Accept popup
-const acceptBtn = this.page.locator('button:has-text("Accept")');
+  // Push Setting popup
+  try {
+    const popupClose = this.page.locator('#popup_close').first();
 
-if (await acceptBtn.isVisible().catch(() => false)) {
-  await acceptBtn.click({ force: true });
-  console.log('✅ Cookie popup accepted');
-}
+    if (await popupClose.isVisible().catch(() => false)) {
+      await popupClose.click({ force: true });
+      console.log('✅ Push Setting popup closed');
+    }
+  } catch {}
+
+  // Cookie popup
+  try {
+    const acceptBtn = this.page.locator('button:has-text("Accept")').first();
+
+    if (await acceptBtn.isVisible().catch(() => false)) {
+      await acceptBtn.click({ force: true });
+      console.log('✅ Cookie popup accepted');
+    }
+  } catch {}
+
+  // Sometimes cookie popup appears late
+  await this.page.waitForTimeout(2000);
+
+  try {
+    const acceptBtn = this.page.locator('button:has-text("Accept")').first();
+
+    if (await acceptBtn.isVisible().catch(() => false)) {
+      await acceptBtn.click({ force: true });
+      console.log('✅ Late Cookie popup accepted');
+    }
+  } catch {}
+
+  await this.page.waitForLoadState('domcontentloaded');
+
+  console.log('✅ Login completed');
 }
 
  
