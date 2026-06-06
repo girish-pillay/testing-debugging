@@ -1,10 +1,7 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pageObject/CL_loginpage');
 //const dataset = require('../../cred/credential.json');
-const dataset = {
-  username: process.env.CW_USERNAME,
-  password: process.env.CW_PASSWORD
-  };
+const dataset = {username: process.env.CW_USERNAME,password: process.env.CW_PASSWORD};
 const { loginToApp, openMASD } = require('./helpers/commonActions');
 
 async function extractMasdLastUpdated(page, tabName) {
@@ -17,23 +14,13 @@ async function extractMasdLastUpdated(page, tabName) {
     const panelId = await tab.getAttribute('aria-controls');
     const panel = page.locator(`#${panelId}`);
 
-    await page.waitForLoadState('networkidle');
-await page.waitForTimeout(1500);
+    const lastUpdated = panel
+      .locator('div.font-14.text-lite-gray', { hasText: /Last updated/i })
+      .first();
 
-const lastUpdated = panel
-  .locator('div.font-14.text-lite-gray')
-  .filter({ hasText: /Last updated/i })
-  .first();
-
-await lastUpdated.waitFor({
-  state: 'visible',
-  timeout: 20000
-});
-
-await expect(lastUpdated).toContainText(
-  /\d{4}|\bam\b|\bpm\b/,
-  { timeout: 20000 }
-);
+    await expect(lastUpdated).toContainText(/\d{4}|\bam\b|\bpm\b/, {
+      timeout: 20000
+    });
 
     const text = (await lastUpdated.innerText()).replace(/\s+/g, ' ').trim();
     console.log(`📊 JIIU IIMSR → ${tabName} → ${text}`);

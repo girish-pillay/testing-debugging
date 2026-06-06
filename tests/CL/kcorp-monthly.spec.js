@@ -1,17 +1,13 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pageObject/loginpage');
-//const dataset = JSON.parse(JSON.stringify(require('../../cred/credential.json')));
-const dataset = {
-  username: process.env.CW_USERNAME,
-  password: process.env.CW_PASSWORD
-  };
+const dataset = JSON.parse(JSON.stringify(require('../../cred/credential.json')));
 
 test('Org backup for KCorp districts', async ({ page }) => {
   const loginPage = new LoginPage(page);
   await loginPage.goTo();
   await loginPage.ValidLogin(dataset.username, dataset.password);
 
-  await page.getByRole('list').locator('a').nth(0).click();
+  await page.getByRole('list').locator('a').nth(1).click();
   await page.waitForTimeout(1000);
   await loginPage.KCorpAROEHAN();
   await page.waitForTimeout(2000);
@@ -78,8 +74,8 @@ for (let i = 1; i < Math.min(rowCount, 20); i++) {
   if ((await cells.count()) < 3) continue;
 
   const fileName = (await cells.nth(1).textContent()).trim();
-  const fileDate = (await cells.nth(2).textContent()).trim();
   const fileSize = (await cells.nth(2).textContent()).trim();
+  const fileDate = (await cells.nth(3).textContent()).trim();
 
   if (/\.csv$/.test(fileName)) {
    console.log(`${fileName.padEnd(75)} Size: ${fileSize.padEnd(10)} Date: ${fileDate}`);

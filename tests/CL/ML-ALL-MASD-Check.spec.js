@@ -1,10 +1,6 @@
 const { test, expect } = require('@playwright/test');
 const { LoginCheck } = require('../../pageObject/CL_logincheck');
-//const dataset = require('../../cred/credential.json');
-const dataset = {
-  username: process.env.CW_USERNAME,
-  password: process.env.CW_PASSWORD
-  };
+const dataset = {username: process.env.CW_USERNAME,password: process.env.CW_PASSWORD};
 
 test('All Meghalaya orgs -> MASD -> print last updated from each tab', async ({ page }) => {
   test.setTimeout(10 * 60 * 1000);
@@ -53,45 +49,24 @@ test('All Meghalaya orgs -> MASD -> print last updated from each tab', async ({ 
     }
   }
 
-      async function getLastUpdatedFromCurrentTab(page) {
+  async function getLastUpdatedFromCurrentTab(page) {
+    const activePanel = page.locator('div[role="tabpanel"][aria-hidden="false"]').first();
 
-  const activePanel = page
-    .locator('div[role="tabpanel"][aria-hidden="false"]')
-    .first();
+    try {
+      await activePanel.waitFor({ state: 'visible', timeout: 10000 });
 
-  try {
+      const text = await activePanel.evaluate((panel) => {
+        const match = panel.innerText.match(
+          /Last\s*updated\s*:?\s*[A-Za-z]{3}\s+\d{1,2},\s+\d{4}\s+\d{1,2}:\d{2}\s*(am|pm)/i
+        );
+        return match ? match[0] : null;
+      });
 
-    await activePanel.waitFor({
-      state: 'visible',
-      timeout: 15000
-    });
-
-    await page.waitForLoadState('networkidle');
-    await page.waitForTimeout(1500);
-
-    const lastUpdated = activePanel
-      .locator('div.font-14.text-lite-gray')
-      .filter({ hasText: /Last updated/i })
-      .first();
-
-    await lastUpdated.waitFor({
-      state: 'visible',
-      timeout: 20000
-    });
-
-    const text = (await lastUpdated.innerText())
-      .replace(/\s+/g, ' ')
-      .trim();
-
-    return text;
-
-  } catch {
-    return null;
+      return text ? text.replace(/\s+/g, ' ').trim() : null;
+    } catch {
+      return null;
+    }
   }
-}
-
-
-
 
   async function waitForMasdTabs(page) {
     const tabList = page.locator('[role="tab"]');

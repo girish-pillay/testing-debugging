@@ -83,9 +83,7 @@ test('EGH PNC-SUW-MUW UPC  Tab-wise Validation', async ({ page }) => {
 
   /* ================= BASE CASE LIST ================= */
   await waitForCaseList(page);
- // console.log('✅ Base Case List loaded');
-  await page.waitForLoadState('networkidle');
-  await page.waitForTimeout(1500);
+  console.log('✅ Base Case List loaded');
 
   /* ================= APPLY FILTERS ================= */
   await page.locator('#filter i').click();
