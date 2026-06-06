@@ -1,7 +1,7 @@
 
 
 const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('../../pageObject/CL_loginpage');
+const { LoginPage } = require('../../pageObject/CL_logincheck');
 //const dataset = require('../../cred/credential.json');
 const dataset = {username: process.env.CW_USERNAME,password: process.env.CW_PASSWORD};
 const {
