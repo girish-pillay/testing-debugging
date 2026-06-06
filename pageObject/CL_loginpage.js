@@ -51,14 +51,26 @@ class LoginPage {
 
   await this.username.fill(username);
   await this.password.fill(password);
-  await this.signin.click();
+   await this.signin.click();
 
-  await this.page.getByRole('button', { name: 'Close' }).click();
-  await this.page.waitForLoadState('networkidle');
+await this.page.waitForLoadState('domcontentloaded');
 
-  await this.closePushSettingIfPresent();
+try {
+  const closeBtn = this.page.getByRole('button', { name: /^Close$/i });
+
+  if (await closeBtn.isVisible({ timeout: 5000 })) {
+    await closeBtn.click();
+    console.log('✅ Close popup handled');
+  }
+} catch {
+  console.log('ℹ️ Close popup not present');
 }
 
+await this.closePushSettingIfPresent();
+
+await this.page.waitForLoadState('networkidle').catch(() => {});
+
+   }
  /* async ValidLogin(username, password) {
     await this.page.waitForSelector('text=Sign in with Email', { timeout: 15000 });
     await this.signinicon.click();
