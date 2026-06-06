@@ -109,6 +109,12 @@ async ValidLogin(username, password) {
   } catch {}
 
   await this.page.waitForLoadState('domcontentloaded');
+  console.log('🌐 Current URL:', this.page.url());
+
+await this.page.screenshot({
+  path: `after-login-${Date.now()}.png`,
+  fullPage: true
+});
 
   console.log('✅ Login completed');
 }
