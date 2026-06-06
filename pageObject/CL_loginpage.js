@@ -18,59 +18,100 @@ class LoginPage {
 }
 
 
-      async closePushSettingIfPresent() {
+     async closePushSettingIfPresent() {
 
-  // Push Setting popup
-  const pushTitle = this.page.getByText('Push Setting', { exact: true });
-  const closeBtn = this.page.locator('#popup_close');
+  try {
+    const pushClose = this.page.locator('#popup_close').first();
 
-  if (await pushTitle.isVisible().catch(() => false)) {
-    await closeBtn.first().click({ force: true }).catch(async () => {
-      await closeBtn.first().evaluate(el => el.click());
-    });
+    if (await pushClose.isVisible().catch(() => false)) {
+      await pushClose.click({ force: true });
+      console.log('✅ Push popup closed');
+      await this.page.waitForTimeout(500);
+    }
+  } catch {}
 
-    await this.page.waitForTimeout(500);
-    console.log('✅ Push Setting popup closed');
-  }
+  try {
+    const acceptBtn = this.page.locator('button:has-text("Accept")').first();
 
-  // Cookie popup
-  const acceptBtn = this.page.locator('button:has-text("Accept")');
-
-  if (await acceptBtn.isVisible().catch(() => false)) {
-    await acceptBtn.click({ force: true });
-    await this.page.waitForTimeout(500);
-    console.log('✅ Cookie popup accepted');
-  }
+    if (await acceptBtn.isVisible().catch(() => false)) {
+      await acceptBtn.click({ force: true });
+      console.log('✅ Cookie accepted');
+      await this.page.waitForTimeout(500);
+    }
+  } catch {}
 }
-
    
 
-   async ValidLogin(username, password) {
-  await this.page.waitForSelector('text=Sign in with Email', { timeout: 15000 });
+async ValidLogin(username, password) {
+  await this.page.waitForSelector('text=Sign in with Email', {
+    timeout: 15000
+  });
+
   await this.signinicon.click();
 
   await this.username.fill(username);
   await this.password.fill(password);
-   await this.signin.click();
 
-await this.page.waitForLoadState('domcontentloaded');
+  await this.signin.click();
 
-try {
-  const closeBtn = this.page.getByRole('button', { name: /^Close$/i });
+  console.log('✅ Login button clicked');
 
-  if (await closeBtn.isVisible({ timeout: 5000 })) {
-    await closeBtn.click();
-    console.log('✅ Close popup handled');
+  // Wait for page to settle
+  await this.page.waitForTimeout(3000);
+
+  // Handle Close popup if present
+  try {
+    const closeBtn = this.page.getByRole('button', { name: /^Close$/i });
+
+    if (await closeBtn.first().isVisible().catch(() => false)) {
+      await closeBtn.first().click({ force: true });
+      console.log('✅ Close popup handled');
+    }
+  } catch {
+    console.log('ℹ️ Close popup not present');
   }
-} catch {
-  console.log('ℹ️ Close popup not present');
+
+  // Handle Push Setting popup
+  try {
+    const pushClose = this.page.locator('#popup_close').first();
+
+    if (await pushClose.isVisible().catch(() => false)) {
+      await pushClose.click({ force: true });
+      console.log('✅ Push Setting popup closed');
+    }
+  } catch {
+    console.log('ℹ️ Push popup not present');
+  }
+
+  // Handle Cookie banner
+  try {
+    const acceptBtn = this.page.locator('button:has-text("Accept")').first();
+
+    if (await acceptBtn.isVisible().catch(() => false)) {
+      await acceptBtn.click({ force: true });
+      console.log('✅ Cookie popup accepted');
+      await this.page.waitForTimeout(1000);
+    }
+  } catch {
+    console.log('ℹ️ Cookie popup not present');
+  }
+
+  // One more check after page finishes loading
+  await this.page.waitForTimeout(2000);
+
+  try {
+    const acceptBtn = this.page.locator('button:has-text("Accept")').first();
+
+    if (await acceptBtn.isVisible().catch(() => false)) {
+      await acceptBtn.click({ force: true });
+      console.log('✅ Late Cookie popup accepted');
+    }
+  } catch {}
+
+  await this.page.waitForLoadState('domcontentloaded');
+
+  console.log('✅ Login completed');
 }
-
-await this.closePushSettingIfPresent();
-
-await this.page.waitForLoadState('networkidle').catch(() => {});
-
-   }
  /* async ValidLogin(username, password) {
     await this.page.waitForSelector('text=Sign in with Email', { timeout: 15000 });
     await this.signinicon.click();
