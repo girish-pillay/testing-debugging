@@ -46,21 +46,21 @@ class LoginPage {
   
 
    async ValidLogin(username, password) {
-  console.log(
-  'USERNAME:',
-  process.env.CW_USERNAME ? 'FOUND' : 'MISSING'
-);
-
-console.log(
-  'PASSWORD:',
-  process.env.CW_PASSWORD ? 'FOUND' : 'MISSING'
-);
+  
   await this.page.waitForSelector('text=Sign in with Email', { timeout: 15000 });
   await this.signinicon.click();
 
   await this.username.fill(username);
   await this.password.fill(password);
   await this.signin.click();
+  await this.page.waitForTimeout(5000);
+
+console.log('AFTER LOGIN URL:', this.page.url());
+
+console.log(
+  'HEADINGS:',
+  await this.page.locator('h1,h2,h3').allTextContents()
+);
 
 const closeBtn = this.page.getByRole('button', { name: 'Close' });
 
