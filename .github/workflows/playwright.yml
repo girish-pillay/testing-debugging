@@ -53,6 +53,13 @@ jobs:
         with:
           name: report-final
           path: report-final/
+
+      - name: Upload test results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+         name: test-results
+         path: test-results/
       
 
       - name: Upload JSON report
