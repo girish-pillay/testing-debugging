@@ -53,10 +53,20 @@ class LoginPage {
   await this.password.fill(password);
   await this.signin.click();
 
-  await this.page.getByRole('button', { name: 'Close' }).click();
-  await this.page.waitForLoadState('networkidle');
+const closeBtn = this.page.getByRole('button', { name: 'Close' });
 
-  await this.closePushSettingIfPresent();
+try {
+  await closeBtn.waitFor({ state: 'visible', timeout: 5000 });
+  await closeBtn.click({ force: true });
+  console.log('✅ Close popup clicked');
+} catch {
+  console.log('⚠️ Close popup not shown');
+}
+
+await this.page.waitForLoadState('domcontentloaded').catch(() => {});
+await this.page.waitForTimeout(1000);
+
+await this.closePushSettingIfPresent();
 }
 
  /* async ValidLogin(username, password) {
