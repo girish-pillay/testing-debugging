@@ -52,8 +52,12 @@ class LoginPage {
 
   await this.username.fill(username);
   await this.password.fill(password);
+  console.log('USERNAME FIELD:', await this.username.inputValue());
+  console.log('PASSWORD LENGTH:', (await this.password.inputValue()).length);
   await this.signin.click();
   await this.page.waitForTimeout(5000);
+  const errors = await this.page.locator('text=/invalid|incorrect|failed|error/i').allTextContents().catch(() => []);
+  console.log('LOGIN ERRORS:', errors);
 
 console.log('AFTER LOGIN URL:', this.page.url());
 
