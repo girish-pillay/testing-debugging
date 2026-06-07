@@ -174,7 +174,7 @@ test('UJJAIN Complete Validation | UPC + MASD + I2R', async ({ page }) => {
   await loginToApp(loginPage, dataset);
 
   /* ================= SELECT UJJAIN ONCE ================= */
-  await page.getByRole('list').locator('a').first().click();
+  await page.waitForTimeout(3000);
   await loginPage.UJJAIN();
 
   console.log('✅ UJJAIN selected');
