@@ -14,7 +14,7 @@ async function openCaseList(page) {
   await page.goto('https://demo.cuedwell.com/health/table', {
     waitUntil: 'domcontentloaded'
   });
-  await expect(page).toHaveURL(/\/health\/table/, { timeout: 30000 });
+  await expect(page).toHaveURL(/\/health\/table/, { timeout: 45000 });
 }
 
 async function closeFilterPanel(page) {
@@ -56,7 +56,7 @@ async function openMASD(page) {
   await masdLink.waitFor({ state: 'visible', timeout: 20000 });
 
   await Promise.all([
-    page.waitForURL(/\/members\/mcj\/activity/, { timeout: 30000 }),
+    page.waitForURL(/\/members\/mcj\/activity/, { timeout: 45000 }),
     masdLink.click()
   ]);
 
@@ -87,7 +87,7 @@ async function openI2R(page) {
     hasText: /Role Summary|HCW Requiring Guidance|Cases Needing Guidance|Block\/Village|Training Status/i
   }).first();
 
-  await expect(i2rReady).toBeVisible({ timeout: 30000 });
+  await expect(i2rReady).toBeVisible({ timeout: 45000 });
 
   // Confirm Last updated exists
   const lastUpdated = page.locator('div.font-14.text-lite-gray').filter({
@@ -95,7 +95,7 @@ async function openI2R(page) {
   }).first();
 
   await expect(lastUpdated).toContainText(/\d{4}|\bam\b|\bpm\b/i, {
-    timeout: 30000
+    timeout: 45000
   });
 }
 

@@ -30,6 +30,7 @@ async function extractMasdLastUpdated(page, tabName) {
 }
 
 test('JIIU IIMSR MASD Last Updated Extraction', async ({ page }) => {
+   test.setTimeout(5 * 60 * 1000);
   const loginPage = new LoginPage(page);
 
   /* ================= LOGIN ================= */

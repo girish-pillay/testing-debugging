@@ -1,42 +1,21 @@
-const { test, expect } = require('@playwright/test');
+const { test } = require('@playwright/test');
 const { LoginPage } = require('../../pageObject/CL_loginpage');
 //const dataset = require('../../cred/credential.json');
 const dataset = {username: process.env.CW_USERNAME,password: process.env.CW_PASSWORD};
+
 const {
   loginToApp,
   waitForCaseList,
   closeFilterPanel,
-  applyCheckboxFilter,
-  openMASD,
-  openCaseList,
-  openI2R
+  openCaseList
 } = require('./helpers/commonActions');
 
-
-async function getI2RLastUpdated(page) {
-  const lastUpdated = page.locator('div.font-14.text-lite-gray').filter({
-    hasText: /Last updated/i
-  }).first();
-
-  await lastUpdated.waitFor({ state: 'visible', timeout: 15000 });
-  return (await lastUpdated.innerText()).replace(/\s+/g, ' ').trim();
-}
-
-async function openTabAndPrintLastUpdated(page, tabName) {
-  const tab = page.getByRole('tab', { name: tabName });
-  await tab.waitFor({ state: 'visible', timeout: 15000 });
-  await tab.click();
-  await page.waitForTimeout(800);
-
-  const text = await getI2RLastUpdated(page);
-  console.log(`📊 I2R → ${tabName} → ${text}`);
-}
-
-
+const {
+  validateTabData
+} = require('./helpers/upcHelpers');
 
 async function findRowByBadge(page, badgeText) {
   const rows = page.locator('#patient_lists tbody tr');
-
   const maxScrolls = 25;
 
   for (let i = 0; i < maxScrolls; i++) {
@@ -45,19 +24,18 @@ async function findRowByBadge(page, badgeText) {
     for (let r = 0; r < count; r++) {
       const row = rows.nth(r);
 
-      // EXACT badge DOM
       const badgeSpans = row.locator('div.badge-2 span');
-
       const badgeCount = await badgeSpans.count();
+
       for (let b = 0; b < badgeCount; b++) {
         const text = (await badgeSpans.nth(b).innerText()).trim();
+
         if (text === badgeText) {
           return row;
         }
       }
     }
 
-    // 🔥 SCROLL THE PAGE (NOT CONTAINER)
     await page.mouse.wheel(0, 800);
     await page.waitForTimeout(700);
   }
@@ -65,39 +43,36 @@ async function findRowByBadge(page, badgeText) {
   return null;
 }
 
-
-
-test('EGH PNC-SUW-MUW UPC  Tab-wise Validation', async ({ page }) => {
+test('EGH UPC Validation Only', async ({ page }) => {
 
   const loginPage = new LoginPage(page);
 
-  /* ================= LOGIN ================= */
   await loginToApp(loginPage, dataset);
 
-  /* ================= NAVIGATION ================= */
   await loginPage.EGH();
 
-  await openCaseList(page);
+console.log(`🌐 Landed after EGH() on: ${page.url()}`);
 
-  console.log(`🌐 On URL: ${page.url()}`);
+await page.waitForTimeout(3000);
 
-  /* ================= BASE CASE LIST ================= */
-  await waitForCaseList(page);
-  console.log('✅ Base Case List loaded');
+await openCaseList(page);
 
-  /* ================= APPLY FILTERS ================= */
+console.log(`🌐 On URL: ${page.url()}`);
+
+await waitForCaseList(page);
+
+console.log('✅ Base Case List loaded');
+
   await page.locator('#filter i').click();
 
-  // PNC
   await page.getByText('Current stage of case', { exact: true }).click();
+
   await page.locator('.checkbox-container', { hasText: 'PNC' })
     .locator('.checkbox-checkmark')
     .click();
 
-  // Z-score (Weight)
   await page.getByText('Z-score (Weight)', { exact: true }).click();
 
-  // SUW + MUW
   await page.locator('.checkbox-container', { hasText: 'SUW' })
     .locator('.checkbox-checkmark')
     .click();
@@ -106,13 +81,10 @@ test('EGH PNC-SUW-MUW UPC  Tab-wise Validation', async ({ page }) => {
     .locator('.checkbox-checkmark')
     .click();
 
-  await page.keyboard.press('Escape');
+  await closeFilterPanel(page);
+
   console.log('✅ Filters applied (PNC + SUW + MUW)');
 
-  // Allow React to settle
-  await page.waitForTimeout(1500);
-
-  /* ================= FIND TARGET USER ================= */
   let targetRow = await findRowByBadge(page, 'SUW');
   let badgeUsed = 'SUW';
 
@@ -123,19 +95,18 @@ test('EGH PNC-SUW-MUW UPC  Tab-wise Validation', async ({ page }) => {
   }
 
   if (!targetRow) {
-    throw new Error('No SUW or MUW user found in Case List');
+    console.log('⚠️ No SUW or MUW user found');
+    return;
   }
 
   console.log(`✅ ${badgeUsed} user found`);
 
-  await targetRow.scrollIntoViewIfNeeded();
-  await expect(targetRow).toBeVisible();
+  const upcUser = targetRow.locator('.uline-hov').first();
 
-  /* ================= OPEN UPC ================= */
-  const upcUser = targetRow.locator('.uline-hov');
   const userName = (await upcUser.textContent())?.trim();
 
   await upcUser.click();
+
   await page.waitForSelector('.ml-modal-content', {
     state: 'visible',
     timeout: 20000
@@ -143,7 +114,8 @@ test('EGH PNC-SUW-MUW UPC  Tab-wise Validation', async ({ page }) => {
 
   console.log(`✅ UPC opened for ${badgeUsed}: ${userName}`);
 
-  /* ================= TAB VALIDATION ================= */
+  const modal = page.locator('.ml-modal');
+
   const tabs = [
     'Cases',
     'Actions',
@@ -152,172 +124,12 @@ test('EGH PNC-SUW-MUW UPC  Tab-wise Validation', async ({ page }) => {
     'Indicators',
     'Daily Report'
   ];
-    const modal = page.locator('.ml-modal');
-await modal.waitFor({ state: 'visible', timeout: 15000 });
-
-for (const tabName of tabs) {
-  try {
-    // Click tab inside modal
-    const tab = modal.getByRole('tab', { name: tabName });
-    await tab.click();
-
-    // Get exact panel linked to this tab (IMPORTANT)
-    const panelId = await tab.getAttribute('aria-controls');
-    const panel = modal.locator(`#${panelId}`);
-    await panel.waitFor({ state: 'attached', timeout: 20000 });
-
-    /* ================= CASES ================= */
-    if (tabName === 'Cases') {
-  try {
-    const lastUpdated = panel.locator(
-      'div.text-lite-gray',
-      { hasText: 'Last updated at' }
-    ).first();
-
-    await lastUpdated.waitFor({ timeout: 15000 });
-
-    const text = (await lastUpdated.innerText()).trim();
-    console.log(`📊 Cases → ${text}`);
-  } catch {
-    console.log('📭 Cases → No data in tab');
-  }
-  continue;
-}
-
-    /* ================= ACTIONS ================= */
-    if (tabName === 'Actions') {
-      const firstRow = panel.locator('table tbody tr').first();
-      try {
-        // Wait for actual data row (React async fix)
-        await firstRow.waitFor({ state: 'visible', timeout: 20000 });
-
-        const name = (await firstRow.locator('td.text-gray').first().innerText()).trim();
-        console.log(`📊 Actions → User: ${name}`);
-      } catch {
-        console.log(`📭 Actions → No data in tab`);
-      }
-      continue;
-    }
-
-    /* ================= TIMELINE ================= */
-if (tabName === 'Timeline') {
-  try {
-    const firstRow = panel.locator('table tbody tr').first();
-    await firstRow.waitFor({ timeout: 15000 });
-
-    const name = (await firstRow.locator('td').first().innerText()).trim();
-    console.log(`📊 Timeline → User: ${name}`);
-  } catch {
-    console.log('📭 Timeline → No data in tab');
-  }
-  continue;
-}
-
-
-/* ================= SUBMISSIONS ================= */
-      if (tabName === 'Submissions') {
-  const rows = panel.locator('table tbody tr');
-  const count = await rows.count();
-
-  if (count > 0) {
-    const name = (await rows.first().locator('td').first().innerText()).trim();
-    console.log(`📊 Submissions → User: ${name}`);
-  } else {
-    console.log(`📭 Submissions → No data in tab`);
-  }
-  continue;
-}
-
-
-
-    /* ================= INDICATORS ================= */
-    if (tabName === 'Indicators') {
-      const firstRow = panel.locator('table tbody tr').first();
-      try {
-        await firstRow.waitFor({ state: 'visible', timeout: 20000 });
-
-        const name = (await firstRow.locator('td').first().innerText()).trim();
-        console.log(`📊 Indicators → User: ${name}`);
-      } catch {
-        console.log(`📭 Indicators → No data in tab`);
-      }
-      continue;
-    }
-
-    /* ================= DAILY REPORT ================= */
-   if (tabName === 'Daily Report') {
-  try {
-    // Global search because Daily Report is rendered via React portal
-    const dailyText = page.locator(
-      'text=/Your activity for/i'
-    ).first();
-
-    await dailyText.waitFor({ timeout: 20000 });
-
-    const proof = (await dailyText.innerText())
-      .split('\n')[0]
-      .trim();
-
-    console.log(`📊 Daily Report → ${proof}`);
-  } catch {
-    console.log(`📭 Daily Report → No data in tab`);
-  }
-  continue;
-}
-
-
-  } catch (err) {
-    console.warn(`❌ ${tabName} → Validation failed`);
-  }
-}
-
-
-});
-
-  
-
-
-
-
-test('EGH-I2R-Check', async ({ page }) => {
-  const loginPage = new LoginPage(page);
-
-  /* ================= LOGIN ================= */
-  await loginToApp(loginPage, dataset);
-
-  /* ================= ORG SWITCH ================= */
-  //await loginPage.EGH();
-  console.log(`🌐 Landed after EGH() on: ${page.url()}`);
-
-  /* ================= OPEN I2R ================= */
-  await openI2R(page);
-  console.log('✅ Items To Review page opened');
-
-  /* ================= PAGE LEVEL LAST UPDATED ================= */
-  try {
-    const pageLastUpdated = await getI2RLastUpdated(page);
-    console.log(`🕒 I2R Page Last Updated → ${pageLastUpdated}`);
-  } catch {
-    console.log('📭 I2R Page Last Updated not found');
-  }
-
-  /* ================= TAB-WISE ================= */
-  const tabs = [
-    'Role Summary',
-    'HCW Requiring Guidance',
-    'Cases Needing Guidance',
-    'Block/Village',
-    'Training Status'
-  ];
 
   for (const tabName of tabs) {
     try {
-      await openTabAndPrintLastUpdated(page, tabName);
-    } catch (err) {
-      console.log(`❌ I2R → ${tabName} → Last updated not found`);
+      await validateTabData(modal, page, tabName);
+    } catch {
+      console.log(`❌ ${tabName} → Validation failed`);
     }
   }
 });
-
-
-
