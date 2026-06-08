@@ -83,7 +83,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 18216,
+                  "duration": 14233,
                   "errors": [],
                   "stdout": [
                     {
@@ -96,10 +96,25 @@
                       "text": "📁 Fresh downloads folder created\n"
                     },
                     {
+                      "text": "⚠️ Push setting popup detected after login\n"
+                    },
+                    {
+                      "text": "✅ Push setting popup closed\n"
+                    },
+                    {
                       "text": "✅ Cookie popup accepted\n"
                     },
                     {
-                      "text": "✅ Clicked KCorpAROEHAN\n"
+                      "text": "✅ Organization popup opened\n"
+                    },
+                    {
+                      "text": "✅ KCorp clicked\n"
+                    },
+                    {
+                      "text": "✅ AROEHAN clicked\n"
+                    },
+                    {
+                      "text": "✅ Switched to KCORP → AROEHAN\n"
                     },
                     {
                       "text": "🔗 Navigating directly to Org Backup URL: https://demo.cuedwell.com/backup/52acd869-1dcb-4f11-a337-53ce7eb2d994\n"
@@ -126,223 +141,223 @@
                       "text": "\n📄 Extracted Filenames (73 total):\n"
                     },
                     {
-                      "text": "01. MCJ_Case_Measurements_United_Way_Mumbai_2026-05-27.csv (7.4643 MB)\n"
+                      "text": "01. MCJ_Case_Measurements_United_Way_Mumbai_2026-06-07.csv (7.6828 MB)\n"
                     },
                     {
-                      "text": "02. MCJ_Case_Report_United_Way_Mumbai_2026-05-27.csv (1.6437 MB)\n"
+                      "text": "02. MCJ_Case_Report_United_Way_Mumbai_2026-06-07.csv (1.6575 MB)\n"
                     },
                     {
-                      "text": "03. PW_Mother_Education_Occupation_United_Way_Mumbai_2026-05-27-202505.csv (0.6153 MB)\n"
+                      "text": "03. PW_Mother_Education_Occupation_United_Way_Mumbai_2026-06-07-161333.csv (0.6346 MB)\n"
                     },
                     {
-                      "text": "04. Family_details_United_Way_Mumbai_2026-05-27-202505.csv (0.8523 MB)\n"
+                      "text": "04. Family_details_United_Way_Mumbai_2026-06-07-161326.csv (0.8671 MB)\n"
                     },
                     {
-                      "text": "05. Child_delivery_United_Way_Mumbai_2026-05-27-202505.csv (1.4231 MB)\n"
+                      "text": "05. Child_delivery_United_Way_Mumbai_2026-06-07-161315.csv (1.4521 MB)\n"
                     },
                     {
-                      "text": "06. Birth_History_(Gravida)_United_Way_Mumbai_2026-05-27-202505.csv (0.6673 MB)\n"
+                      "text": "06. Birth_History_(Gravida)_United_Way_Mumbai_2026-06-07-161309.csv (0.6792 MB)\n"
                     },
                     {
-                      "text": "07. Mother_United_Way_Mumbai_2026-05-27-202504.csv (1.6451 MB)\n"
+                      "text": "07. Mother_United_Way_Mumbai_2026-06-07-161259.csv (1.6748 MB)\n"
                     },
                     {
-                      "text": "08. Check_baby_indicators_United_Way_Mumbai_2026-05-27-202503.csv (9.0837 MB)\n"
+                      "text": "08. Check_baby_indicators_United_Way_Mumbai_2026-06-07-161222.csv (9.3275 MB)\n"
                     },
                     {
-                      "text": "09. Immunization_United_Way_Mumbai_2026-05-27-202501.csv (0.2948 MB)\n"
+                      "text": "09. Immunization_United_Way_Mumbai_2026-06-07-161214.csv (0.2956 MB)\n"
                     },
                     {
-                      "text": "10. ANC_Follow_Up_United_Way_Mumbai_2026-05-27-202501.csv (0.4472 MB)\n"
+                      "text": "10. ANC_Follow_Up_United_Way_Mumbai_2026-06-07-161210.csv (0.4544 MB)\n"
                     },
                     {
-                      "text": "11. ANC_United_Way_Mumbai_2026-05-27-202500.csv (0.0896 MB)\n"
+                      "text": "11. ANC_United_Way_Mumbai_2026-06-07-161208.csv (0.0916 MB)\n"
                     },
                     {
-                      "text": "12. MCJ_Case_Measurements_AROEHAN_2026-05-27.csv (1.4738 MB)\n"
+                      "text": "12. MCJ_Case_Measurements_AROEHAN_2026-06-07.csv (1.4987 MB)\n"
                     },
                     {
-                      "text": "13. MCJ_Case_Report_AROEHAN_2026-05-27.csv (0.7994 MB)\n"
+                      "text": "13. MCJ_Case_Report_AROEHAN_2026-06-07.csv (0.8036 MB)\n"
                     },
                     {
-                      "text": "14. PW_Mother_Education_Occupation_AROEHAN_2026-05-27-202455.csv (0.2531 MB)\n"
+                      "text": "14. PW_Mother_Education_Occupation_AROEHAN_2026-06-07-161145.csv (0.2571 MB)\n"
                     },
                     {
-                      "text": "15. Family_details_AROEHAN_2026-05-27-202454.csv (0.4466 MB)\n"
+                      "text": "15. Family_details_AROEHAN_2026-06-07-161143.csv (0.4525 MB)\n"
                     },
                     {
-                      "text": "16. Child_delivery_AROEHAN_2026-05-27-202454.csv (0.4993 MB)\n"
+                      "text": "16. Child_delivery_AROEHAN_2026-06-07-161140.csv (0.5046 MB)\n"
                     },
                     {
-                      "text": "17. Birth_History_(Gravida)_AROEHAN_2026-05-27-202454.csv (0.2882 MB)\n"
+                      "text": "17. Birth_History_(Gravida)_AROEHAN_2026-06-07-161137.csv (0.2925 MB)\n"
                     },
                     {
-                      "text": "18. Mother_AROEHAN_2026-05-27-202454.csv (1.0555 MB)\n"
+                      "text": "18. Mother_AROEHAN_2026-06-07-161132.csv (1.0625 MB)\n"
                     },
                     {
-                      "text": "19. Check_baby_indicators_AROEHAN_2026-05-27-202454.csv (1.9232 MB)\n"
+                      "text": "19. Check_baby_indicators_AROEHAN_2026-06-07-161124.csv (1.9555 MB)\n"
                     },
                     {
-                      "text": "20. Immunization_AROEHAN_2026-05-27-202453.csv (1.9306 MB)\n"
+                      "text": "20. Immunization_AROEHAN_2026-06-07-161113.csv (1.9899 MB)\n"
                     },
                     {
-                      "text": "21. ANC_Follow_Up_AROEHAN_2026-05-27-202452.csv (0.9416 MB)\n"
+                      "text": "21. ANC_Follow_Up_AROEHAN_2026-06-07-161107.csv (0.9572 MB)\n"
                     },
                     {
-                      "text": "22. ANC_AROEHAN_2026-05-27-202452.csv (0.5601 MB)\n"
+                      "text": "22. ANC_AROEHAN_2026-06-07-161103.csv (0.5665 MB)\n"
                     },
                     {
-                      "text": "23. MCJ_Case_Measurements_Armman_2026-05-27.csv (0.4176 MB)\n"
+                      "text": "23. MCJ_Case_Measurements_Armman_2026-06-07.csv (0.4176 MB)\n"
                     },
                     {
-                      "text": "24. MCJ_Case_Report_Armman_2026-05-27.csv (0.4208 MB)\n"
+                      "text": "24. MCJ_Case_Report_Armman_2026-06-07.csv (0.4208 MB)\n"
                     },
                     {
-                      "text": "25. Child_delivery_Armman_2026-05-27-202450.csv (0.2765 MB)\n"
+                      "text": "25. Child_delivery_Armman_2026-06-07-161055.csv (0.2765 MB)\n"
                     },
                     {
-                      "text": "26. Birth_History_(Gravida)_Armman_2026-05-27-202450.csv (0.0009 MB)\n"
+                      "text": "26. Birth_History_(Gravida)_Armman_2026-06-07-161053.csv (0.0009 MB)\n"
                     },
                     {
-                      "text": "27. Mother_Armman_2026-05-27-202450.csv (0.3927 MB)\n"
+                      "text": "27. Mother_Armman_2026-06-07-161050.csv (0.3927 MB)\n"
                     },
                     {
-                      "text": "28. Check_baby_indicators_Armman_2026-05-27-202450.csv (0.571 MB)\n"
+                      "text": "28. Check_baby_indicators_Armman_2026-06-07-161046.csv (0.571 MB)\n"
                     },
                     {
-                      "text": "29. Immunization_Armman_2026-05-27-202450.csv (0.0009 MB)\n"
+                      "text": "29. Immunization_Armman_2026-06-07-161044.csv (0.0009 MB)\n"
                     },
                     {
-                      "text": "30. MCJ_Case_Measurements_Bal_Raksha_Bharat_2026-05-27.csv (1.1216 MB)\n"
+                      "text": "30. MCJ_Case_Measurements_Bal_Raksha_Bharat_2026-06-07.csv (1.1424 MB)\n"
                     },
                     {
-                      "text": "31. MCJ_Case_Report_Bal_Raksha_Bharat_2026-05-27.csv (0.4309 MB)\n"
+                      "text": "31. MCJ_Case_Report_Bal_Raksha_Bharat_2026-06-07.csv (0.4368 MB)\n"
                     },
                     {
-                      "text": "32. PW_Mother_Education_Occupation_Bal_Raksha_Bharat_2026-05-27-202448.csv (0.1139 MB)\n"
+                      "text": "32. PW_Mother_Education_Occupation_Bal_Raksha_Bharat_2026-06-07-161030.csv (0.1155 MB)\n"
                     },
                     {
-                      "text": "33. Family_details_Bal_Raksha_Bharat_2026-05-27-202448.csv (0.1427 MB)\n"
+                      "text": "33. Family_details_Bal_Raksha_Bharat_2026-06-07-161029.csv (0.1445 MB)\n"
                     },
                     {
-                      "text": "34. Child_delivery_Bal_Raksha_Bharat_2026-05-27-202448.csv (0.3294 MB)\n"
+                      "text": "34. Child_delivery_Bal_Raksha_Bharat_2026-06-07-161027.csv (0.3389 MB)\n"
                     },
                     {
-                      "text": "35. Birth_History_(Gravida)_Bal_Raksha_Bharat_2026-05-27-202448.csv (0.1526 MB)\n"
+                      "text": "35. Birth_History_(Gravida)_Bal_Raksha_Bharat_2026-06-07-161025.csv (0.1545 MB)\n"
                     },
                     {
-                      "text": "36. Mother_Bal_Raksha_Bharat_2026-05-27-202448.csv (0.4575 MB)\n"
+                      "text": "36. Mother_Bal_Raksha_Bharat_2026-06-07-161021.csv (0.4585 MB)\n"
                     },
                     {
-                      "text": "37. Check_baby_indicators_Bal_Raksha_Bharat_2026-05-27-202447.csv (1.3768 MB)\n"
+                      "text": "37. Check_baby_indicators_Bal_Raksha_Bharat_2026-06-07-161014.csv (1.3917 MB)\n"
                     },
                     {
-                      "text": "38. Immunization_Bal_Raksha_Bharat_2026-05-27-202447.csv (2.4705 MB)\n"
+                      "text": "38. Immunization_Bal_Raksha_Bharat_2026-06-07-161002.csv (2.5029 MB)\n"
                     },
                     {
-                      "text": "39. ANC_Follow_Up_Bal_Raksha_Bharat_2026-05-27-202446.csv (0.4035 MB)\n"
+                      "text": "39. ANC_Follow_Up_Bal_Raksha_Bharat_2026-06-07-160957.csv (0.4112 MB)\n"
                     },
                     {
-                      "text": "40. ANC_Bal_Raksha_Bharat_2026-05-27-202446.csv (0.1582 MB)\n"
+                      "text": "40. ANC_Bal_Raksha_Bharat_2026-06-07-160955.csv (0.16 MB)\n"
                     },
                     {
-                      "text": "41. MCJ_Case_Measurements_CYDA_2026-05-27.csv (0.3814 MB)\n"
+                      "text": "41. MCJ_Case_Measurements_CYDA_2026-06-07.csv (0.3883 MB)\n"
                     },
                     {
-                      "text": "42. MCJ_Case_Report_CYDA_2026-05-27.csv (0.2195 MB)\n"
+                      "text": "42. MCJ_Case_Report_CYDA_2026-06-07.csv (0.2283 MB)\n"
                     },
                     {
-                      "text": "43. PW_Mother_Education_Occupation_CYDA_2026-05-27-202445.csv (0.116 MB)\n"
+                      "text": "43. PW_Mother_Education_Occupation_CYDA_2026-06-07-160947.csv (0.1201 MB)\n"
                     },
                     {
-                      "text": "44. Family_details_CYDA_2026-05-27-202444.csv (0.139 MB)\n"
+                      "text": "44. Family_details_CYDA_2026-06-07-160946.csv (0.144 MB)\n"
                     },
                     {
-                      "text": "45. Child_delivery_CYDA_2026-05-27-202444.csv (0.1921 MB)\n"
+                      "text": "45. Child_delivery_CYDA_2026-06-07-160944.csv (0.1929 MB)\n"
                     },
                     {
-                      "text": "46. Birth_History_(Gravida)_CYDA_2026-05-27-202444.csv (0.1132 MB)\n"
+                      "text": "46. Birth_History_(Gravida)_CYDA_2026-06-07-160942.csv (0.1171 MB)\n"
                     },
                     {
-                      "text": "47. Mother_CYDA_2026-05-27-202444.csv (0.2898 MB)\n"
+                      "text": "47. Mother_CYDA_2026-06-07-160939.csv (0.2856 MB)\n"
                     },
                     {
-                      "text": "48. Check_baby_indicators_CYDA_2026-05-27-202444.csv (0.5278 MB)\n"
+                      "text": "48. Check_baby_indicators_CYDA_2026-06-07-160935.csv (0.5312 MB)\n"
                     },
                     {
-                      "text": "49. Immunization_CYDA_2026-05-27-202444.csv (0.6905 MB)\n"
+                      "text": "49. Immunization_CYDA_2026-06-07-160930.csv (0.75 MB)\n"
                     },
                     {
-                      "text": "50. ANC_Follow_Up_CYDA_2026-05-27-202443.csv (0.1702 MB)\n"
+                      "text": "50. ANC_Follow_Up_CYDA_2026-06-07-160926.csv (0.1758 MB)\n"
                     },
                     {
-                      "text": "51. ANC_CYDA_2026-05-27-202443.csv (0.0225 MB)\n"
+                      "text": "51. ANC_CYDA_2026-06-07-160924.csv (0.0233 MB)\n"
                     },
                     {
-                      "text": "52. MCJ_Case_Measurements_BAIF_BISLD_2026-05-27.csv (3.6722 MB)\n"
+                      "text": "52. MCJ_Case_Measurements_BAIF_BISLD_2026-06-07.csv (3.727 MB)\n"
                     },
                     {
-                      "text": "53. MCJ_Case_Report_BAIF_BISLD_2026-05-27.csv (0.7206 MB)\n"
+                      "text": "53. MCJ_Case_Report_BAIF_BISLD_2026-06-07.csv (0.7269 MB)\n"
                     },
                     {
-                      "text": "54. PW_Mother_Education_Occupation_BAIF_BISLD_2026-05-27-202437.csv (0.0522 MB)\n"
+                      "text": "54. PW_Mother_Education_Occupation_BAIF_BISLD_2026-06-07-160845.csv (0.1104 MB)\n"
                     },
                     {
-                      "text": "55. Family_details_BAIF_BISLD_2026-05-27-202437.csv (0.1089 MB)\n"
+                      "text": "55. Family_details_BAIF_BISLD_2026-06-07-160844.csv (0.1489 MB)\n"
                     },
                     {
-                      "text": "56. Child_delivery_BAIF_BISLD_2026-05-27-202437.csv (0.5686 MB)\n"
+                      "text": "56. Child_delivery_BAIF_BISLD_2026-06-07-160841.csv (0.5738 MB)\n"
                     },
                     {
-                      "text": "57. Birth_History_(Gravida)_BAIF_BISLD_2026-05-27-202437.csv (0.093 MB)\n"
+                      "text": "57. Birth_History_(Gravida)_BAIF_BISLD_2026-06-07-160839.csv (0.1238 MB)\n"
                     },
                     {
-                      "text": "58. Mother_BAIF_BISLD_2026-05-27-202436.csv (0.7369 MB)\n"
+                      "text": "58. Mother_BAIF_BISLD_2026-06-07-160835.csv (0.7667 MB)\n"
                     },
                     {
-                      "text": "59. Check_baby_indicators_BAIF_BISLD_2026-05-27-202436.csv (4.5877 MB)\n"
+                      "text": "59. Check_baby_indicators_BAIF_BISLD_2026-06-07-160819.csv (4.6619 MB)\n"
                     },
                     {
-                      "text": "60. Immunization_BAIF_BISLD_2026-05-27-202434.csv (0.9208 MB)\n"
+                      "text": "60. Immunization_BAIF_BISLD_2026-06-07-160812.csv (1.0809 MB)\n"
                     },
                     {
-                      "text": "61. ANC_Follow_Up_BAIF_BISLD_2026-05-27-202434.csv (0.9424 MB)\n"
+                      "text": "61. ANC_Follow_Up_BAIF_BISLD_2026-06-07-160805.csv (0.9699 MB)\n"
                     },
                     {
-                      "text": "62. ANC_BAIF_BISLD_2026-05-27-202434.csv (0.2888 MB)\n"
+                      "text": "62. ANC_BAIF_BISLD_2026-06-07-160802.csv (0.2984 MB)\n"
                     },
                     {
-                      "text": "63. MCJ_Case_Measurements_CRY_2026-05-27.csv (1.3318 MB)\n"
+                      "text": "63. MCJ_Case_Measurements_CRY_2026-06-07.csv (1.3801 MB)\n"
                     },
                     {
-                      "text": "64. MCJ_Case_Report_CRY_2026-05-27.csv (0.1962 MB)\n"
+                      "text": "64. MCJ_Case_Report_CRY_2026-06-07.csv (0.1993 MB)\n"
                     },
                     {
-                      "text": "65. PW_Mother_Education_Occupation_CRY_2026-05-27-202432.csv (0.0799 MB)\n"
+                      "text": "65. PW_Mother_Education_Occupation_CRY_2026-06-07-160751.csv (0.0808 MB)\n"
                     },
                     {
-                      "text": "66. Family_details_CRY_2026-05-27-202432.csv (0.0923 MB)\n"
+                      "text": "66. Family_details_CRY_2026-06-07-160750.csv (0.0932 MB)\n"
                     },
                     {
-                      "text": "67. Child_delivery_CRY_2026-05-27-202432.csv (0.172 MB)\n"
+                      "text": "67. Child_delivery_CRY_2026-06-07-160748.csv (0.1731 MB)\n"
                     },
                     {
-                      "text": "68. Birth_History_(Gravida)_CRY_2026-05-27-202432.csv (0.0768 MB)\n"
+                      "text": "68. Birth_History_(Gravida)_CRY_2026-06-07-160746.csv (0.0777 MB)\n"
                     },
                     {
-                      "text": "69. Mother_CRY_2026-05-27-202431.csv (0.1984 MB)\n"
+                      "text": "69. Mother_CRY_2026-06-07-160743.csv (0.2003 MB)\n"
                     },
                     {
-                      "text": "70. Check_baby_indicators_CRY_2026-05-27-202431.csv (2.0869 MB)\n"
+                      "text": "70. Check_baby_indicators_CRY_2026-06-07-160736.csv (2.166 MB)\n"
                     },
                     {
-                      "text": "71. Immunization_CRY_2026-05-27-202430.csv (1.678 MB)\n"
+                      "text": "71. Immunization_CRY_2026-06-07-160725.csv (1.6946 MB)\n"
                     },
                     {
-                      "text": "72. ANC_Follow_Up_CRY_2026-05-27-202429.csv (0.4131 MB)\n"
+                      "text": "72. ANC_Follow_Up_CRY_2026-06-07-160719.csv (0.4273 MB)\n"
                     },
                     {
-                      "text": "73. ANC_CRY_2026-05-27-202429.csv (0.1066 MB)\n"
+                      "text": "73. ANC_CRY_2026-06-07-160716.csv (0.109 MB)\n"
                     },
                     {
                       "text": "📦 Total files extracted: 73\n\n"
@@ -351,37 +366,37 @@
                       "text": "🔹 NGO: BAIF_BISLD\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Measurements_BAIF_BISLD → Found on 3.6722 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Measurements_BAIF_BISLD → Found on 3.727 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Report_BAIF_BISLD → Found on 0.7206 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Report_BAIF_BISLD → Found on 0.7269 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Check_baby_indicators_BAIF_BISLD → Found on 4.5877 MB\n"
+                      "text": "   ✅ ❌  Check_baby_indicators_BAIF_BISLD → Found on 4.6619 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Child_delivery_BAIF_BISLD → Found on 0.5686 MB\n"
+                      "text": "   ✅ ❌  Child_delivery_BAIF_BISLD → Found on 0.5738 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Mother_BAIF_BISLD → Found on 0.7369 MB\n"
+                      "text": "   ✅ ❌  Mother_BAIF_BISLD → Found on 0.7667 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_Follow_Up_BAIF_BISLD → Found on 0.9424 MB\n"
+                      "text": "   ✅ ❌  ANC_Follow_Up_BAIF_BISLD → Found on 0.9699 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_BAIF_BISLD → Found on 0.2888 MB\n"
+                      "text": "   ✅ ❌  ANC_BAIF_BISLD → Found on 0.2984 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_BAIF_BISLD → Found on 0.0522 MB\n"
+                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_BAIF_BISLD → Found on 0.1104 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Birth_History_(Gravida)_BAIF_BISLD → Found on 0.093 MB\n"
+                      "text": "   ✅ ❌  Birth_History_(Gravida)_BAIF_BISLD → Found on 0.1238 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Family_details_BAIF_BISLD → Found on 0.1089 MB\n"
+                      "text": "   ✅ ❌  Family_details_BAIF_BISLD → Found on 0.1489 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Immunization_BAIF_BISLD → Found on 0.9208 MB\n"
+                      "text": "   ✅ ❌  Immunization_BAIF_BISLD → Found on 1.0809 MB\n"
                     },
                     {
                       "text": "\n   📊 Summary for BAIF_BISLD: ✅ Available = 11, ❌ Missing = 0\n\n"
@@ -390,37 +405,37 @@
                       "text": "🔹 NGO: AROEHAN\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Measurements_AROEHAN → Found on 1.4738 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Measurements_AROEHAN → Found on 1.4987 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Report_AROEHAN → Found on 0.7994 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Report_AROEHAN → Found on 0.8036 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Check_baby_indicators_AROEHAN → Found on 1.9232 MB\n"
+                      "text": "   ✅ ❌  Check_baby_indicators_AROEHAN → Found on 1.9555 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Child_delivery_AROEHAN → Found on 0.4993 MB\n"
+                      "text": "   ✅ ❌  Child_delivery_AROEHAN → Found on 0.5046 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Mother_AROEHAN → Found on 1.0555 MB\n"
+                      "text": "   ✅ ❌  Mother_AROEHAN → Found on 1.0625 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_Follow_Up_AROEHAN → Found on 0.9416 MB\n"
+                      "text": "   ✅ ❌  ANC_Follow_Up_AROEHAN → Found on 0.9572 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_AROEHAN → Found on 0.5601 MB\n"
+                      "text": "   ✅ ❌  ANC_AROEHAN → Found on 0.5665 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_AROEHAN → Found on 0.2531 MB\n"
+                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_AROEHAN → Found on 0.2571 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Birth_History_(Gravida)_AROEHAN → Found on 0.2882 MB\n"
+                      "text": "   ✅ ❌  Birth_History_(Gravida)_AROEHAN → Found on 0.2925 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Family_details_AROEHAN → Found on 0.4466 MB\n"
+                      "text": "   ✅ ❌  Family_details_AROEHAN → Found on 0.4525 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Immunization_AROEHAN → Found on 1.9306 MB\n"
+                      "text": "   ✅ ❌  Immunization_AROEHAN → Found on 1.9899 MB\n"
                     },
                     {
                       "text": "\n   📊 Summary for AROEHAN: ✅ Available = 11, ❌ Missing = 0\n\n"
@@ -429,37 +444,37 @@
                       "text": "🔹 NGO: Bal_Raksha_Bharat\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Measurements_Bal_Raksha_Bharat → Found on 1.1216 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Measurements_Bal_Raksha_Bharat → Found on 1.1424 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Report_Bal_Raksha_Bharat → Found on 0.4309 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Report_Bal_Raksha_Bharat → Found on 0.4368 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Check_baby_indicators_Bal_Raksha_Bharat → Found on 1.3768 MB\n"
+                      "text": "   ✅ ❌  Check_baby_indicators_Bal_Raksha_Bharat → Found on 1.3917 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Child_delivery_Bal_Raksha_Bharat → Found on 0.3294 MB\n"
+                      "text": "   ✅ ❌  Child_delivery_Bal_Raksha_Bharat → Found on 0.3389 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Mother_Bal_Raksha_Bharat → Found on 0.4575 MB\n"
+                      "text": "   ✅ ❌  Mother_Bal_Raksha_Bharat → Found on 0.4585 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_Follow_Up_Bal_Raksha_Bharat → Found on 0.4035 MB\n"
+                      "text": "   ✅ ❌  ANC_Follow_Up_Bal_Raksha_Bharat → Found on 0.4112 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_Bal_Raksha_Bharat → Found on 0.1582 MB\n"
+                      "text": "   ✅ ❌  ANC_Bal_Raksha_Bharat → Found on 0.16 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_Bal_Raksha_Bharat → Found on 0.1139 MB\n"
+                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_Bal_Raksha_Bharat → Found on 0.1155 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Birth_History_(Gravida)_Bal_Raksha_Bharat → Found on 0.1526 MB\n"
+                      "text": "   ✅ ❌  Birth_History_(Gravida)_Bal_Raksha_Bharat → Found on 0.1545 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Family_details_Bal_Raksha_Bharat → Found on 0.1427 MB\n"
+                      "text": "   ✅ ❌  Family_details_Bal_Raksha_Bharat → Found on 0.1445 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Immunization_Bal_Raksha_Bharat → Found on 2.4705 MB\n"
+                      "text": "   ✅ ❌  Immunization_Bal_Raksha_Bharat → Found on 2.5029 MB\n"
                     },
                     {
                       "text": "\n   📊 Summary for Bal_Raksha_Bharat: ✅ Available = 11, ❌ Missing = 0\n\n"
@@ -468,37 +483,37 @@
                       "text": "🔹 NGO: CRY\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Measurements_CRY → Found on 1.3318 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Measurements_CRY → Found on 1.3801 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Report_CRY → Found on 0.1962 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Report_CRY → Found on 0.1993 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Check_baby_indicators_CRY → Found on 2.0869 MB\n"
+                      "text": "   ✅ ❌  Check_baby_indicators_CRY → Found on 2.166 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Child_delivery_CRY → Found on 0.172 MB\n"
+                      "text": "   ✅ ❌  Child_delivery_CRY → Found on 0.1731 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Mother_CRY → Found on 0.1984 MB\n"
+                      "text": "   ✅ ❌  Mother_CRY → Found on 0.2003 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_Follow_Up_CRY → Found on 0.4131 MB\n"
+                      "text": "   ✅ ❌  ANC_Follow_Up_CRY → Found on 0.4273 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_CRY → Found on 0.1066 MB\n"
+                      "text": "   ✅ ❌  ANC_CRY → Found on 0.109 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_CRY → Found on 0.0799 MB\n"
+                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_CRY → Found on 0.0808 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Birth_History_(Gravida)_CRY → Found on 0.0768 MB\n"
+                      "text": "   ✅ ❌  Birth_History_(Gravida)_CRY → Found on 0.0777 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Family_details_CRY → Found on 0.0923 MB\n"
+                      "text": "   ✅ ❌  Family_details_CRY → Found on 0.0932 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Immunization_CRY → Found on 1.678 MB\n"
+                      "text": "   ✅ ❌  Immunization_CRY → Found on 1.6946 MB\n"
                     },
                     {
                       "text": "\n   📊 Summary for CRY: ✅ Available = 11, ❌ Missing = 0\n\n"
@@ -507,37 +522,37 @@
                       "text": "🔹 NGO: United_Way_Mumbai\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Measurements_United_Way_Mumbai → Found on 7.4643 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Measurements_United_Way_Mumbai → Found on 7.6828 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Report_United_Way_Mumbai → Found on 1.6437 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Report_United_Way_Mumbai → Found on 1.6575 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Check_baby_indicators_United_Way_Mumbai → Found on 9.0837 MB\n"
+                      "text": "   ✅ ❌  Check_baby_indicators_United_Way_Mumbai → Found on 9.3275 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Child_delivery_United_Way_Mumbai → Found on 1.4231 MB\n"
+                      "text": "   ✅ ❌  Child_delivery_United_Way_Mumbai → Found on 1.4521 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Mother_United_Way_Mumbai → Found on 1.6451 MB\n"
+                      "text": "   ✅ ❌  Mother_United_Way_Mumbai → Found on 1.6748 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_Follow_Up_United_Way_Mumbai → Found on 0.4472 MB\n"
+                      "text": "   ✅ ❌  ANC_Follow_Up_United_Way_Mumbai → Found on 0.4544 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_United_Way_Mumbai → Found on 0.0896 MB\n"
+                      "text": "   ✅ ❌  ANC_United_Way_Mumbai → Found on 0.0916 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_United_Way_Mumbai → Found on 0.6153 MB\n"
+                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_United_Way_Mumbai → Found on 0.6346 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Birth_History_(Gravida)_United_Way_Mumbai → Found on 0.6673 MB\n"
+                      "text": "   ✅ ❌  Birth_History_(Gravida)_United_Way_Mumbai → Found on 0.6792 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Family_details_United_Way_Mumbai → Found on 0.8523 MB\n"
+                      "text": "   ✅ ❌  Family_details_United_Way_Mumbai → Found on 0.8671 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Immunization_United_Way_Mumbai → Found on 0.2948 MB\n"
+                      "text": "   ✅ ❌  Immunization_United_Way_Mumbai → Found on 0.2956 MB\n"
                     },
                     {
                       "text": "\n   📊 Summary for United_Way_Mumbai: ✅ Available = 11, ❌ Missing = 0\n\n"
@@ -546,37 +561,37 @@
                       "text": "🔹 NGO: CYDA\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Measurements_CYDA → Found on 0.3814 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Measurements_CYDA → Found on 0.3883 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  MCJ_Case_Report_CYDA → Found on 0.2195 MB\n"
+                      "text": "   ✅ ❌  MCJ_Case_Report_CYDA → Found on 0.2283 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Check_baby_indicators_CYDA → Found on 0.5278 MB\n"
+                      "text": "   ✅ ❌  Check_baby_indicators_CYDA → Found on 0.5312 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Child_delivery_CYDA → Found on 0.1921 MB\n"
+                      "text": "   ✅ ❌  Child_delivery_CYDA → Found on 0.1929 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Mother_CYDA → Found on 0.2898 MB\n"
+                      "text": "   ✅ ❌  Mother_CYDA → Found on 0.2856 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_Follow_Up_CYDA → Found on 0.1702 MB\n"
+                      "text": "   ✅ ❌  ANC_Follow_Up_CYDA → Found on 0.1758 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  ANC_CYDA → Found on 0.0225 MB\n"
+                      "text": "   ✅ ❌  ANC_CYDA → Found on 0.0233 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_CYDA → Found on 0.116 MB\n"
+                      "text": "   ✅ ❌  PW_Mother_Education_Occupation_CYDA → Found on 0.1201 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Birth_History_(Gravida)_CYDA → Found on 0.1132 MB\n"
+                      "text": "   ✅ ❌  Birth_History_(Gravida)_CYDA → Found on 0.1171 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Family_details_CYDA → Found on 0.139 MB\n"
+                      "text": "   ✅ ❌  Family_details_CYDA → Found on 0.144 MB\n"
                     },
                     {
-                      "text": "   ✅ ❌  Immunization_CYDA → Found on 0.6905 MB\n"
+                      "text": "   ✅ ❌  Immunization_CYDA → Found on 0.75 MB\n"
                     },
                     {
                       "text": "\n   📊 Summary for CYDA: ✅ Available = 11, ❌ Missing = 0\n\n"
@@ -621,12 +636,12 @@
                       "text": "\n   📊 Summary for Armman: ✅ Available = 7, ❌ Missing = 4\n\n"
                     },
                     {
-                      "text": "\n🕒 Run Timestamp: 2026-05-28 02:59:26\n"
+                      "text": "\n🕒 Run Timestamp: 2026-06-08 03:09:38\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-28T02:59:08.486Z",
+                  "startTime": "2026-06-08T03:09:23.807Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -636,7 +651,7 @@
           ],
           "id": "293c03fbd0d1b224ee1e-20b62088480db859fdc0",
           "file": "kcorp2.spec.js",
-          "line": 41,
+          "line": 37,
           "column": 1
         }
       ]
@@ -644,8 +659,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-28T02:59:07.348Z",
-    "duration": 20424.203,
+    "startTime": "2026-06-08T03:09:22.395Z",
+    "duration": 16572.063000000002,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

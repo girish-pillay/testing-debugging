@@ -22,13 +22,8 @@ const config = {
       name: 'chrome',
       use: {
         browserName: 'chromium',
-        headless: true,
-
-        trace: 'retain-on-failure',
-        video: 'retain-on-failure',
-        screenshot: 'only-on-failure',
-
-        permissions: ['geolocation', 'microphone'],
+        headless: false,
+         permissions: ['geolocation', 'microphone'],
 
       launchOptions: {
         args: [

@@ -248,7 +248,7 @@ const { execSync } = require('child_process');
 
 /* ================= CONFIG ================= */
 
-const testFiles = ['kcorp2'];
+const testFiles = ['UPC-Ujjain','ML-ALL-MASD-Check','ML-ALL-I2R-Check','kcorp2','kcorp-consolidated-check','JIIU-IIMSR'];
 
 const testDir = './tests/CL';
 

@@ -68,7 +68,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "EGH PNC-SUW-MUW UPC  Tab-wise Validation",
+          "title": "EGH UPC Validation Only",
           "ok": true,
           "tags": [],
           "tests": [
@@ -83,11 +83,20 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 11807,
+                  "duration": 21205,
                   "errors": [],
                   "stdout": [
                     {
+                      "text": "✅ Close popup clicked\n"
+                    },
+                    {
+                      "text": "✅ Push Setting popup closed\n"
+                    },
+                    {
                       "text": "✅ Organization switched to EGH\n"
+                    },
+                    {
+                      "text": "🌐 Landed after EGH() on: https://demo.cuedwell.com/ML%20East%20Garo%20Hills/members/b2840f10-ab91-43fe-8ce0-46fbbf0156b5\n"
                     },
                     {
                       "text": "🌐 On URL: https://demo.cuedwell.com/health/table\n"
@@ -102,30 +111,30 @@
                       "text": "✅ SUW user found\n"
                     },
                     {
-                      "text": "✅ UPC opened for SUW: Simchirik M Marak\n"
+                      "text": "✅ UPC opened for SUW: Usha S Sangma\n"
                     },
                     {
-                      "text": "📊 Cases → Last updated at May 27, 2026 06:24 am.\n"
+                      "text": "📊 Cases → Data present\n"
                     },
                     {
-                      "text": "📊 Actions → User: Silje B Momin\n"
+                      "text": "📊 Actions → User: Moonmoon   N  Marak\n"
                     },
                     {
-                      "text": "📊 Timeline → User: Trisilda D Sangma\n"
+                      "text": "📊 Timeline → User: Amchina R Marak\n"
                     },
                     {
-                      "text": "📭 Submissions → No data in tab\n"
+                      "text": "📊 Submissions → User: Amchina R Marak\n"
                     },
                     {
-                      "text": "📊 Indicators → User: Trisilda D Sangma\n"
+                      "text": "📊 Indicators → User: Amchina R Marak\n"
                     },
                     {
-                      "text": "📊 Daily Report → Your activity for May 27, 2026\n"
+                      "text": "📊 Daily Report → Your activity for Jun 7, 2026\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-28T02:53:54.374Z",
+                  "startTime": "2026-06-08T02:54:11.262Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -133,68 +142,9 @@
               "status": "expected"
             }
           ],
-          "id": "6fd7c2975f906fc32d63-333510806a287a061160",
+          "id": "6fd7c2975f906fc32d63-0a46e6fec62ceab0db60",
           "file": "UPC-EGH.spec.js",
-          "line": 73,
-          "column": 1
-        },
-        {
-          "title": "EGH-I2R-Check",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 150000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chrome",
-              "projectName": "chrome",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 14361,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "🌐 Landed after EGH() on: https://demo.cuedwell.com/ML%20East%20Garo%20Hills/members/b2840f10-ab91-43fe-8ce0-46fbbf0156b5\n"
-                    },
-                    {
-                      "text": "✅ Items To Review page opened\n"
-                    },
-                    {
-                      "text": "🕒 I2R Page Last Updated → Last updated : May 27, 2026 06:30 am\n"
-                    },
-                    {
-                      "text": "📊 I2R → Role Summary → Last updated : May 27, 2026 06:30 am\n"
-                    },
-                    {
-                      "text": "📊 I2R → HCW Requiring Guidance → Last updated : May 27, 2026 06:30 am\n"
-                    },
-                    {
-                      "text": "📊 I2R → Cases Needing Guidance → Last updated : May 27, 2026 06:30 am\n"
-                    },
-                    {
-                      "text": "📊 I2R → Block/Village → Last updated : May 27, 2026 06:30 am\n"
-                    },
-                    {
-                      "text": "📊 I2R → Training Status → Last updated : May 27, 2026 06:30 am\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-28T02:54:06.302Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "6fd7c2975f906fc32d63-2c50099a652aed6a0c6d",
-          "file": "UPC-EGH.spec.js",
-          "line": 285,
+          "line": 46,
           "column": 1
         }
       ]
@@ -202,9 +152,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-28T02:53:53.408Z",
-    "duration": 28026.887000000002,
-    "expected": 2,
+    "startTime": "2026-06-08T02:54:10.031Z",
+    "duration": 23472.466,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0

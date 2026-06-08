@@ -37,13 +37,13 @@
       [
         "json",
         {
-          "outputFile": "report-temp/ML-ALL-MASD-Check.json"
+          "outputFile": "report-temp/ML-ALL-I2R-Check.json"
         }
       ],
       [
         "html",
         {
-          "outputFolder": "report-temp/ML-ALL-MASD-Check-html",
+          "outputFolder": "report-temp/ML-ALL-I2R-Check-html",
           "open": "never"
         }
       ]
@@ -62,13 +62,13 @@
   },
   "suites": [
     {
-      "title": "ML-ALL-MASD-Check.spec.js",
-      "file": "ML-ALL-MASD-Check.spec.js",
+      "title": "ML-ALL-I2R-Check.spec.js",
+      "file": "ML-ALL-I2R-Check.spec.js",
       "column": 0,
       "line": 0,
       "specs": [
         {
-          "title": "All Meghalaya orgs -> MASD -> print last updated from each tab",
+          "title": "All Meghalaya orgs -> I2R -> print last updated from each tab",
           "ok": true,
           "tags": [],
           "tests": [
@@ -83,7 +83,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 127291,
+                  "duration": 116415,
                   "errors": [],
                   "stdout": [
                     {
@@ -108,25 +108,22 @@
                       "text": "🏢 Org selected -> Agalgre Awc\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for Agalgre Awc\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for Agalgre Awc on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -141,25 +138,22 @@
                       "text": "🏢 Org selected -> Bamkhosngi\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for Bamkhosngi\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for Bamkhosngi on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -174,25 +168,22 @@
                       "text": "🏢 Org selected -> 29-Contonment Anjalee I\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for 29-Contonment Anjalee I\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for 29-Contonment Anjalee I on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -207,25 +198,22 @@
                       "text": "🏢 Org selected -> BLOSSOM CLF\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for BLOSSOM CLF\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for BLOSSOM CLF on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -240,25 +228,22 @@
                       "text": "🏢 Org selected -> Abanda\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for Abanda\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for Abanda on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -273,25 +258,22 @@
                       "text": "🏢 Org selected -> 0 Point A\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for 0 Point A\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for 0 Point A on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -306,25 +288,22 @@
                       "text": "🏢 Org selected -> AMAN CHIGA CLF\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for AMAN CHIGA CLF\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for AMAN CHIGA CLF on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "⚠️ Case Summary -> Last updated missing\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -339,25 +318,22 @@
                       "text": "🏢 Org selected -> AGIPE DOROA CLF\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for AGIPE DOROA CLF\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for AGIPE DOROA CLF on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -372,25 +348,22 @@
                       "text": "🏢 Org selected -> Alekwareng\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for Alekwareng\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for Alekwareng on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -405,25 +378,22 @@
                       "text": "🏢 Org selected -> Chisakgre\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for Chisakgre\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for Chisakgre on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -438,25 +408,22 @@
                       "text": "🏢 Org selected -> Amjalong\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for Amjalong\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for Amjalong on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -471,30 +438,27 @@
                       "text": "🏢 Org selected -> 15 Shnong CLF\n"
                     },
                     {
-                      "text": "🔁 MASD open attempt 1 for 15 Shnong CLF\n"
+                      "text": "🕒 I2R Page -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "📊 MASD opened\n"
+                      "text": "📊 Role Summary -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ MASD opened for 15 Shnong CLF on attempt 1\n"
+                      "text": "📊 HCW Requiring Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 Cases Needing Guidance -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Block/Village -> Last updated : Jun 7, 2026 04:25 pm\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
-                    },
-                    {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Training Status -> Last updated : Jun 7, 2026 04:25 pm\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-08T03:04:30.127Z",
+                  "startTime": "2026-06-08T03:07:01.762Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -502,9 +466,9 @@
               "status": "expected"
             }
           ],
-          "id": "afc7163a58f8da1cc918-f5beced3d0cbff145797",
-          "file": "ML-ALL-MASD-Check.spec.js",
-          "line": 6,
+          "id": "21865bebe09506887802-f559a865c91e450eff64",
+          "file": "ML-ALL-I2R-Check.spec.js",
+          "line": 7,
           "column": 1
         }
       ]
@@ -512,8 +476,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-08T03:04:29.277Z",
-    "duration": 128995.74500000001,
+    "startTime": "2026-06-08T03:07:00.517Z",
+    "duration": 118633.643,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

@@ -1,8 +1,8 @@
 const { test } = require('@playwright/test');
 const { LoginCheck } = require('../../pageObject/CL_logincheck');
 const { openI2R } = require('./helpers/commonActions');
-//const dataset = require('../../cred/credential.json');
-const dataset = {username: process.env.CW_USERNAME,password: process.env.CW_PASSWORD};
+const dataset = require('../../cred/credential.json');
+//const dataset = {username: process.env.CW_USERNAME,password: process.env.CW_PASSWORD};
 
 test('All Meghalaya orgs -> I2R -> print last updated from each tab', async ({ page }) => {
   test.setTimeout(10 * 60 * 1000);

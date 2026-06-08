@@ -68,7 +68,7 @@
       "line": 0,
       "specs": [
         {
-          "title": "Ujjain | PNC |SUW |UPC | Tab-wise Validation",
+          "title": "UJJAIN Complete Validation | UPC + MASD + I2R",
           "ok": true,
           "tags": [],
           "tests": [
@@ -83,87 +83,103 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 43986,
+                  "duration": 53319,
                   "errors": [],
                   "stdout": [
                     {
+                      "text": "✅ Close popup clicked\n"
+                    },
+                    {
+                      "text": "✅ Push Setting popup closed\n"
+                    },
+                    {
                       "text": "✅ Organization switched to UJJAIN\n"
+                    },
+                    {
+                      "text": "✅ UJJAIN selected\n"
+                    },
+                    {
+                      "text": "🔎 SUW row count check: 10\n"
                     },
                     {
                       "text": "✅ Found 10 SUW users\n"
                     },
                     {
-                      "text": "✅ UPC opened for: Aruna Prajapat\n"
+                      "text": "✅ UPC opened for: Sunita Parmar\n"
                     },
                     {
                       "text": "📊 Cases → Data present\n"
                     },
                     {
-                      "text": "📊 Actions → User: ज्योति व्यास\n"
+                      "text": "📊 Actions → User: गायत्री\n"
                     },
                     {
-                      "text": "📊 Timeline → User: Saina bhi Asif\n"
+                      "text": "📊 Timeline → User: Kavita Arun\n"
                     },
                     {
-                      "text": "📊 Submissions → User: Sadiya bhi\n"
+                      "text": "📊 Submissions → User: Bhayak biharilal\n"
                     },
                     {
-                      "text": "📊 Indicators → User: Sadiya bhi\n"
+                      "text": "📊 Indicators → User: Gatta lakhan\n"
                     },
                     {
-                      "text": "📊 Daily Report → Your activity for May 27, 2026\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-28T02:52:08.877Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "8f1c8886740de028ff7c-6ff6203544143d01cf10",
-          "file": "UPC-Ujjain.spec.js",
-          "line": 176,
-          "column": 1
-        },
-        {
-          "title": "UJJAIN MASD Last Updated Extraction Only",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 150000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chrome",
-              "projectName": "chrome",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 16895,
-                  "errors": [],
-                  "stdout": [
+                      "text": "📊 Daily Report → Your activity for Jun 7, 2026\n"
+                    },
+                    {
+                      "text": "\n"
+                    },
+                    {
+                      "text": "================ MASD =================\n"
+                    },
+                    {
+                      "text": "📊 MASD Validation\n"
+                    },
                     {
                       "text": "MASD for Ujjain\n"
                     },
                     {
-                      "text": "📊 Case Summary → Last updated : May 27, 2026 06:24 am\n"
+                      "text": "📭 Case Summary → Last updated not found\n"
                     },
                     {
-                      "text": "📊 Case Activities → Last updated : May 27, 2026 05:30 am\n"
+                      "text": "📊 Case Activities → Last updated : Jun 7, 2026 05:30 am\n"
                     },
                     {
-                      "text": "📊 Coaching → Last updated : May 27, 2026 05:30 am\n"
+                      "text": "📊 Coaching → Last updated : Jun 7, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "📊 Supervision → Last updated : Jun 7, 2026 05:30 am\n"
+                    },
+                    {
+                      "text": "\n"
+                    },
+                    {
+                      "text": "================ I2R =================\n"
+                    },
+                    {
+                      "text": "📊 I2R Validation\n"
+                    },
+                    {
+                      "text": "🕒 UJJAIN I2R Page Last Updated → Last updated : Jun 7, 2026 04:25 pm\n"
+                    },
+                    {
+                      "text": "📊 UJJAIN I2R → Role Summary → Last updated : Jun 7, 2026 04:25 pm\n"
+                    },
+                    {
+                      "text": "📊 UJJAIN I2R → HCW Requiring Guidance → Last updated : Jun 7, 2026 04:25 pm\n"
+                    },
+                    {
+                      "text": "📊 UJJAIN I2R → Cases Needing Guidance → Last updated : Jun 7, 2026 04:25 pm\n"
+                    },
+                    {
+                      "text": "📊 UJJAIN I2R → Block/Village → Last updated : Jun 7, 2026 04:25 pm\n"
+                    },
+                    {
+                      "text": "📊 UJJAIN I2R → Training Status → Last updated : Jun 7, 2026 04:25 pm\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-05-28T02:52:53.268Z",
+                  "startTime": "2026-06-08T03:03:12.995Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -171,62 +187,9 @@
               "status": "expected"
             }
           ],
-          "id": "8f1c8886740de028ff7c-c3cbb07005a356551459",
+          "id": "8f1c8886740de028ff7c-283d801f9cbef4f1f214",
           "file": "UPC-Ujjain.spec.js",
-          "line": 236,
-          "column": 1
-        },
-        {
-          "title": "UJJAIN I2R Last Updated Extraction Tab-wise",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 150000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chrome",
-              "projectName": "chrome",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "parallelIndex": 0,
-                  "status": "passed",
-                  "duration": 18979,
-                  "errors": [],
-                  "stdout": [
-                    {
-                      "text": "🕒 UJJAIN I2R Page Last Updated → Last updated : May 27, 2026 06:30 am\n"
-                    },
-                    {
-                      "text": "📊 UJJAIN I2R → Role Summary → Last updated : May 27, 2026 06:30 am\n"
-                    },
-                    {
-                      "text": "📊 UJJAIN I2R → HCW Requiring Guidance → Last updated : May 27, 2026 06:30 am\n"
-                    },
-                    {
-                      "text": "📊 UJJAIN I2R → Cases Needing Guidance → Last updated : May 27, 2026 06:30 am\n"
-                    },
-                    {
-                      "text": "📊 UJJAIN I2R → Block/Village → Last updated : May 27, 2026 06:30 am\n"
-                    },
-                    {
-                      "text": "📊 UJJAIN I2R → Training Status → Last updated : May 27, 2026 06:30 am\n"
-                    }
-                  ],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2026-05-28T02:53:10.181Z",
-                  "annotations": [],
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "8f1c8886740de028ff7c-0aaed6c939b69815fa09",
-          "file": "UPC-Ujjain.spec.js",
-          "line": 331,
+          "line": 170,
           "column": 1
         }
       ]
@@ -234,9 +197,9 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-05-28T02:52:07.202Z",
-    "duration": 82730.97600000001,
-    "expected": 3,
+    "startTime": "2026-06-08T03:03:12.108Z",
+    "duration": 55086.759000000005,
+    "expected": 1,
     "skipped": 0,
     "unexpected": 0,
     "flaky": 0
