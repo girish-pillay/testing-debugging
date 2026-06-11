@@ -31,7 +31,27 @@ async ValidLogin(username, password) {
   await this.username.fill(username);
   await this.username.press('Tab');
   await this.password.fill(password);
-  await this.signin.click();
+  const emailLogin = this.page.getByText('Sign in with Email', {
+  exact: true
+});
+
+await emailLogin.waitFor({
+  state: 'visible',
+  timeout: 30000
+});
+
+await emailLogin.scrollIntoViewIfNeeded();
+
+const box = await emailLogin.boundingBox();
+
+if (!box) {
+  throw new Error('Sign in with Email bounding box not found');
+}
+
+await this.page.mouse.click(
+  box.x + box.width / 2,
+  box.y + box.height / 2
+);
 
   if (await this.closebtn.isVisible().catch(() => false)) {
   await this.closebtn.click();
@@ -55,6 +75,14 @@ const acceptBtn = this.page.locator('button:has-text("Accept")');
 if (await acceptBtn.isVisible().catch(() => false)) {
   await acceptBtn.click({ force: true });
   console.log('✅ Cookie popup accepted');
+}
+    // Close second popup if still present
+const secondPopup = this.page.locator('#popup_close').first();
+
+if (await secondPopup.isVisible().catch(() => false)) {
+  console.log('⚠️ Second popup detected');
+  await secondPopup.click({ force: true });
+  await this.page.waitForTimeout(2000);
 }
 }
 
