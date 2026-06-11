@@ -137,16 +137,28 @@ test('DEBUG LOGIN ONLY', async ({ page }) => {
 
   console.log('STEP 6 COMPLETE');
 
-  const globe = page.locator('li[data-tip] img').first();
+  const modalClose = page.locator('#popup_close').first();
 
-  await globe.waitFor({
-    state: 'visible',
-    timeout: 30000
-  });
+if (await modalClose.isVisible().catch(() => false)) {
+  console.log('SECOND POPUP FOUND');
 
-  console.log('GLOBE FOUND');
+  await modalClose.click({ force: true });
 
-  await globe.click();
+  await page.waitForTimeout(2000);
+}
+
+const globe = page.locator('li[data-tip] img').first();
+
+await globe.waitFor({
+  state: 'visible',
+  timeout: 30000
+});
+
+console.log('GLOBE FOUND');
+
+await globe.click({ force: true });
+
+console.log('GLOBE CLICKED');
 
   await page.screenshot({
     path: 'step7-globe-clicked.png',
