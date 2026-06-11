@@ -27,7 +27,18 @@ test('DEBUG LOGIN ONLY', async ({ page }) => {
 
   console.log('EMAIL LOGIN VISIBLE');
 
-  await emailLogin.click({ force: true });
+  await emailLogin.evaluate(el => el.click());
+
+console.log('JS CLICK EXECUTED');
+
+await page.waitForTimeout(5000);
+
+console.log('INPUT COUNT:', await page.locator('input').count());
+
+await page.screenshot({
+  path: 'after-js-click.png',
+  fullPage: true
+});
 
   console.log('EMAIL LOGIN CLICKED');
 
