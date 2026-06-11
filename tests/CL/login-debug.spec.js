@@ -1,4 +1,4 @@
-const { test, expect } = require('@playwright/test');
+const { test } = require('@playwright/test');
 
 test('DEBUG LOGIN ONLY', async ({ page }) => {
 
@@ -16,41 +16,57 @@ test('DEBUG LOGIN ONLY', async ({ page }) => {
     fullPage: true
   });
 
-  console.log('STEP 2: Clicking Sign in with Email');
+  console.log('STEP 2: Waiting for page app to settle');
 
-  const emailLogin = page.locator('text=Sign in with Email').last();
+  await page.waitForLoadState('networkidle', {
+    timeout: 60000
+  }).catch(() => {});
+
+  await page.waitForTimeout(10000);
+
+  await page.screenshot({
+    path: 'before-email-click-after-wait.png',
+    fullPage: true
+  });
+
+  console.log('STEP 3: Clicking Sign in with Email');
+
+  const emailLogin = page.getByText(
+    'Sign in with Email',
+    { exact: true }
+  );
 
   await emailLogin.waitFor({
     state: 'visible',
     timeout: 30000
   });
 
-  console.log('EMAIL LOGIN VISIBLE');
+  await emailLogin.scrollIntoViewIfNeeded();
 
-  await emailLogin.evaluate(el => el.click());
+  const box = await emailLogin.boundingBox();
 
-console.log('JS CLICK EXECUTED');
+  console.log('EMAIL LOGIN BOX:', box);
 
-await page.waitForTimeout(5000);
+  if (!box) {
+    throw new Error('EMAIL LOGIN BOX NOT FOUND');
+  }
 
-console.log('INPUT COUNT:', await page.locator('input').count());
+  await page.mouse.click(
+    box.x + box.width / 2,
+    box.y + box.height / 2
+  );
 
-await page.screenshot({
-  path: 'after-js-click.png',
-  fullPage: true
-});
+  console.log('REAL MOUSE CLICK DONE');
 
-  console.log('EMAIL LOGIN CLICKED');
-
-  await page.waitForTimeout(5000);
-
-  await page.screenshot({
-    path: 'after-email-click.png',
-    fullPage: true
-  });
+  await page.waitForTimeout(7000);
 
   console.log(
-    'EMAIL BOX COUNT:',
+    'INPUT COUNT:',
+    await page.locator('input').count()
+  );
+
+  console.log(
+    'TEXTBOX COUNT:',
     await page.getByRole('textbox').count()
   );
 
@@ -59,7 +75,12 @@ await page.screenshot({
     (await page.content()).includes('Enter your email')
   );
 
-  console.log('STEP 3: Filling credentials');
+  await page.screenshot({
+    path: 'after-real-mouse-click.png',
+    fullPage: true
+  });
+
+  console.log('STEP 4: Filling credentials');
 
   await page.getByRole('textbox', {
     name: 'Enter your email'
@@ -70,22 +91,24 @@ await page.screenshot({
   }).fill(process.env.CW_PASSWORD);
 
   await page.screenshot({
-    path: 'step3-creds-filled.png',
+    path: 'step4-creds-filled.png',
     fullPage: true
   });
 
-  console.log('STEP 4: Clicking Login');
+  console.log('STEP 5: Clicking Login');
 
   await page.getByRole('button', {
     name: 'Sign in',
     exact: true
   }).click();
 
-  await page.waitForLoadState('domcontentloaded').catch(() => {});
+  await page.waitForLoadState('domcontentloaded')
+    .catch(() => {});
+
   await page.waitForTimeout(5000);
 
   await page.screenshot({
-    path: 'step4-after-login.png',
+    path: 'step5-after-login.png',
     fullPage: true
   });
 
@@ -98,7 +121,9 @@ await page.screenshot({
     await popupClose.click({ force: true });
   }
 
-  const acceptBtn = page.locator('button:has-text("Accept")');
+  const acceptBtn = page.locator(
+    'button:has-text("Accept")'
+  );
 
   if (await acceptBtn.isVisible().catch(() => false)) {
     console.log('COOKIE FOUND');
@@ -106,11 +131,11 @@ await page.screenshot({
   }
 
   await page.screenshot({
-    path: 'step5-popup-closed.png',
+    path: 'step6-popup-closed.png',
     fullPage: true
   });
 
-  console.log('STEP 5 COMPLETE');
+  console.log('STEP 6 COMPLETE');
 
   const globe = page.locator('li[data-tip] img').first();
 
@@ -124,7 +149,7 @@ await page.screenshot({
   await globe.click();
 
   await page.screenshot({
-    path: 'step6-globe-clicked.png',
+    path: 'step7-globe-clicked.png',
     fullPage: true
   });
 
