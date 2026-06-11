@@ -22,218 +22,118 @@ async goTo()
 }
 
 
+async ValidLogin(username, password) {
 
-async ValidLogin(username, password) {   
-  await this.page.waitForLoadState('networkidle');
-  await this.page.waitForSelector('text=Sign in with Email', { timeout: 10000 });
+  await this.page.waitForLoadState('networkidle').catch(() => {});
+  await this.page.waitForTimeout(10000);
 
-  await this.signinicon.click();
+  // Open Email Login using real mouse click
+  const emailLogin = this.page.getByText('Sign in with Email', {
+    exact: true
+  });
+
+  await emailLogin.waitFor({
+    state: 'visible',
+    timeout: 30000
+  });
+
+  await emailLogin.scrollIntoViewIfNeeded();
+
+  const box = await emailLogin.boundingBox();
+
+  if (!box) {
+    throw new Error('Sign in with Email bounding box not found');
+  }
+
+  await this.page.mouse.click(
+    box.x + box.width / 2,
+    box.y + box.height / 2
+  );
+
+  // Fill credentials
+  await this.username.waitFor({
+    state: 'visible',
+    timeout: 30000
+  });
+
   await this.username.fill(username);
   await this.username.press('Tab');
+
   await this.password.fill(password);
-  const emailLogin = this.page.getByText('Sign in with Email', {
-  exact: true
-});
 
-await emailLogin.waitFor({
-  state: 'visible',
-  timeout: 30000
-});
+  await this.signin.click();
 
-await emailLogin.scrollIntoViewIfNeeded();
+  await this.page.waitForTimeout(5000);
 
-const box = await emailLogin.boundingBox();
+  // Welcome popup
+  const closeBtn = this.page.getByRole('button', {
+    name: 'Close'
+  });
 
-if (!box) {
-  throw new Error('Sign in with Email bounding box not found');
-}
+  try {
+    await closeBtn.waitFor({
+      state: 'visible',
+      timeout: 5000
+    });
 
-await this.page.mouse.click(
-  box.x + box.width / 2,
-  box.y + box.height / 2
-);
+    await closeBtn.click({ force: true });
 
-  if (await this.closebtn.isVisible().catch(() => false)) {
-  await this.closebtn.click();
-}
+    console.log('✅ Close popup clicked');
 
-  // ✅ Close Push Setting popup immediately after login
+  } catch {
+    console.log('⚠️ Close popup not shown');
+  }
+
+  await this.page.waitForLoadState('domcontentloaded').catch(() => {});
   await this.page.waitForTimeout(1000);
 
+  // Push setting popup
   const popupClose = this.page.locator('#popup_close').first();
 
   if (await popupClose.isVisible().catch(() => false)) {
+
     console.log('⚠️ Push setting popup detected after login');
+
     await popupClose.click({ force: true });
-    await this.page.waitForTimeout(800);
+
+    await this.page.waitForTimeout(1000);
+
     console.log('✅ Push setting popup closed');
   }
 
-  // ✅ Cookie Accept popup
-const acceptBtn = this.page.locator('button:has-text("Accept")');
+  // Cookie popup
+  const acceptBtn = this.page.locator(
+    'button:has-text("Accept")'
+  );
 
-if (await acceptBtn.isVisible().catch(() => false)) {
-  await acceptBtn.click({ force: true });
-  console.log('✅ Cookie popup accepted');
-}
-    // Close second popup if still present
-const secondPopup = this.page.locator('#popup_close').first();
+  if (await acceptBtn.isVisible().catch(() => false)) {
 
-if (await secondPopup.isVisible().catch(() => false)) {
-  console.log('⚠️ Second popup detected');
-  await secondPopup.click({ force: true });
-  await this.page.waitForTimeout(2000);
-}
-}
+    await acceptBtn.click({ force: true });
 
+    await this.page.waitForTimeout(1000);
+
+    console.log('✅ Cookie popup accepted');
+  }
+
+  // Second popup
+  const secondPopup = this.page.locator('#popup_close').first();
+
+  if (await secondPopup.isVisible().catch(() => false)) {
+
+    console.log('⚠️ Second popup detected');
+
+    await secondPopup.click({ force: true });
+
+    await this.page.waitForTimeout(2000);
+  }
+}
  
 
 
   
-  async Jashpur() {
-    
-    const heading = this.page.locator('h5.pointer', { hasText: 'Jashpur District -' });
-    await heading.scrollIntoViewIfNeeded();
-    await heading.click();
-    console.log('✅ Clicked MP Jashpur ');
-    const child = this.page.locator('h5', { hasText: 'Jeetu Toli Mini' });
-    await child.scrollIntoViewIfNeeded();
-    await child.click();
-  
-    // Close the modal
-    await this.page.getByRole('button', { name: '⨉' }).click();
-  }
 
 
-  async Barwani() {
-    
-    const heading = this.page.locator('h5.pointer', { hasText: 'MP Barwani -' });
-    await heading.scrollIntoViewIfNeeded();
-    await heading.click();
-    console.log('✅ Clicked MP Barwani heading');
-    const child = this.page.locator('h5', { hasText: 'AADIWASHI BEDIPURA KRMANK 07' });
-    await child.scrollIntoViewIfNeeded();
-    await child.click();
-  
-    // Close the modal
-    await this.page.getByRole('button', { name: '⨉' }).click();
-  }
-  
-  
 
-  
-
- async Chhatarpur() {
-    const heading = this.page.locator('h5.pointer', { hasText: 'MP Chhatarpur - 2373' });
-    await heading.scrollIntoViewIfNeeded();
-    await heading.click();
-    console.log('✅ Clicked MP Chhatarpur heading');
-  
-    // Then click the nested entry (child location or project)
-    const child = this.page.locator('h5', { hasText: 'MP Chhatarpur - 14 Satai' });
-    await child.scrollIntoViewIfNeeded();
-    await child.click();
-  
-    // Close the modal
-    await this.page.getByRole('button', { name: '⨉' }).click();
-  }
-  
-
-  async Dindori() {
-    const heading = this.page.locator('h5.pointer', { hasText: 'MP Dindori' });
-    await heading.scrollIntoViewIfNeeded();
-    await heading.click();
-    console.log('✅ Clicked MP Dindori');
-  
-    // Then click the nested entry (child location or project)
-    const child = this.page.locator('h5', { hasText: '(IMLI TOLA) MADHOPUR' });
-    await child.scrollIntoViewIfNeeded();
-    await child.click();
-  
-    // Close the modal
-    await this.page.getByRole('button', { name: '⨉' }).click();
-  }
-  
- 
- async Ratlam() {
-    // Target the correct heading with class `pointer` and expected text
-    const heading = this.page.locator('h5.pointer', { hasText: 'MP Ratlam - 2382' });
-    await heading.scrollIntoViewIfNeeded();
-    await heading.click();
-    console.log('✅ Clicked MP Ratlam');
-  
-    // Select the specific location within the district
-    const location = this.page.locator('h5', { hasText: '1 Naya Malipura' });
-    await location.scrollIntoViewIfNeeded();
-    await location.click();
-  
-    // Close the modal
-    await this.page.getByRole('button', { name: '⨉' }).click();
-  }
-
-  async Sheopur() {
-    const heading = this.page.locator('h5.pointer', { hasText: 'MP Sheopur -' });
-    await heading.scrollIntoViewIfNeeded();
-    await heading.click();
-    console.log('✅ Clicked MP Sheopur');
-  
-    // Then click the nested entry (child location or project)
-    const child = this.page.locator('h5', { hasText: 'MP Sheopur - "Balwirpura, morawan' });
-    await child.scrollIntoViewIfNeeded();
-    await child.click(); 	
-  
-    // Close the modal
-    await this.page.getByRole('button', { name: '⨉' }).click();
-  }
-  
-
-  async Singrauli() {
-    const heading = this.page.locator('h5', { hasText: 'MP Singrauli -' });
-    await heading.scrollIntoViewIfNeeded();
-    await heading.click();
-    console.log('✅ Clicked MP Singrauli');
-  
-    // Then click the nested entry (child location or project)
-    const child = this.page.getByRole('heading', { name: 'MP Singrauli - Aadiwasi' });
-    await child.scrollIntoViewIfNeeded();
-    await child.click(); 	
-  
-    // Close the modal
-    await this.page.getByRole('button', { name: '⨉' }).click();
-  }
-
-
-  async Vidisha() {
-    const heading = this.page.locator('h5.pointer', { hasText: 'MP Vidisha -' });
-    await heading.scrollIntoViewIfNeeded();
-    await heading.click();
-    console.log('✅ Clicked MP Vidisha');
-  
-    // Then click the nested entry (child location or project)
-    const child = this.page.locator('h5', { hasText: /^MP Vidisha - 1$/ });
-    await child.scrollIntoViewIfNeeded();
-    await child.click(); 	
-  
-    // Close the modal
-    await this.page.getByRole('button', { name: '⨉' }).click();
-  }
-  
-
- 
-  async Nanded() {
-    const heading = this.page.locator('h5.pointer', { hasText: 'Nanded District' });
-    await heading.scrollIntoViewIfNeeded();
-    await heading.click();
-    console.log('✅ Clicked Nanded');
-  
-    // Then click the nested entry (child location or project)
-    const child = this.page.locator('h5', { hasText: 'ALUR' }).first();
-    await child.scrollIntoViewIfNeeded();
-    await child.click(); 	
-  
-    // Close the modal
-    await this.page.getByRole('button', { name: '⨉' }).click();
-  }
   
 
     
@@ -255,6 +155,19 @@ async KCorpAROEHAN() {
     timeout: 15000
   });
 
+
+  for (let i = 0; i < 5; i++) {
+
+  const popupClose = this.page.locator('#popup_close').first();
+
+  if (await popupClose.isVisible().catch(() => false)) {
+    console.log(`Closing popup ${i + 1}`);
+    await popupClose.click({ force: true });
+    await this.page.waitForTimeout(1500);
+  } else {
+    break;
+  }
+}  
   await globe.click({ force: true });
 
   // CRITICAL: Wait for organization popup
