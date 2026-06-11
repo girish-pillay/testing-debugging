@@ -42,34 +42,51 @@ async function applyCheckboxFilter(page, sectionText, optionText) {
 }
 
 async function openMASD(page) {
-   // 🔥 CLOSE POPUP FIRST
-  const popup = page.locator('#popup_close').first();
+
+  // Close all remaining popups
   for (let i = 0; i < 3; i++) {
-  const popup = page.locator('#popup_close').first();
 
-  if (await popup.isVisible().catch(() => false)) {
-    console.log(`Closing popup ${i + 1}`);
-    await popup.click({ force: true });
-    await page.waitForTimeout(1000);
-  } else {
-    break;
+    const popup = page.locator('#popup_close').first();
+
+    if (await popup.isVisible().catch(() => false)) {
+      console.log(`Closing popup ${i + 1}`);
+      await popup.click({ force: true });
+      await page.waitForTimeout(1000);
+    } else {
+      break;
+    }
   }
-}
-    await page.waitForTimeout(800);
-  }
+
+  await page.waitForTimeout(800);
+
   const menuIcon = page.locator('li[data-tip="View main menu"] img');
-  await menuIcon.waitFor({ state: 'visible', timeout: 15000 });
-  await menuIcon.click();
 
-  const masdLink = page.locator('a#member_ppt_process_report[href="/members/mcj/activity"]');
-  await masdLink.waitFor({ state: 'visible', timeout: 20000 });
+  await menuIcon.waitFor({
+    state: 'visible',
+    timeout: 15000
+  });
+
+  await menuIcon.click({ force: true });
+
+  const masdLink = page.locator(
+    'a#member_ppt_process_report[href="/members/mcj/activity"]'
+  );
+
+  await masdLink.waitFor({
+    state: 'visible',
+    timeout: 20000
+  });
 
   await Promise.all([
-    page.waitForURL(/\/members\/mcj\/activity/, { timeout: 45000 }),
+    page.waitForURL(/\/members\/mcj\/activity/, {
+      timeout: 45000
+    }),
     masdLink.click()
   ]);
 
-  await page.waitForSelector('[role="tab"]', { timeout: 30000 });
+  await page.waitForSelector('[role="tab"]', {
+    timeout: 30000
+  });
 }
 
 /* ================= OPEN I2R ================= */
