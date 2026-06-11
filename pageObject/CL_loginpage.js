@@ -47,8 +47,29 @@ class LoginPage {
 
    async ValidLogin(username, password) {
   
-  await this.page.waitForSelector('text=Sign in with Email', { timeout: 15000 });
-  await this.signinicon.click();
+ await this.page.waitForLoadState('networkidle', { timeout: 60000 }).catch(() => {});
+await this.page.waitForTimeout(10000);
+
+const emailLogin = this.page.getByText('Sign in with Email', { exact: true });
+
+await emailLogin.waitFor({
+  state: 'visible',
+  timeout: 30000
+});
+
+await emailLogin.scrollIntoViewIfNeeded();
+
+const box = await emailLogin.boundingBox();
+
+if (!box) {
+  throw new Error('Sign in with Email bounding box not found');
+}
+
+await this.page.mouse.click(
+  box.x + box.width / 2,
+  box.y + box.height / 2
+);
+ 
 
   await this.username.fill(username);
   await this.password.fill(password);
