@@ -44,8 +44,17 @@ async function applyCheckboxFilter(page, sectionText, optionText) {
 async function openMASD(page) {
    // 🔥 CLOSE POPUP FIRST
   const popup = page.locator('#popup_close').first();
+  for (let i = 0; i < 3; i++) {
+  const popup = page.locator('#popup_close').first();
+
   if (await popup.isVisible().catch(() => false)) {
+    console.log(`Closing popup ${i + 1}`);
     await popup.click({ force: true });
+    await page.waitForTimeout(1000);
+  } else {
+    break;
+  }
+}
     await page.waitForTimeout(800);
   }
   const menuIcon = page.locator('li[data-tip="View main menu"] img');
