@@ -24,7 +24,7 @@ jobs:
           CW_USERNAME: ${{ secrets.CW_USERNAME }}
           CW_PASSWORD: ${{ secrets.CW_PASSWORD }}
         run: |
-          npx playwright test tests/debug/login-debug.spec.js
+          npx playwright test tests/CL/login-debug.spec.js
 
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
