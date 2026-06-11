@@ -34,6 +34,12 @@ class LoginCheck {
   /* ---------- OPEN ORG SELECTOR ---------- */
   const globe = this.page.locator('li[data-tip] img');
   await globe.first().waitFor({ state: 'visible', timeout: 15000 });
+    const popupClose = this.page.locator('#popup_close').first();
+
+if (await popupClose.isVisible().catch(() => false)) {
+  await popupClose.click({ force: true });
+  await this.page.waitForTimeout(1000);
+}
   await globe.first().click();
 
   /* ---------- WAIT FOR ORG MODAL ---------- */
