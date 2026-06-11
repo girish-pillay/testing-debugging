@@ -69,6 +69,14 @@ await this.page.waitForLoadState('domcontentloaded').catch(() => {});
 await this.page.waitForTimeout(1000);
 
 await this.closePushSettingIfPresent();
+// Close any remaining popup
+const popupClose = this.page.locator('#popup_close').first();
+
+if (await popupClose.isVisible().catch(() => false)) {
+  console.log('⚠️ Second popup detected');
+  await popupClose.click({ force: true });
+  await this.page.waitForTimeout(2000);
+}
 }
 
  /* async ValidLogin(username, password) {
@@ -144,7 +152,15 @@ async selectOrg(parentText, childText) {
 
   const globe = this.page.locator('li[data-tip] img').first();
   await globe.waitFor({ state: 'visible', timeout: 15000 });
-  await globe.click({ force: true });
+  // close popup before globe click
+const popupClose = this.page.locator('#popup_close').first();
+
+if (await popupClose.isVisible().catch(() => false)) {
+  await popupClose.click({ force: true });
+  await this.page.waitForTimeout(1000);
+}
+
+await globe.click({ force: true });
 
   const parentOrg = this.page.locator('h5').filter({ hasText: parentText }).first();
   await parentOrg.waitFor({ state: 'visible', timeout: 20000 });
