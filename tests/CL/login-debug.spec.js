@@ -1,15 +1,15 @@
 const { test, expect } = require('@playwright/test');
-const { LoginPage } = require('../../pageObject/CL_loginpage');
-const dataset = {
-  username: process.env.CW_USERNAME,
-  password: process.env.CW_PASSWORD
-};
 
 test('DEBUG LOGIN ONLY', async ({ page }) => {
 
   console.log('STEP 1: Opening URL');
 
-  await page.goto('https://demo.cuedwell.com');
+  console.log('USERNAME EXISTS:', !!process.env.CW_USERNAME);
+  console.log('PASSWORD EXISTS:', !!process.env.CW_PASSWORD);
+
+  await page.goto('https://demo.cuedwell.com', {
+    waitUntil: 'domcontentloaded'
+  });
 
   await page.screenshot({
     path: 'step1-homepage.png',
@@ -18,12 +18,35 @@ test('DEBUG LOGIN ONLY', async ({ page }) => {
 
   console.log('STEP 2: Clicking Sign in with Email');
 
-  await page.getByText('Sign in with Email').click();
+  const emailLogin = page.locator('text=Sign in with Email').last();
+
+  await emailLogin.waitFor({
+    state: 'visible',
+    timeout: 30000
+  });
+
+  console.log('EMAIL LOGIN VISIBLE');
+
+  await emailLogin.click({ force: true });
+
+  console.log('EMAIL LOGIN CLICKED');
+
+  await page.waitForTimeout(5000);
 
   await page.screenshot({
-    path: 'step2-signin-clicked.png',
+    path: 'after-email-click.png',
     fullPage: true
   });
+
+  console.log(
+    'EMAIL BOX COUNT:',
+    await page.getByRole('textbox').count()
+  );
+
+  console.log(
+    'EMAIL FIELD FOUND:',
+    (await page.content()).includes('Enter your email')
+  );
 
   console.log('STEP 3: Filling credentials');
 
@@ -47,7 +70,8 @@ test('DEBUG LOGIN ONLY', async ({ page }) => {
     exact: true
   }).click();
 
-  await page.waitForTimeout(10000);
+  await page.waitForLoadState('domcontentloaded').catch(() => {});
+  await page.waitForTimeout(5000);
 
   await page.screenshot({
     path: 'step4-after-login.png',
@@ -94,5 +118,5 @@ test('DEBUG LOGIN ONLY', async ({ page }) => {
   });
 
   console.log('ORG POPUP OPENED');
-
+  console.log('FINAL URL:', page.url());
 });
