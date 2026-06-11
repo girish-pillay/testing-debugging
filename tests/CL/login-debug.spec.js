@@ -1,5 +1,9 @@
 const { test, expect } = require('@playwright/test');
 const { LoginPage } = require('../../pageObject/CL_loginpage');
+const dataset = {
+  username: process.env.CW_USERNAME,
+  password: process.env.CW_PASSWORD
+};
 
 test('DEBUG LOGIN ONLY', async ({ page }) => {
 
