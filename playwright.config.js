@@ -22,7 +22,7 @@ const config = {
       name: 'chrome',
       use: {
         browserName: 'chromium',
-        headless: false,
+        headless: true,
          permissions: ['geolocation', 'microphone'],
 
       launchOptions: {
@@ -37,7 +37,7 @@ const config = {
       name: 'firefox',
       use: {
         browserName: 'firefox',
-        headless: false,
+        headless: true,
         permissions: ['geolocation']
       }
     },
@@ -45,7 +45,7 @@ const config = {
       name: 'safari',
       use: {
         browserName: 'webkit',
-        headless: false,
+        headless: true,
         permissions: ['geolocation']
       }
     },
