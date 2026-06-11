@@ -83,7 +83,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 32657,
+                  "duration": 32529,
                   "errors": [],
                   "stdout": [
                     {
@@ -96,10 +96,10 @@
                       "text": "🌐 Landed after JIIU_IIMSR() on: https://demo.cuedwell.com/health/table\n"
                     },
                     {
-                      "text": "📊 JIIU IIMSR → Case Summary → Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "📊 JIIU IIMSR → Case Summary → Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "📊 JIIU IIMSR → Case Activities → Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 JIIU IIMSR → Case Activities → Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "📭 JIIU IIMSR → Coaching → Last updated not found\n"
@@ -107,7 +107,7 @@
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-08T03:10:39.911Z",
+                  "startTime": "2026-06-11T06:22:17.957Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -125,8 +125,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-08T03:10:38.914Z",
-    "duration": 34555.297,
+    "startTime": "2026-06-11T06:22:16.584Z",
+    "duration": 34836.91,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

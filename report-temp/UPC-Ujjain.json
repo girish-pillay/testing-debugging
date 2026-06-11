@@ -83,7 +83,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 53319,
+                  "duration": 65193,
                   "errors": [],
                   "stdout": [
                     {
@@ -105,25 +105,25 @@
                       "text": "✅ Found 10 SUW users\n"
                     },
                     {
-                      "text": "✅ UPC opened for: Sunita Parmar\n"
+                      "text": "✅ UPC opened for: Anju kunwar\n"
                     },
                     {
                       "text": "📊 Cases → Data present\n"
                     },
                     {
-                      "text": "📊 Actions → User: गायत्री\n"
+                      "text": "📊 Actions → User: Nandani\n"
                     },
                     {
-                      "text": "📊 Timeline → User: Kavita Arun\n"
+                      "text": "📊 Timeline → User: Rachana\n"
                     },
                     {
-                      "text": "📊 Submissions → User: Bhayak biharilal\n"
+                      "text": "📊 Submissions → User: Bhagu bai\n"
                     },
                     {
-                      "text": "📊 Indicators → User: Gatta lakhan\n"
+                      "text": "📊 Indicators → User: Bhagu bai\n"
                     },
                     {
-                      "text": "📊 Daily Report → Your activity for Jun 7, 2026\n"
+                      "text": "📊 Daily Report → Your activity for Jun 11, 2026\n"
                     },
                     {
                       "text": "\n"
@@ -141,13 +141,13 @@
                       "text": "📭 Case Summary → Last updated not found\n"
                     },
                     {
-                      "text": "📊 Case Activities → Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Case Activities → Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "📊 Coaching → Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Coaching → Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "📊 Supervision → Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "📊 Supervision → Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n"
@@ -159,27 +159,27 @@
                       "text": "📊 I2R Validation\n"
                     },
                     {
-                      "text": "🕒 UJJAIN I2R Page Last Updated → Last updated : Jun 7, 2026 04:25 pm\n"
+                      "text": "🕒 UJJAIN I2R Page Last Updated → Last updated : Jun 11, 2026 07:49 am\n"
                     },
                     {
-                      "text": "📊 UJJAIN I2R → Role Summary → Last updated : Jun 7, 2026 04:25 pm\n"
+                      "text": "📊 UJJAIN I2R → Role Summary → Last updated : Jun 11, 2026 07:49 am\n"
                     },
                     {
-                      "text": "📊 UJJAIN I2R → HCW Requiring Guidance → Last updated : Jun 7, 2026 04:25 pm\n"
+                      "text": "📊 UJJAIN I2R → HCW Requiring Guidance → Last updated : Jun 11, 2026 07:49 am\n"
                     },
                     {
-                      "text": "📊 UJJAIN I2R → Cases Needing Guidance → Last updated : Jun 7, 2026 04:25 pm\n"
+                      "text": "📊 UJJAIN I2R → Cases Needing Guidance → Last updated : Jun 11, 2026 07:49 am\n"
                     },
                     {
-                      "text": "📊 UJJAIN I2R → Block/Village → Last updated : Jun 7, 2026 04:25 pm\n"
+                      "text": "📊 UJJAIN I2R → Block/Village → Last updated : Jun 11, 2026 07:49 am\n"
                     },
                     {
-                      "text": "📊 UJJAIN I2R → Training Status → Last updated : Jun 7, 2026 04:25 pm\n"
+                      "text": "📊 UJJAIN I2R → Training Status → Last updated : Jun 11, 2026 07:49 am\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-08T03:03:12.995Z",
+                  "startTime": "2026-06-11T06:12:25.827Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -197,8 +197,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-08T03:03:12.108Z",
-    "duration": 55086.759000000005,
+    "startTime": "2026-06-11T06:12:23.930Z",
+    "duration": 68406.393,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

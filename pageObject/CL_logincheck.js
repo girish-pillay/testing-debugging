@@ -1,7 +1,7 @@
 
 const { LoginPage } = require('./CL_loginpage');
-const dataset = require('../cred/credential.json');
-//const dataset = {username: process.env.CW_USERNAME,password: process.env.CW_PASSWORD};
+//const dataset = require('../cred/credential.json');
+const dataset = {username: process.env.CW_USERNAME,password: process.env.CW_PASSWORD};
 
 class LoginCheck {
   constructor(page) {

@@ -83,7 +83,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 21205,
+                  "duration": 21616,
                   "errors": [],
                   "stdout": [
                     {
@@ -96,7 +96,7 @@
                       "text": "✅ Organization switched to EGH\n"
                     },
                     {
-                      "text": "🌐 Landed after EGH() on: https://demo.cuedwell.com/ML%20East%20Garo%20Hills/members/b2840f10-ab91-43fe-8ce0-46fbbf0156b5\n"
+                      "text": "🌐 Landed after EGH() on: https://demo.cuedwell.com/health/table\n"
                     },
                     {
                       "text": "🌐 On URL: https://demo.cuedwell.com/health/table\n"
@@ -111,30 +111,30 @@
                       "text": "✅ SUW user found\n"
                     },
                     {
-                      "text": "✅ UPC opened for SUW: Usha S Sangma\n"
+                      "text": "✅ UPC opened for SUW: Rejilline Ch Momin\n"
                     },
                     {
                       "text": "📊 Cases → Data present\n"
                     },
                     {
-                      "text": "📊 Actions → User: Moonmoon   N  Marak\n"
+                      "text": "📊 Actions → User: Slime N Sangma\n"
                     },
                     {
-                      "text": "📊 Timeline → User: Amchina R Marak\n"
+                      "text": "📊 Timeline → User: Dechira N Sangma\n"
                     },
                     {
-                      "text": "📊 Submissions → User: Amchina R Marak\n"
+                      "text": "📊 Submissions → User: Atchirime M Marak\n"
                     },
                     {
-                      "text": "📊 Indicators → User: Amchina R Marak\n"
+                      "text": "📊 Indicators → User: Atchirime M Marak\n"
                     },
                     {
-                      "text": "📊 Daily Report → Your activity for Jun 7, 2026\n"
+                      "text": "📊 Daily Report → Your activity for Jun 11, 2026\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-08T02:54:11.262Z",
+                  "startTime": "2026-06-11T06:13:59.050Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -152,8 +152,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-08T02:54:10.031Z",
-    "duration": 23472.466,
+    "startTime": "2026-06-11T06:13:57.429Z",
+    "duration": 24418.015,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,

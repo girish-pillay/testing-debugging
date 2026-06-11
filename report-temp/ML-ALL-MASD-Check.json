@@ -83,7 +83,7 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 127291,
+                  "duration": 157551,
                   "errors": [],
                   "stdout": [
                     {
@@ -117,16 +117,16 @@
                       "text": "✅ MASD opened for Agalgre Awc on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -150,16 +150,16 @@
                       "text": "✅ MASD opened for Bamkhosngi on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -183,16 +183,16 @@
                       "text": "✅ MASD opened for 29-Contonment Anjalee I on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "⚠️ Case Activities -> missing\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "⚠️ Coaching -> missing\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "⚠️ Supervision -> missing\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -216,16 +216,16 @@
                       "text": "✅ MASD opened for BLOSSOM CLF on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -249,16 +249,16 @@
                       "text": "✅ MASD opened for Abanda on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -282,16 +282,16 @@
                       "text": "✅ MASD opened for 0 Point A on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -315,16 +315,16 @@
                       "text": "✅ MASD opened for AMAN CHIGA CLF on attempt 1\n"
                     },
                     {
-                      "text": "⚠️ Case Summary -> Last updated missing\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -348,16 +348,16 @@
                       "text": "✅ MASD opened for AGIPE DOROA CLF on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -381,16 +381,16 @@
                       "text": "✅ MASD opened for Alekwareng on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -414,16 +414,16 @@
                       "text": "✅ MASD opened for Chisakgre on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -447,16 +447,16 @@
                       "text": "✅ MASD opened for Amjalong on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
                       "text": "\n==============================\n"
@@ -480,21 +480,21 @@
                       "text": "✅ MASD opened for 15 Shnong CLF on attempt 1\n"
                     },
                     {
-                      "text": "✅ Case Summary -> Last updated : Jun 7, 2026 04:16 pm\n"
+                      "text": "✅ Case Summary -> Last updated : Jun 11, 2026 08:13 am\n"
                     },
                     {
-                      "text": "✅ Case Activities -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Case Activities -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Coaching -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Coaching -> Last updated : Jun 11, 2026 05:30 am\n"
                     },
                     {
-                      "text": "✅ Supervision -> Last updated : Jun 7, 2026 05:30 am\n"
+                      "text": "✅ Supervision -> Last updated : Jun 11, 2026 05:30 am\n"
                     }
                   ],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-06-08T03:04:30.127Z",
+                  "startTime": "2026-06-11T06:14:46.839Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -512,8 +512,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-06-08T03:04:29.277Z",
-    "duration": 128995.74500000001,
+    "startTime": "2026-06-11T06:14:45.502Z",
+    "duration": 159817.007,
     "expected": 1,
     "skipped": 0,
     "unexpected": 0,
