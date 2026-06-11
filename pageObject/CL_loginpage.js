@@ -197,17 +197,35 @@ async JIIU_IIMSR() {
 async UJJAIN() {
 
   
+ // Close ALL remaining popups
+for (let i = 0; i < 5; i++) {
+
   const popupClose = this.page.locator('#popup_close').first();
+
   if (await popupClose.isVisible().catch(() => false)) {
+    console.log(`Closing popup ${i + 1}`);
+
     await popupClose.click({ force: true });
-    await this.page.waitForTimeout(1000);
+
+    await this.page.waitForTimeout(1500);
+  } else {
+    break;
   }
+}
 
+/* ---------- OPEN ORG SELECTOR ---------- */
+const globe = this.page.locator('li[data-tip] img');
 
-  /* ---------- OPEN ORG SELECTOR ---------- */
-  const globe = this.page.locator('li[data-tip] img');
-  await globe.first().waitFor({ state: 'visible', timeout: 15000 });
-  await globe.first().click();
+await globe.first().waitFor({
+  state: 'visible',
+  timeout: 30000
+});
+
+console.log('🌍 Globe visible');
+
+await globe.first().click({ force: true });
+
+console.log('🌍 Globe clicked');
  // console.log('🌍 Org selector opened');
 
   /* ---------- SELECT PARENT ORG ---------- */
